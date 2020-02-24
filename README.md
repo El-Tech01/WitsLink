@@ -1,3 +1,4 @@
 
-[![El-Tech01](https://circleci.com/gh/El-Tech01/WitsStudentRecruitment.svg?style=sgv)](https://app.circleci.com/github/El-Tech01/WitsStudentRecruitment/pipelines/9c47776e-d60b-42bf-b4b7-090b85d94416/workflows/02c5f089-0a00-42c1-b2ba-ec96fbea75d8)
+[![Coverage Status](https://coveralls.io/repos/github/El-Tech01/WitsStudentRecruitment/badge.svg?branch=master)](https://coveralls.io/github/El-Tech01/WitsStudentRecruitment?branch=master)
  
+[![CircleCI](https://circleci.com/gh/El-Tech01/WitsStudentRecruitment.svg?style=svg)](https://circleci.com/gh/El-Tech01/WitsStudentRecruitment)

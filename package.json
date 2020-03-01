@@ -1,0 +1,22 @@
+{
+  "name": "witsstudentrecruitment",
+  "version": "1.0.0",
+  "description": "[![Coverage Status](https://coveralls.io/repos/github/El-Tech01/WitsStudentRecruitment/badge.svg?branch=master)](https://coveralls.io/github/El-Tech01/WitsStudentRecruitment?branch=master)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/El-Tech01/WitsStudentRecruitment.git"
+  },
+  "author": "El-Tech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/El-Tech01/WitsStudentRecruitment/issues"
+  },
+  "homepage": "https://github.com/El-Tech01/WitsStudentRecruitment#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}

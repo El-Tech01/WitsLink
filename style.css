@@ -1,0 +1,92 @@
+body{
+    background-color:#e4e4e4;
+     color:#555555;
+
+     font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button{
+  background-color: #030165;
+  position: relative;
+  text-decoration: underline;
+  font-family: Tahoma;
+  font-size: 900;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-weight: 850;
+  color:#fff;
+}
+
+button:hover{
+  background-color:#262626;
+}
+
+.header{
+  text-align: center;
+  font-weight: 900;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 55px;
+  background-color: #172735;
+  color:#fff;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: auto;
+}
+
+.box{
+  width:100%;
+  margin: 15px;
+  display: block;
+}
+
+.box .filter{
+  background-color: white;
+  margin:10px;
+  float:left;
+  margin:10px;
+
+
+}
+
+.container{
+  position: relative;
+  margin-top:0px;
+  border:1px hidden #000;
+  background-color: #dadada;
+}
+
+.container input{
+  padding-top: :8px;
+  width:40%;
+}
+
+.container p{
+  font-family:Arial Black, Gadget, sans-serif;
+  color: #5b5b5b;
+  text-align: center;
+  font-style: oblique;
+  font-variant: small-caps;
+  font-size: 1.5em;
+  padding-bottom: 0px;
+}
+
+.big-Pbox{
+  display:inline-flex;
+  float: left;
+}
+
+.big-Pbox .p-box{
+
+  float:left;
+  width:33.3%;
+  padding:10px;
+  background-color: #787878;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px dotted #fff;
+  box-sizing: border-box;
+  line-height: 1.6em;
+
+}

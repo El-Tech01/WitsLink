@@ -3,53 +3,88 @@
   <head>
     <meta charset="utf-8">
     <title>witsHire</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <script  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   </head>
   <body>
+
     <div >
-      <h1 class="header"> WitsHire </h1>
+      <h1 class="header"> Wits Hire </h1>
     </div>
     <div class="container">
-      <button type="submit" name="Search" onclick="href='www.google.com'"> Search </button>
+      <a href = "http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php"><button type="submit" name="Search"> Search </button></a>
       <input type="text" name="searchtxt" placeholder="Search">
       <p>Once a student, Always a Witsee!!</p>
     </div>
     <p>You can filter the avaible jobs either by Department, Job type or Job status below.</p>
     <div class="box" >
+
       <div class="filter">
         <form class="label" action="index.html" method="Get">
           <label for="department">Department</label>
-          <select  name=" Department">
-            <option value="Mathematics">Mathematics</option>
-            <option value="CSAM">CSAM</option>
-            <option value="STATS-ACTSCIE">STATS-ACTSCIE</option>
-            <option value="MSL/MSB">MSL/MSB</option>
-            <option value="LibraryWork">Library-Work</option>
-          </select>
+          <select  name=" Department" id="Department">
+            <option value="nothing" selected="selected">select filter</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?DEPT_ID=10003">CSAM</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?DEPT_ID=10002">MSL/MSB</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?DEPT_ID=10001">Library Word</option>
+            </select>
         </form>
+           <script type="text/javascript">
+            var urlJobStatus = document.getElementById('Department');
+              urlJobStatus.onchange = function(){
+                  var userOpt = this.options(this.selectedIndex);
+                  if(userOpt.value != "nothing"){
+                      window.open(userOpt.value,"Filtered by Job Title","");
+                  }
+              }
+          </script>
     </div>
 
       <div class="filter">
         <form class="label" action="index.html" method="Get">
           <label for="department">Job Title</label>
-          <select  name=" Job Title">
-            <option value="Tutoring">Tutoring</option>
-            <option value="Cleaning">Cleaning</option>
-            <option value="Facilitator">Facilitator</option>
+          <select  name=" Job Title" id ="JobTitle">
+            <option value="nothing" selected="selected">select filter</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOb_TITLE=Tutoring">Tutoring</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOb_TITLE=Cleaning">Cleaning</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOb_TITLE=Facilitator">Facilitator</option>
           </select>
         </form>
+             <script type="text/javascript">
+            var urlJobStatus = document.getElementById('JobTitle');
+              urlJobStatus.onchange = function(){
+                  var userOpt = this.options(this.selectedIndex);
+                  if(userOpt.value != "nothing"){
+                      window.open(userOpt.value,"Filtered by Job Title","");
+                  }
+              }
+          </script>
       </div>
-      <div class="filter">
-        <form class="label" action="index.html" method="Get">
-          <label for="department">Job Status</label>
-          <select  name=" Job Status">
-            <option value="Once-Off">Once-Off</option>
-            <option value="Full-Time">Full-Time</option>
-            <option value="Vacational">Vacational</option>
-            <option value="Part-Time">Part-Time</option>
+      <div>
+        <form name="JobStatus">
+          <label>Job Status</label>
+          <select  name="JobStatus" id ="JobStatus">
+              <option value="nothing" selected="selected">select filter</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOB_STATUS=Full-Time">Full_Time</option>
+              <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOB_STATUS=Part-Time">Part-Time</option>
+            <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOB_STATUS=Once-Off">Once-Off</option>
+              <option value="http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?JOB_STATUS=Vacational">Vacational</option>
           </select>
         </form>
-      </div>
+        <script type="text/javascript">
+            var urlJobStatus = document.getElementById('JobStatus');
+              urlJobStatus.onchange = function(){
+                  var userOpt = this.options(this.selectedIndex);
+                  if(userOpt.value != "nothing"){
+                      window.open(userOpt.value,"Filtered by Job Status","");
+                  }
+              }
+          </script>
+        </div>
+
     </div>
     <br>
     <div class="big-Pbox">
@@ -60,6 +95,7 @@
             </p>
             <small>Deadline: 03 March 2020</small>
         </div>
+
         <div class="p-box">
             <h2>Mathematics</h2>
             <h3>Tutoring</h3>
@@ -67,6 +103,7 @@
             </p>
             <small>Deadline:31 January 2020 </small>
         </div>
+
         <div class="p-box">
             <h2>CLM Library</h2>
             <h3>Cleaner</h3>
@@ -74,76 +111,77 @@
             </p>
             <small>Deadline:06 February 2020 </small>
       </div>
-  </div>
-  <div class="big-Pbox">
-      <div class="p-box">
-          <h2>MSL</h2>
-          <h3>Admin</h3>
-          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
-          </p>
-          <small>Deadline: 03 March 2020</small>
-      </div>
-      <div class="p-box">
-          <h2>Mathematics</h2>
-          <h3>Tutoring</h3>
-          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
-          </p>
-          <small>Deadline:31 January 2020 </small>
-      </div>
-      <div class="p-box">
-          <h2>CLM Library</h2>
-          <h3>Cleaner</h3>
-          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
-          </p>
-          <small>Deadline:06 February 2020 </small>
-    </div>
-  </div>
-  <div class="big-Pbox">
-      <div class="p-box">
-          <h2>MSL</h2>
-          <h3>Admin</h3>
-          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
-          </p>
-          <small>Deadline: 03 March 2020</small>
-      </div>
-      <div class="p-box">
-          <h2>Mathematics</h2>
-          <h3>Tutoring</h3>
-          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
-          </p>
-          <small>Deadline:31 January 2020 </small>
-      </div>
-      <div class="p-box">
-          <h2>CLM Library</h2>
-          <h3>Cleaner</h3>
-          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
-          </p>
-          <small>Deadline:06 February 2020 </small>
-    </div>
-  </div>
-  <div class="big-Pbox">
-      <div class="p-box">
-          <h2>MSL</h2>
-          <h3>Admin</h3>
-          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
-          </p>
-          <small>Deadline: 03 March 2020</small>
-      </div>
-      <div class="p-box">
-          <h2>Mathematics</h2>
-          <h3>Tutoring</h3>
-          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
-          </p>
-          <small>Deadline:31 January 2020 </small>
-      </div>
-      <div class="p-box">
-          <h2>CLM Library</h2>
-          <h3>Cleaner</h3>
-          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
-          </p>
-          <small>Deadline:06 February 2020 </small>
-    </div>
 
+  </div>
+  <div class="big-Pbox">
+      <div class="p-box">
+          <h2>MSL</h2>
+          <h3>Admin</h3>
+          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
+          </p>
+          <small>Deadline: 03 March 2020</small>
+      </div>
+
+      <div class="p-box">
+          <h2>Mathematics</h2>
+          <h3>Tutoring</h3>
+          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
+          </p>
+          <small>Deadline:31 January 2020 </small>
+      </div>
+      <div class="p-box">
+          <h2>CLM Library</h2>
+          <h3>Cleaner</h3>
+          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
+          </p>
+          <small>Deadline:06 February 2020 </small>
+    </div>
+  </div>
+  <div class="big-Pbox">
+      <div class="p-box">
+          <h2>MSL</h2>
+          <h3>Admin</h3>
+          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
+          </p>
+          <small>Deadline: 03 March 2020</small>
+      </div>
+      <div class="p-box">
+          <h2>Mathematics</h2>
+          <h3>Tutoring</h3>
+          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
+          </p>
+          <small>Deadline:31 January 2020 </small>
+      </div>
+      <div class="p-box">
+          <h2>CLM Library</h2>
+          <h3>Cleaner</h3>
+          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
+          </p>
+          <small>Deadline:06 February 2020 </small>
+    </div>
+  </div>
+  <div class="big-Pbox">
+      <div class="p-box">
+          <h2>MSL</h2>
+          <h3>Admin</h3>
+          <p>Looking for students to work at the msl labs and also at the collection centre to help with the facilitation of the labs and hand out packs from the msl collection centre.Students have to be atleast on their second year for this job.
+          </p>
+          <small>Deadline: 03 March 2020</small>
+      </div>
+      <div class="p-box">
+          <h2>Mathematics</h2>
+          <h3>Tutoring</h3>
+          <p>This job is for a postgraduate with a degree in mathematics looking for some extra income at Wits university.It involves tutoring maths1 which is calculus1 and algebra 1,maths2 which comprises of linear algebra,abstract maths,multivariable calculus and basic analysis no third year causes because there arent any tuts for 3rd years.
+          </p>
+          <small>Deadline:31 January 2020 </small>
+      </div>
+      <div class="p-box">
+          <h2>CLM Library</h2>
+          <h3>Cleaner</h3>
+          <p>Looking for Students to help with the Cleaning of the discussion rooms in the CLM library and also with the repacking of the textbooks after usage by Students.
+          </p>
+          <small>Deadline:06 February 2020 </small>
+    </div>
   </div>
   </body>
 

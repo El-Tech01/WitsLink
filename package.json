@@ -7,6 +7,9 @@
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "bin": {
+    "coveralls": "./bin/coveralls.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/El-Tech01/WitsStudentRecruitment.git"
@@ -19,5 +22,5 @@
   "homepage": "https://github.com/El-Tech01/WitsStudentRecruitment#readme",
   "devDependencies": {
     "jest": "^25.1.0"
-  }
+  },
 }

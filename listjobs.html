@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WitsLink</title>
+
+    <link rel="stylesheet" type="text/css" href="listjobs.css">
+
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+    <script>
+    //function to clear division when reloading 
+      function clearcontent(elementID) {
+        document.getElementById(elementID).innerHTML = "";
+      }
+    </script>
+
+    <div >
+      <h1 class="header"> WitsLink </h1>
+    </div>
+
+    <div class="container">
+      <button type="submit" name="Search" id="btnSearch"> Search </button>
+      <input type="text" name="searchtxt" placeholder="Search">
+      <p>Once a student, Always a Witsie!!</p>
+    </div>
+
+    <p>You can filter the avaible jobs either by Department, Job type or Job status below.</p>
+
+    <div class="box" >
+      <div class="filter">
+        <form class="label" action="index.html" method="Get">
+          <label for="department">Department</label>
+          <select  name=" Department" id="Department">
+            <option id="csamOPT" onclick="clearcontent('jobDiv')">CSAM</option>
+            <option id="mslOPT" onclick="clearcontent('jobDiv')">MSL/MSB</option>
+            <option id="libraryOPT" onclick="clearcontent('jobDiv')">Library Work</option>
+            </select>
+        </form>
+      </div>
+
+      <div class="filter">
+        <form class="label" action="index.html" method="Get">
+          <label for="department">Job Title</label>
+          <select  name=" Job Title" id ="JobTitle">
+            <option name="Tutoring" id="tutoringOPT" onclick="clearcontent('jobDiv')">Tutoring</option>
+            <option name="Cleaning" id="cleaingOPT" onclick="clearcontent('jobDiv')">Cleaning</option>
+            <option name="Facilitator" id="facilitatorOPT" onclick="clearcontent('jobDiv')">Facilitator</option>
+          </select>
+        </form>
+      </div>
+
+      <div>
+        <form name="JobStatus">
+          <label>Job Status</label>
+          <select  name="JobStatus" id ="JobStatus">
+            <option id="fullTimeOPT" onclick="clearcontent('jobDiv')">Full-Time</option>
+              <option id="partTimeOPT" onclick="clearcontent('jobDiv')">Part-Time</option>
+            <option id="onceOffOPT" onclick="clearcontent('jobDiv')">Once-Off</option>
+              <option id="vacationalOPT" onclick="clearcontent('jobDiv')">Vacational</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <br>
+      <div class="box"
+          <div id="jobDiv">
+          </div>
+      </div>
+        <script src="listjobs.js"></script>
+  </body>
+
+</html>

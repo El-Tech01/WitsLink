@@ -5,9 +5,7 @@
     <title>WitsLink</title>
 
     <link rel="stylesheet" type="text/css" href="listjobs.css">
-
     <script  src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-
   </head>
 
   <body>
@@ -53,8 +51,8 @@
         </form>
       </div>
 
-      <div>
-        <form name="JobStatus">
+      <div class="filter">
+        <form name="label" action="listjobs.html" method="Get">
           <label>Job Status</label>
           <select  name="JobStatus" id ="JobStatus">
             <option id="fullTimeOPT" onclick="clearcontent('jobDiv')">Full-Time</option>
@@ -66,8 +64,8 @@
       </div>
     </div>
     <br>
-      <div class="box"
-          <div id="jobDiv">
+      <div class="big-Pbox">
+          <div id="jobDiv" class="p-box">
           </div>
       </div>
         <script src="listjobs.js"></script>

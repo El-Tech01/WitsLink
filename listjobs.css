@@ -1,9 +1,7 @@
 body{
     background-color:#e4e4e4;
      color:#555555;
-
      font-family: Arial, Helvetica, sans-serif;
-
 }
 
 button{
@@ -46,8 +44,6 @@ button:hover{
   margin:10px;
   float:left;
   margin:10px;
-
-
 }
 
 .container{
@@ -78,15 +74,19 @@ button:hover{
 }
 
 .big-Pbox .p-box{
-
   float:left;
-  width:33.3%;
+  width:70%;
   padding:10px;
+  align-content: center;
   background-color: #787878;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px dotted #fff;
   box-sizing: border-box;
   line-height: 1.6em;
+}
+
+.p-box id{
+  text-align: center;
 
 }

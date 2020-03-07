@@ -1,4 +1,3 @@
-
 //on load list all jobs avaible
 var avaibleJobs = new XMLHttpRequest();
 avaibleJobs.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php');
@@ -7,7 +6,6 @@ avaibleJobs.onload = function(){
     HtmlDisplayJob(JobStatusData);
 };
 avaibleJobs.send();
-
 
 //when clicking the csam option
 var csamopt = document.getElementById("csamOPT");
@@ -92,6 +90,7 @@ partTimeopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
+
 //job status: Full_Time
 var fullTimeopt = document.getElementById("fullTimeOPT");
 fullTimeopt.addEventListener("click",function(){
@@ -115,6 +114,7 @@ vacationalopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
+
 //Job status : Once-Off
 var onceOffopt = document.getElementById("onceOffOPT");
 onceOffopt.addEventListener("click",function(){
@@ -126,6 +126,7 @@ onceOffopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
+
 // list jobs given data array
 var disJobDiv = document.getElementById("jobDiv");
 function HtmlDisplayJob(data) {
@@ -136,7 +137,7 @@ function HtmlDisplayJob(data) {
   }
   else{
     for(i = 0; i < data.length; i++){
-      htmlString += "<h2>"+data[i].JOB_TITLE+"</h2> <h3>"+data[i].JOB_STATUS+"</h3> <p>"
+      htmlString += "<br><h2>"+data[i].JOB_TITLE+"</h2> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
       +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+"</small>";
     }
   }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coveralls":"jest --coverage --coverageReporters=text-lcov | coveralls",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "bin": {

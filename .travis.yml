@@ -1,6 +1,13 @@
+sudo: false
+
 language: node_js
+
 node_js:
-  - 7
-  before_script:
-  - npm install -g gulp-cli
-script: gulp
+    - node
+
+install:
+  - npm ci
+
+script:
+  - npm run lint
+  -nmp run test:coveralls

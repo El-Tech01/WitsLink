@@ -1,13 +1,20 @@
-sudo: false
-
 language: node_js
 
 node_js:
     - node
+cache: npm
 
 install:
   - npm ci
 
 script:
-  - npm run lint
-  -nmp run test:coveralls
+  - npm test
+  -nmp run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: build
+  github-token: $GITHUB_TOKEN
+on:
+  branch: master

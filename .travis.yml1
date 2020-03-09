@@ -1,0 +1,25 @@
+sudo: false
+
+language: node_js
+
+node_js:
+    - node
+cache: npm
+
+install:
+  - npm ci
+
+script:
+  - npm test
+  -nmp run build
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: build
+  github-token: $GITHUB_TOKEN
+on:
+  branch: master

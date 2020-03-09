@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest"
-    "build": "webpack --config webpack.config.js"
+     "build:js"
   },
   "repository": {
     "type": "git",

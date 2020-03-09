@@ -10,6 +10,9 @@ install:
 script:
   - npm test
   -nmp run build
+branches:
+  only:
+    - master
 
 deploy:
   provider: pages

@@ -1,25 +1,19 @@
-sudo: false
-
-language: node_js
-
-node_js:
-    - node
-cache: npm
-
-install:
-  - npm ci
-
-script:
-  - npm test
-  -nmp run build
-branches:
-  only:
+--- 
+branches: 
+  only: 
     - master
-
-deploy:
+cache: npm
+deploy: 
+  github-token: $GITHUB_TOKEN
+  local_dir: build
   provider: pages
   skip-cleanup: true
-  local_dir: build
-  github-token: $GITHUB_TOKEN
-on:
+install: 
+  - "npm ci"
+language: node_js
+node_js: 
+  - node
+script: "-npm test -nmp run build"
+sudo: false
+true: 
   branch: master

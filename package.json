@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest"
-     "build": "jobsum.js"
+    "build": "jobsum.js"
   },
   "repository": {
     "type": "git",

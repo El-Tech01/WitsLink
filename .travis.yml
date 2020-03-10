@@ -9,7 +9,7 @@ cache: npm
 
 install:
   - npm ci
-  - npm --save-dev webpack
+  - npm webpack
 script:
   - npm test
   - npm run build

@@ -9,11 +9,13 @@
   "dependencies": {},
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "coveralls": "^3.0.0"
   },
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage"
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
   },
   "repository": {
     "type": "git",

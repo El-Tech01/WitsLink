@@ -1,7 +1,7 @@
 {
-  "name": "jobsum",
+  "name": "witsstudentrecruitment",
   "version": "1.0.0",
-  "description": "test js",
+  "description": "tests",
   "main": "jobsum.js",
   "bin": {
     "witsstudentrecruitment": "coveralls.js"
@@ -12,16 +12,14 @@
   },
   "scripts": {
     "test": "jest"
-    "build": "jobsum.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/El-Tech01/WitsStudentRecruitment.git"
   },
   "keywords": [
-    "test",
-    "job",
-    "sum"
+    "testing",
+    "code"
   ],
   "author": "EL-Tech",
   "license": "ISC",

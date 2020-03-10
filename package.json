@@ -17,7 +17,8 @@
   },
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "coveralls": "jest"
   },
   "repository": {
     "type": "git",

@@ -16,10 +16,10 @@ branches:
   only:
   - master
 
-deploy:
-  provider: pages
-  cleanup: true
-  local_dir: build
-  token: $GITHUB_TOKEN
-on:
-  branch: master
+##deploy:
+  #provider: pages
+  #cleanup: true
+  #local_dir: build
+  #token: $GITHUB_TOKEN
+#on:
+#  branch: master 

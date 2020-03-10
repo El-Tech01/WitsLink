@@ -10,8 +10,8 @@ cache: npm
 install:
   - npm ci
 script:
-  - checkout
   - npm test
+  - npm run coverage
   - npm run coveralls
 branches:
   only:

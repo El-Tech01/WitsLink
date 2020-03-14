@@ -1,6 +1,6 @@
 //on load list all jobs avaible
 var avaibleJobs = new XMLHttpRequest();
-avaibleJobs.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php');
+avaibleJobs.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php');
 avaibleJobs.onload = function(){
     var JobStatusData = JSON.parse(avaibleJobs.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -11,7 +11,7 @@ avaibleJobs.send();
 var csamopt = document.getElementById("csamOPT");
 csamopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php?DEPT_ID=10003');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php?DEPT_ID=10003');
   urlJobStatus.onload = function(){
     var JobStatusData = JSON.parse(urlJobStatus.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -23,7 +23,7 @@ csamopt.addEventListener("click",function(){
 var mslopt = document.getElementById("mslOPT");
 mslopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?DEPT_ID=10001');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?DEPT_ID=10001');
   urlJobStatus.onload = function(){
     var JobStatusData = JSON.parse(urlJobStatus.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -35,7 +35,7 @@ mslopt.addEventListener("click",function(){
 var libraryopt = document.getElementById("libraryOPT");
 libraryopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?DEPT_ID=10002');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?DEPT_ID=10002');
   urlJobStatus.onload = function(){
     var JobStatusData = JSON.parse(urlJobStatus.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -47,7 +47,7 @@ libraryopt.addEventListener("click",function(){
 var tutoringopt = document.getElementById("tutoringOPT");
 tutoringopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_TITLE=Tutoring');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_TITLE=Tutoring');
   urlJobStatus.onload = function(){
     var JobStatusData = JSON.parse(urlJobStatus.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -59,7 +59,7 @@ tutoringopt.addEventListener("click",function(){
 var cleaningopt = document.getElementById("cleaingOPT");
 cleaningopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_TITLE=Cleaning');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_TITLE=Cleaning');
   urlJobStatus.onload = function(){
     var JobStatusData = JSON.parse(urlJobStatus.responseText);
     HtmlDisplayJob(JobStatusData);
@@ -71,7 +71,7 @@ cleaningopt.addEventListener("click",function(){
 var facilitatoropt = document.getElementById("facilitatorOPT");
 facilitatoropt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_TITLE=Facilitator');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_TITLE=Facilitator');
   urlJobStatus.onload = function(){
       var JobStatusData = JSON.parse(urlJobStatus.responseText);
       HtmlDisplayJob(JobStatusData);
@@ -83,7 +83,7 @@ facilitatoropt.addEventListener("click",function(){
 var partTimeopt = document.getElementById("partTimeOPT");
 partTimeopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_STATUS=Part-Time');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_STATUS=Part-Time');
   urlJobStatus.onload = function(){
       var JobStatusData = JSON.parse(urlJobStatus.responseText);
       HtmlDisplayJob(JobStatusData);
@@ -95,7 +95,7 @@ partTimeopt.addEventListener("click",function(){
 var fullTimeopt = document.getElementById("fullTimeOPT");
 fullTimeopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_STATUS=Full-Time');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_STATUS=Full-Time');
   urlJobStatus.onload = function(){
       var JobStatusData = JSON.parse(urlJobStatus.responseText);
       HtmlDisplayJob(JobStatusData);
@@ -107,7 +107,7 @@ fullTimeopt.addEventListener("click",function(){
 var vacationalopt = document.getElementById("vacationalOPT");
 vacationalopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_STATUS=Vacational');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_STATUS=Vacational');
   urlJobStatus.onload = function(){
       var JobStatusData = JSON.parse(urlJobStatus.responseText);
       HtmlDisplayJob(JobStatusData);
@@ -119,7 +119,7 @@ vacationalopt.addEventListener("click",function(){
 var onceOffopt = document.getElementById("onceOffOPT");
 onceOffopt.addEventListener("click",function(){
   var urlJobStatus = new XMLHttpRequest();
-  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/listjobsfilter.php/?JOB_STATUS=Once-Off');
+  urlJobStatus.open('GET','http://lamp.ms.wits.ac.za/~s1879990/JobsExtract.php/?JOB_STATUS=Once-Off');
   urlJobStatus.onload = function(){
       var JobStatusData = JSON.parse(urlJobStatus.responseText);
       HtmlDisplayJob(JobStatusData);

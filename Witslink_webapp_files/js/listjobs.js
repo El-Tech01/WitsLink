@@ -127,9 +127,9 @@ onceOffopt.addEventListener("click",function(){
   urlJobStatus.send();
 });
 
-// list jobs given data array
-// function needs to be tested
 var disJobDiv = document.getElementById("jobDiv");
+// list jobs given data array
+//function to be tested
 function HtmlDisplayJob(data) {
   var htmlString="",hold="";
   hold=data[0].JOB_TITLE;
@@ -144,4 +144,3 @@ function HtmlDisplayJob(data) {
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);
 }
-//test for fun HtmlDisplayJob

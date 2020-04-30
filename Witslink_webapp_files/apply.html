@@ -68,7 +68,7 @@
           <p>Please ensure you fill all attributes of the the form below</p>
         </div>
 
-        <form name="sentMessage" id="contactForm" novalidate>
+        <form name="getStudentDetailsForm" id="getAppDetailsForm" action="http://lamp.ms.wits.ac.za/~s1604352/TESTHTML.php/?" method="POST">
 
             <div class="col-md-12">
               <div class="form-group">
@@ -77,197 +77,199 @@
                 </div>
                 </div>
                 <!-- Name -->
-                <div class="col-md-8">
-                <ul>
-                  <li>
+            <div class="col-md-8" >
+              <ul>
 
-                <div class="contact-item">
-                  <h4>Biographical info</h4>
-                </div>
-
-              </li>
-                  <li>
-                      <p> First Name</p>
-                      <div class="form-group">
-                <input type="text" id="Fname" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
-                </div>
-              <!--/div-->
-              </li>
               <li>
-                <p> Last Name</p>
-              <div class="form-group">
-                <input type="text" id="Lname" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <!--  IDno   -->
+                  <div class="contact-item">
+                    <h4>Biographical info</h4>
+                  </div>
+              </li>
+              <form name="getStudentData" id="getStudentData">
+
+              <li>
+                  <p>First Name</p>
+                  <div class="form-group">
+                  <input type="text" id="Fname" class="form-control" name="TEST_DATA" placeholder="" required >
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+
+              <li>
+                  <p> Last Name</p>
+                  <div class="form-group">
+                  <input type="text" id="Lname" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="form-group">
                   <p> ID or Passport Number</p>
-                <input type="text" id="id_or_passport" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </li>
-
-            <li>
-              <div class="form-group">
-                <!--  studentno   -->
-                  <p> Student Number</p>
-                <input type="text" id="studentno" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </li>
-            <!--- dateofbirth -->
-            <li>
-              <p> Date of birth</p>
-              <div class="form-group">
-                <input type="date" id="dateofbirth" class="form-control" placeholder="Date-of-birth" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </li>
-            <!-- Race -->
-            <li>
-            <div class="form-group">
-                <p>Ethnicity</p>
-              <input type="text" id="Race" class="form-control" placeholder="" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-
-          </li>
-
-              <li>
-                <p>Select gender:</p>
-                <ul>
-  <li><input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label> </li><br>
-  <li><input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label> </li> <br>
-  <li><input type="radio" id="other" name="gender" value="other">
-  <label for="other">Other</label></li>
-
-</ul>
-<br>
+                  <input type="text" id="id_or_passport" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
               </li>
 
-              <!-- Marital Status -->
               <li>
-              <div class="form-group">
+                  <div class="form-group">
+                  <p> Student Number</p>
+                  <input type="text" id="studentno" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+              <!--- dateofbirth -->
+              <li>
+                  <p> Date of birth</p>
+                  <div class="form-group">
+                  <input type="date" id="dateofbirth" class="form-control" placeholder="Date-of-birth" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+              <!-- Race -->
+              <li>
+                  <div class="form-group">
+                  <p>Ethnicity</p>
+                  <input type="text" id="Race" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+
+              <li>
+                  <p>Select gender:</p>
+                  <ul>
+                  <li><input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label> </li><br>
+                  <li><input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label> </li> <br>
+                  <li><input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label></li>
+                  </ul>
+                  <br>
+              </li>
+
+                <!-- Marital Status -->
+              <li>
+                  <div class="form-group">
                   <p>Marital Status</p>
-                <input type="text" id="MaritalStatus" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
+                  <input type="text" id="MaritalStatus" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
 
-            </li>
-            <li>
-            <div class="form-group">
-                <p>Primary Language</p>
-              <input type="text" id="PrimaryLanguage" class="form-control" placeholder="" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
+              <li>
+                  <div class="form-group">
+                  <p>Primary Language</p>
+                  <input type="text" id="PrimaryLanguage" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
 
-          </li>
+              <li>
+                  <p>Any Disability</p>
+                  <ul>
+                  <li><input type="radio" id="yes" name="hasdisability" value="hasdisability">
+                  <label for="yes">YES</label> </li> <br>
+                  <li><input type="radio" id="nodisability" name="nodisability" value="nodisability">
+                  <label for="nodisability">No</label>
+                  </li>
+                  <br>
+                  </ul>
+              </li>
 
-          <li>
-            <p>Any Disability</p>
-            <ul>
-<li><input type="radio" id="yes" name="hasdisability" value="hasdisability">
-<label for="yes">YES</label> </li> <br>
-<li><input type="radio" id="nodisability" name="nodisability" value="nodisability">
-<label for="nodisability">No</label> </li> <br>
-</ul>
-          </li>
-<li>
-<div class="form-group">
-    <p>If clicked yes, specify</p>
-  <input type="text" id="disabilityspec" class="form-control" placeholder="" >
-  <p class="help-block text-danger"></p>
-</div>
+              <li>
+                  <div class="form-group">
+                  <p>If clicked yes, specify</p>
+                  <input type="text" id="disabilityspec" class="form-control" placeholder="" >
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+              <br>
+              <br>
 
-</li>
+              <li>
+                <div class="contact-item">
+                <h4>Contact details</h4>
+                </div>
+              </li>
+              <!-- Email address-->
+              <li>
+                  <p>Email address</p>
+                  <div class="form-group">
+                  <input type="email" id="email" class="form-control" placeholder="" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
 
-<br>
-<br>
-          <li>
-            <div class="contact-item">
-              <h4>Contact details</h4>
-            </div>
-          </li>
-            <!-- Email address-->
-           <li>
-             <p>Email address</p>
+              <li>
+                  <p>Phone number</p>
+                  <div class="form-group">
+                  <input type="text" id="Contactnumber" class="form-control" placeholder="  " required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="contact-item">
+                  <h4>Education</h4>
+                  </div>
+              </li>
+
+              <li>
+                  <p>Faculty enrolled in</p>
+                  <div class="form-group">
+                  <input type="text" id="faculty" class="form-control" name="faculty" value="" required="required">
+                  </div>
+              </li>
+
+              <li>
+                  <p>Year of study</p>
+                  <div class=" form-group">
+                  <input type="number" name="YOS" value="yos" id="yos">
+                  </div>
+              </li>
+
               <div class="form-group">
-                <input type="email" id="email" class="form-control" placeholder="" required="required">
-                <p class="help-block text-danger"></p>
+                  <textarea name="motivation" id="motivation" class="form-control" rows="4" placeholder="Short Motivation" maxlength="1000"required></textarea>
+                  <p class="help-block text-danger"></p>
               </div>
-         </li>
+          </form>
 
-             <li>
-               <p>Phone number</p>
-              <div class="form-group">
-                <input type="text" id="number" class="form-control" placeholder="  " required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-           </li>
-           <li>
 
-         <div class="contact-item">
-           <h4>Education</h4>
-         </div>
-
-       </li>
-       <li>
-         <p>Faculty enrolled in</p>
-         <div class="form-group">
-           <input type="text" id="faculty" class="form-control" name="faculty" value="" required="required">
-         </div>
-       </li>
-       <li>
-         <p>Year of study</p>
-         <div class=" form-group">
-           <input type="number" name="YOS" value="yos" id="yos">
-
-         </div>
-       </li>
-
-          <div class="form-group">
-            <textarea name="motivation" id="motivation" class="form-control" rows="4" placeholder="Short Motivation" maxlength="1000"required></textarea>
-            <p class="help-block text-danger"></p>
-          </div>
           <div class="col-md-6">
-          <p>Upload your transcript</p>
-          <form method="post" enctype="multipart/form-data">
+            <p>Upload your transcript</p>
+            <form method="post" enctype="multipart/form-data">
+                <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+                    <tr>
+                    <td width="246">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                    <input name="userfile" type="file" id="userfile">
+                    </td>
+                    </tr>
+                </table>
+            </form>
+            <br>
+          </div>
 
-<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
-<tr>
-<td width="246">
-<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-<input name="userfile" type="file" id="userfile">
-</td>
-<!--td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td-->
-</tr>
-</table>
-</form>
-<br>
-</div>
-<div class="col-md-6">
-        <p>Upload proof of registration</p>
-        <form method="post" enctype="multipart/form-data">
-<table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
-<tr>
-<td width="246">
-<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-<input name="userproofreg" type="file" id="userproofreg">
-</td>
-<!--td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td-->
-</tr>
-</table>
-</form>
-</div>
+          <div class="col-md-6">
+            <p>Upload proof of registration</p>
+            <form method="post" enctype="multipart/form-data">
+              <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
+                  <tr>
+                  <td width="246">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                  <input name="userproofreg" type="file" id="userproofreg">
+                  </td>
+                  <!--td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td-->
+                  </tr>
+                </table>
+              </form>
+          </div>
+
           <div id="submit application"></div>
-          <button type="submit" id="upload" class="btn btn-custom btn-lg" value="Upload">Submit Application</button>
-        </form>
-      </ul>
+            <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
+          </form>
+        </ul>
         </div>
       </div>
     </div>

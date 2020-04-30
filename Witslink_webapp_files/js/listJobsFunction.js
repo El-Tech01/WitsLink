@@ -12,6 +12,7 @@ function HtmlDisplayJob(data) {
       +data.jobs[i].JOB_DESC+" Deadline: "
       +data.jobs[i].JOB_DEADLINE;
     }
+    
   }
   return htmlString;
 }

@@ -10,7 +10,7 @@ $JOB_STATUS=$_REQUEST["JOB_STATUS"];
 $JOB_TITLE=$_REQUEST["JOB_TITLE"];
 
 $output=array();
-//no filter sent list all
+//no filter sent list all 
 if(!isset($DEPT_ID) && !isset($JOB_STATUS) && !isset($JOB_TITLE)){
     if($result =mysqli_query($link,"SELECT * FROM NEW_JOB")){
         while($row =$result->fetch_assoc()){
@@ -34,24 +34,25 @@ else if(isset($JOB_TITLE)){
     }
   }
 }
-//filter by Dept
+//filter by Dept 
 else if(isset($JOB_STATUS)){
   // $deptID=mysqli_query($link,"SELECT DEPT_ID FROM DEPT WHERE DEPT_NAME= $deptfilter ");
 if($result =mysqli_query($link,"SELECT * FROM NEW_JOB WHERE JOB_STATUS = '$JOB_STATUS' ")){
     while($row =$result->fetch_assoc()){
       $output[]=$row;
     }
-  }
-}
+  }  
+} 
 mysqli_close($link);
   if(empty($output)){
   $arr = array
     (array(
         "JOB_TITLE" => "false"
-    ));
+    ));  
   echo json_encode($arr);
   }
   else {
   echo json_encode($output);
   }
 ?>
+

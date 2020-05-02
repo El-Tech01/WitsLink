@@ -61,7 +61,7 @@
           <p>Please ensure you fill all attributes of the the form below</p>
         </div>
 
-        <form name="getStudentDetailsForm" id="getAppDetailsForm"  action="http://lamp.ms.wits.ac.za/~s1604352/TESTHT.php" method="POST">
+        <form name="getStudentDetailsForm" id="getAppDetailsForm"  action="http://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
 
             <div class="col-md-12">
               <div class="form-group">
@@ -79,7 +79,7 @@
                   </div>
               </li>
 
-              <form action="http://lamp.ms.wits.ac.za/~s1604352/TESTHT.php" method="POST">
+              <form action="http://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
               <li>
                   <p>First Name</p>
                   <div class="form-group">
@@ -123,8 +123,8 @@
 
               <li>
                   <div class="form-group">
-                  <p>Ethnicity</p>
-                  <input name="ethnicity" type="text" id="Race" class="form-control" placeholder="Race" required="required">
+                  <p>Race</p>
+                  <input name="race" type="text" id="Race" class="form-control" placeholder="Race" required="required">
                   <p class="help-block text-danger"></p>
                   </div>
               </li>
@@ -155,8 +155,15 @@
 
               <li>
                   <div class="form-group">
-                  <p>Primary Language</p>
-                  <input name="primaryLanguage" type="text" id="PrimaryLanguage" class="form-control" placeholder="Primary language" required="required">
+                  <p>Home Language</p>
+                  <input name="homeLanguage" type="text" id="homeLanguage" class="form-control" placeholder="home language" required="required">
+                  <p class="help-block text-danger"></p>
+                  </div>
+              </li>
+              <li>
+                  <div class="form-group">
+                  <p>Other Languages</p>
+                  <input name="otherLanguages" type="text" id="otherLanguages" class="form-control" placeholder="Other languages">
                   <p class="help-block text-danger"></p>
                   </div>
               </li>
@@ -164,10 +171,10 @@
               <li>
                   <p>Any Disability</p>
                   <ul>
-                  <li><input type="radio" id="yes" name="disability" value="hasdisability">
+                  <li><input type="radio" id="yes" name="disability" value="0">
                   <label for="yes">YES</label> </li> <br>
-                  <li><input type="radio" id="nodisability" name="disability" value="nodisability">
-                  <label for="nodisability">No</label>
+                  <li><input type="radio" id="nodisability" name="disability" value="1">
+                  <label for="no">No</label>
                   </li>
                   <br>
                   </ul>
@@ -220,9 +227,16 @@
               </li>
 
               <li>
+                  <p>School</p>
+                  <div class="form-group">
+                  <input type="text" id="school" class="form-control" name="school" value="" placeholder="School of">
+                  </div>
+              </li>
+
+              <li>
                   <p>Year of study</p>
                   <div class=" form-group">
-                  <input type="number" name="YOS" value="yos" id="yos">
+                  <input type="number" name="YOS" value="yos" id="yos" required="required">
                   </div>
               </li>
 
@@ -230,14 +244,17 @@
                   <textarea name="motivation" id="motivation" class="form-control" rows="4" placeholder="Short Motivation" maxlength="1000"required></textarea>
                   <p class="help-block text-danger"></p>
               </div>
-
+              <div class="form-group">
+                  <textarea name="skill" id="skill" class="form-control" rows="4" placeholder="Your Skills"d></textarea>
+                  <p class="help-block text-danger"></p>
+              </div>
               <!--<input type="submit" value="Submit">-->
 
           </form>
 
           <div class="col-md-6">
 
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" action="">
               <p>Upload proof of registration</p>
               <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
                   <tr>
@@ -257,11 +274,12 @@
                     </td>
                     </tr>
                 </table>
+                <button type="Upload" name"Upload" class="btn btn-custom btn-lg">Upload files</button>
               </form>
           </div>
           <br>
           <div id="submit application"></div>
-            <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
+            <button type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
           </form>
         </ul>
         </div>

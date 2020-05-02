@@ -18,6 +18,7 @@ $specifyDisability=$_POST["specifyDisability"];
 $emailAddress=$_POST["emailAddress"];
 $phoneNumber=$_POST["phoneNumber"];
 $faculty=$_POST["faculty"];
+$school=$_POST["school"];
 $YOS=$_POST["YOS"];
 $motivation=$_POST["motivation"];
 $otherLanguages=$_POST["otherLanguages"];
@@ -31,7 +32,7 @@ $transcript=$_POST["transcript"];
 if ($conn){
         if(isset($firstName,$lastName,$idOrPass,$studentNo,$dateOfBirth,$race,$gender,$maritalStatus,$homeLanguage,
         $disability,$emailAddress,$phoneNumber,$faculty,$YOS,$motivation)){
-        $query ="INSERT INTO STUDENT VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $query ="INSERT INTO STUDENT VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         $studentNo=mysqli_real_escape_string($conn, $studentNo);
         $fName=mysqli_real_escape_string($conn, $firstName);
@@ -44,12 +45,13 @@ if ($conn){
         $race=mysqli_real_escape_string($conn, $race);
         $homeLanguage=mysqli_real_escape_string($conn, $homeLanguage);
         $otherLanguages=mysqli_real_escape_string($conn, $otherLanguages);
-        $disability=mysqli_real_escape_string($conn, $disability;
+        $disability=mysqli_real_escape_string($conn, $disability);
         $specifyDisability=mysqli_real_escape_string($conn, $specifyDisability);
         $phoneNumber=mysqli_real_escape_string($conn, $phoneNumber);
         $emailAddress=mysqli_real_escape_string($conn, $emailAddress);
         $faculty=mysqli_real_escape_string($conn, $faculty);
-        $motivation=mysqli_real_escape_string($conn, $motivation);
+	$faculty=mysqli_real_escape_string($conn, $faculty);
+        $school=mysqli_real_escape_string($conn, $school);
         $skill=mysqli_real_escape_string($conn, $skill);
         /*$proofReg=mysqli_real_escape_string($conn, $proofReg);
         $transcript=mysqli_real_escape_string($conn, $transcript);
@@ -59,7 +61,7 @@ if ($conn){
            die(mysqli_error($conn));
         }
         else{
-            mysqli_stmt_bind_param($stmt, "isssidsssssissssss"$studnetNo,$fName,$lName,$idORPass,$yos,$dob,$gender,$maritalStatus,$race,$homeLanguage,$otherLanguages,$disability,$specifyDisability,$phoneNumber,$emailAddress,$faculty,$motivation,$skill);
+            mysqli_stmt_bind_param($stmt, "isssissssssisssssss",$studentNo,$fName,$lName,$idOrPass,$yos,$dob,$gender,$maritalStatus,$race,$homeLanguage,$otherLanguages,$disability,$specifyDisability,$phoneNumber,$emailAddress,$faculty,$school,$motivation,$skill);
                 //mysqli_stmt_execute($stmt);
                     if($stmt->execute()){
                         $output=true;
@@ -68,6 +70,7 @@ if ($conn){
                     else {
                         $output=false;
                         echo json_encode($output);
+			die(mysqli_error($conn));
                     }
             }
     }

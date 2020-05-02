@@ -43,14 +43,11 @@
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about" class="page-scroll">Info Hub</a></li>
-          <li><a href="#services" class="page-scroll">Job Vacancies</a></li>
-          <li><a href="#portfolio" class="page-scroll">Campus LookOut</a></li>
-          <li><a href="#contact" class="page-scroll">HR Login</a></li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" class="page-scroll">Info Hub</a></li>
+      </ul>
+    </div>
       <!-- /.navbar-collapse -->
     </div>
   </nav>
@@ -66,7 +63,7 @@
         </div>
     
 
-<form name="getStudentDetailsForm" id="getAppDetailsForm" action="http://lamp.ms.wits.ac.za/~s1604352/TESTHTML.php/?" method="POST">
+<form name="getJobDetailsForm" id="getJobDetailsForm" action="http://lamp.ms.wits.ac.za/~s1879990/Addjob.php" method="POST">
 
     <div class="col-md-12">
       <div class="form-group">
@@ -81,12 +78,12 @@
             <h4>Job Details</h4>
           </div>
       </li>
-      <form name="getStudentData" id="getStudentData">
+      <form action ="http://lamp.ms.wits.ac.za/~s1879990/Addjob.php" method = "POST">
 
       <li>
           <p>Job Title</p>
           <div class="form-group"> <!-- Fname -> jobTitle -->
-          <input type="text" id="Fname" class="form-control" name="TEST_DATA" placeholder="" required >
+          <input type="text" id="jobTitle" class="form-control" name="TEST_DATA" placeholder="" required >
           <p class="help-block text-danger"></p>
           </div>
       </li>
@@ -94,7 +91,7 @@
       <li>
           <p>Job Status</p>
           <div class="form-group"> <!-- Lname -> jobStatus -->
-          <input type="text" id="Lname" class="form-control" placeholder="" required="required">
+          <input type="text" id="jobStatus" class="form-control" placeholder="" required="required">
           <p class="help-block text-danger"></p>
           </div>
       </li>
@@ -108,11 +105,11 @@
       </li>
 
       <div class="form-group">
-        <textarea name="motivation" id="motivation" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
+        <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
         <p class="help-block text-danger"></p>
     </div>
 
-      <div id="submit application"></div>
+      <div id="add job"></div>
             <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit">Add Job</button>
           </form>
         </ul>

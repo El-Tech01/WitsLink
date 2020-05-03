@@ -23,9 +23,9 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
+-->
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -63,7 +63,7 @@
         </div>
 
 
-<form name="getJobDetailsForm" id="getJobDetailsForm" action="http://lamp.ms.wits.ac.za/~s1879990/Addjob.php" method="POST">
+<form name="getJobDetailsForm" id="getJobDetailsForm" action="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
 
     <div class="col-md-12">
       <div class="form-group">
@@ -78,38 +78,38 @@
             <h4>Job Details</h4>
           </div>
       </li>
-      <form action ="http://lamp.ms.wits.ac.za/~s1879990/Addjob.php" method = "POST">
+      <form action ="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method = "POST">
 
-      <li>
-          <p>Job Title</p>
-          <div class="form-group"> <!-- Fname -> jobTitle -->
-          <input type="text" id="jobTitle" class="form-control" name="TEST_DATA" placeholder="" required >
-          <p class="help-block text-danger"></p>
-          </div>
-      </li>
+          <li>
+              <p>Job Title</p>
+              <div class="form-group"> <!-- Fname -> jobTitle -->
+              <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder="" required >
+              <p class="help-block text-danger"></p>
+              </div>
+          </li>
 
-      <li>
-          <p>Job Status</p>
-          <div class="form-group"> <!-- Lname -> jobStatus -->
-          <input type="text" id="jobStatus" class="form-control" placeholder="" required="required">
-          <p class="help-block text-danger"></p>
-          </div>
-      </li>
+          <li>
+              <p>Job Status</p>
+              <div class="form-group"> <!-- Lname -> jobStatus -->
+              <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
+              <p class="help-block text-danger"></p>
+              </div>
+          </li>
 
-      <li>
-            <p>Job Application Deadline</p>
-            <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
-            <input type="date" id="jobDeadline" class="form-control" placeholder="Deadline Date" required="required">
-            <p class="help-block text-danger"></p>
+          <li>
+                <p>Job Application Deadline</p>
+                <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
+                <input type="date" id="jobDeadline" class="form-control" placeholder="Deadline Date" name="jobDeadline" required="required">
+                <p class="help-block text-danger"></p>
+                </div>
+          </li>
+
+            <div class="form-group">
+              <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
+              <p class="help-block text-danger"></p>
             </div>
-      </li>
 
-      <div class="form-group">
-        <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
-        <p class="help-block text-danger"></p>
-    </div>
-
-      <div id="add job"></div>
+            <div id="add job"></div>
             <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit">Add Job</button>
           </form>
         </ul>
@@ -126,12 +126,12 @@
     <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a></p>
   </div>
 </div>
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <!--<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
   <script type="text/javascript" src="js/nivo-lightbox.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/contact_me.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>-->
   </body>
 </html>

@@ -137,8 +137,10 @@ function HtmlDisplayJob(data) {
     htmlString = "<h2>"+"No available jobs"+"<h2>";
   }
   else{
+    var c='"';
+    var a="apply"+"."+"html";
     for(i = 0; i < data.length; i++){
-      htmlString += "<br><h2>"+data[i].JOB_TITLE+"</h2> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
+      htmlString += "<br><a href="+c+a+c+"><h2>"+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
       +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+  "</small>";
     }
   }

@@ -4,6 +4,7 @@
     $database= "d1879990";
     $conn = mysqli_connect("127.0.0.1", $username, $password, $database);
 
+    $dept_id = $_POST["Department"];
     $jobTitle = $_POST["jobTitle"];
     $jobStatus = $_POST["jobStatus"];
     $jobDeadline = $_POST["jobDeadline"];
@@ -11,7 +12,7 @@
 
     if($conn){
         if(isset($jobTitle, $jobStatus, $jobDeadline, $jobDesc)){
-            $query = "INSERT INTO NEW_JOB (DEPT_ID,JOB_TITLE,JOB_STATUS,JOB_DESC,JOB_DEADLINE) VALUES(10003,?,?,?,?)";
+            $query = "INSERT INTO NEW_JOB (DEPT_ID,JOB_TITLE,JOB_STATUS,JOB_DESC,JOB_DEADLINE) VALUES($dept_id,?,?,?,?)";
 
             $jobTitle = mysqli_real_escape_string($conn,$jobTitle);
             $jobStatus = mysqli_real_escape_string($conn,$jobStatus);
@@ -27,11 +28,12 @@
                     //mysqli_stmt_execute($stmt);
                         if($stmt->execute()){
                             $output=true;
-                            echo json_encode($output);
+                            echo json_encode("successfully posted a Job");
                         }
                         else {
                             $output=false;
-                            echo json_encode($output);
+                            echo json_encode("Job post was not successful");
+                            /*echo json_encode($output);*/
                             die(mysqli_error($conn));
                         }
             }
@@ -43,5 +45,5 @@
         die("Connection was not established");
     }
     mysqli_close($conn);
-    die(mysqli_error($conn));
+    die();
 ?>

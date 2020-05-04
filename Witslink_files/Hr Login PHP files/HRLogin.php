@@ -12,7 +12,7 @@ while($row =$result->fetch_assoc()){
   $output[]=$row;
 }
 }
-$dID= $row[0];
+
 mysqli_close($link);
 if(empty($output)){
 echo json_encode("false");

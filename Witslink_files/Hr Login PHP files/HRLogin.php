@@ -1,23 +1,37 @@
 <?php
-$username="s1879990";
-$password="s1879990";
-$database= "d1879990";
-$link = mysqli_connect("127.0.0.1", $username, $password, $database);
 
-$deptID= $_REQUEST["deptID"];
-$deptpassword =$_REQUEST["deptPassword"];
+$username = "s1879990";
+$password = "s1879990";
+$database = "d1879990";
+$conn  = mysqli_connect("127.0.0.1",$username,$password,$database);
+$uname = $_REQUEST["USERNAME"];
+$pass = $_REQUEST["PASSWORD"];
 $output=array();
-if($result =mysqli_query($link,"SELECT * FROM DEPARTMENT WHERE DEPT_ID= $deptID")){
-while($row =$result->fetch_assoc()){
-  $output[]=$row;
-}
-}
 
-mysqli_close($link);
-if(empty($output)){
-echo json_encode("false");
-}else {
-echo json_encode($output);
+if(!isset($uname,$pass)){
+    $output="did not send the required output";
 }
+else{
+
+    if($result =mysqli_query($conn,"SELECT * FROM DEPARTMENT WHERE DEPT_ID='$uname' and DEPT_PASSWORD = '$pass'")){
+        while($row =$result->fetch_assoc()){
+          $output[]=$row;
+        }
+    }
+    else{
+        die(mysqli_error($conn));
+    }
+}
+mysqli_close($conn);
+  if(empty($output)){
+  $arr = array
+    (array(
+        "DEPT_ID" => "false"
+    ));
+     echo json_encode($arr);
+  }
+  else {
+     echo json_encode($output);
+  }
+  die();
 ?>
-

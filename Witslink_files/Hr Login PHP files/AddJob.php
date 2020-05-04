@@ -28,7 +28,7 @@
                     //mysqli_stmt_execute($stmt);
                         if($stmt->execute()){
                             $output=true;
-                            echo json_encode("successfully posted a Job");
+                            echo json_encode("Job post successfull!");
                         }
                         else {
                             $output=false;

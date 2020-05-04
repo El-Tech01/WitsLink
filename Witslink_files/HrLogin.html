@@ -7,8 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Favicons
-    ================================================== -->
+<!-- Favicons-->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
@@ -18,34 +17,44 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet
-    ================================================== -->
+<link rel="stylesheet" type="text/css" href="css/Login.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/Login.css">
 
 </head>
-<body>
-<div class="box" >
-<h1>Login</h1>
-    <form name="Login" action="HrLogin.html" method="GET">
-        <input type="text" name="USERNAME" placeholder="Username" id="username" value="" required="required">
-        <input type="password" name="PASSWORD" placeholder="Password" id="password" value="" required="required">
-        <input type="submit" name="submit" value="Login" id="BtnLogin">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    <div class="box" >
+  <div class="filter">
+    <div class="box" >
+    <h1>Login</h1>
+    <form class="label" action="log.html" method="Get">
+      <input type="text" name="USERNAME" placeholder="Username" id="username" value="" required="required">
+      <input type="password" name="PASSWORD" placeholder="Password" id="password" value="" required="required">
+      <input onclick="parseValue();" type="submit" name="submit" value="Login" id="BtnLogin">
     </form>
-<div id="Test" class="p-box">
+  </div>
+  </div>
+        <script src="js/verifyPwd.js"></script>
+        <script>
+            function parseValue(){
+                var username = document.getElementById("username").value;
+                localStorage.setItem("textvalue",username);
+                return false;
+            }
+        </script>
+  </div>
 </div>
-</div>
-<script src="js/verifyPwd.js"></script>
+<script src="js/listjobs.js"></script>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/SmoothScroll.js"></script>
 <script type="text/javascript" src="js/nivo-lightbox.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

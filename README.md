@@ -4,6 +4,3 @@
  [![Build Status](https://travis-ci.com/El-Tech01/WitsStudentRecruitment.svg?branch=master)](https://travis-ci.com/El-Tech01/WitsStudentRecruitment)
 
 [![Coverage Status](https://coveralls.io/repos/github/El-Tech01/WitsStudentRecruitment/badge.svg)](https://coveralls.io/github/El-Tech01/WitsStudentRecruitment)
-
-[![codecov](https://codecov.io/gh/El-Tech01/WitsStudentRecruitment/branch/master/graph/badge.svg)](https://codecov.io/gh/El-Tech01/WitsStudentRecruitment)
-

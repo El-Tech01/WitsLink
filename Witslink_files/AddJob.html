@@ -7,8 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Favicons
-    ================================================== -->
+<!-- Favicons-->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
@@ -18,12 +17,13 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet
-    ================================================== -->
+<!-- Stylesheet-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+
 </head>
+
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -53,9 +53,7 @@
           <p>Please ensure you fill all attributes of the the form below</p>
         </div>
 
-
-<form name="getJobDetailsForm" id="getJobDetailsForm" action="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
-
+<form  onload="val()" name="getJobDetailsForm" id="getJobDetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
     <div class="col-md-12">
       <div class="form-group">
         </div>
@@ -63,37 +61,36 @@
         <!-- Job Details -->
     <div class="col-md-8" >
       <ul>
-
       <li>
           <div class="contact-item">
-            <h4>Job Details</h4>
+          <h4>Job Details</h4>
           </div>
       </li>
-      <form onclick="val()" action ="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method = "POST">
+      <form onload="val()" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
         <li>
             <p>Department ID </p>
-            <input id="DEPT_ID" name="Department" value="" type="text" readonly>
+            <input id="DEPT_ID" name="department" value="" type="text" readonly>
         </li>
 
           <li>
               <p>Job Title</p>
-              <div class="form-group"> <!-- Fname -> jobTitle -->
-              <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder="" required >
+              <div class="form-group"> <!--jobTitle -->
+              <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder="Job Title" required >
               <p class="help-block text-danger"></p>
               </div>
           </li>
 
           <li>
               <p>Job Status</p>
-              <div class="form-group"> <!-- Lname -> jobStatus -->
-              <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
+              <div class="form-group"> <!--jobStatus -->
+              <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="Job Status" required="required">
               <p class="help-block text-danger"></p>
               </div>
           </li>
 
           <li>
                 <p>Job Application Deadline</p>
-                <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
+                <div class="form-group"> <!-- jobDeadline -->
                 <input type="date" id="jobDeadline" class="form-control" placeholder="Deadline Date" name="jobDeadline" required="required">
                 <p class="help-block text-danger"></p>
                 </div>
@@ -105,11 +102,12 @@
             </div>
 
             <div id="add job"></div>
-            <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit" onclick="val()">Add Job</button>
+            <button onclick="val()" type="submit" id="BtnSumbit" class="btn btn-custom btn-lg" value="Submit">Add Job</button>
           </form>
         </ul>
         </div>
       </div>
+    </form>
     </div>
 
     </div>
@@ -131,7 +129,6 @@
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
   <script type="text/javascript" src="js/nivo-lightbox.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-  <script type="text/javascript" src="js/contact_me.js"></script>
   <script type="text/javascript" src="js/main.js"></script>-->
   </body>
 </html>

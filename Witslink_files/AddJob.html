@@ -29,7 +29,7 @@
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand page-scroll" href="#page-top">WITSLINK</a>
+        <a class="navbar-brand page-scroll" href="index.html">WITSLINK</a>
         <div class="phone"><span>STUDENT</span>Plug</div>
       </div>
 
@@ -46,74 +46,83 @@
 <div id="contact">
   <div class="container">
     <div class ="page-scroll"
-    <div class="col-md-8">
-      <div class="row">
-        <div class="section-title">
-          <h2>Add a Job</h2>
-          <p>Please ensure you fill all attributes of the the form below</p>
-        </div>
-
-
-<form name="getJobDetailsForm" id="getJobDetailsForm" action="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
-
-    <div class="col-md-12">
-      <div class="form-group">
-        </div>
-
-        <!-- Job Details -->
-    <div class="col-md-8" >
-      <ul>
-
-      <li>
-          <div class="contact-item">
-            <h4>Job Details</h4>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="section-title">
+            <h2>Add a Job</h2>
+            <p>Please ensure you fill all attributes of the the form below</p>
           </div>
-      </li>
-      <form onclick="val()" action ="http://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method = "POST">
-        <li>
-            <p>Department ID </p>
-            <input id="DEPT_ID" name="Department" value="" type="text" readonly>
-        </li>
 
-          <li>
-              <p>Job Title</p>
-              <div class="form-group"> <!-- Fname -> jobTitle -->
-              <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder="" required >
-              <p class="help-block text-danger"></p>
-              </div>
-          </li>
+         
+          <div class="col-md-12">
+            <div class="form-group"></div>
 
-          <li>
-              <p>Job Status</p>
-              <div class="form-group"> <!-- Lname -> jobStatus -->
-              <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
-              <p class="help-block text-danger"></p>
-              </div>
-          </li>
+            <!-- Job Details -->
+            <div class="col-md-8" >
+              <form  onclick="val()" name="getJobDetailsForm" id="getJobDetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php" method="POST">
+                <ul>
+                    <li>
+                      <div class="contact-item">
+                        <h4>Job Details</h4>
+                      </div>
+                    </li>
 
-          <li>
-                <p>Job Application Deadline</p>
-                <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
-                <input type="date" id="jobDeadline" class="form-control" placeholder="Deadline Date" name="jobDeadline" required="required">
-                <p class="help-block text-danger"></p>
-                </div>
-          </li>
+                    
 
-            <div class="form-group">
-              <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
-              <p class="help-block text-danger"></p>
+                    <li>
+                      <p>Department ID </p>
+                      <div class="form-group">
+                        <input id="DEPT_ID" name="Department" value="" type="integer" readonly>
+                      </div>
+                    </li>
+
+
+                    <li>
+
+                      <p>Job Title</p>
+                      <div class="form-group"> <!-- Fname -> jobTitle -->
+                        <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder= "" required="required" >
+                        <p class="help-block text-danger"></p>
+                      </div>            </li>
+
+                    </li>
+
+                    <li>
+                      <p>Job Status</p>
+                      <div class="form-group"> <!-- Lname -> jobStatus -->
+                        <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <p>Job Application Deadline</p>
+                      <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
+                        <input type="date" id="jobDeadline" class="form-control" placeholder="" name="jobDeadline" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                      <div class="form-group">
+                        <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
+                        <p class="help-block text-danger"></p>
+                      </div>
+
+                      <div id="add job"></div>
+                      <input type="submit" id="BtnUpload" name = "BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
+                      
+                  </ul>
+                </form>
+
             </div>
+          </div>
 
-            <div id="add job"></div>
-            <button type="submit" id="BtnUpload" class="btn btn-custom btn-lg" value="Submit" onclick="val()">Add Job</button>
-          </form>
-        </ul>
         </div>
       </div>
     </div>
-
-    </div>
+    
   </div>
+</div>
 
   <!-- Footer Section -->
 <div id="footer">

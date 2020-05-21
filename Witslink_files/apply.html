@@ -102,7 +102,7 @@
                 <li>
                     <div class="form-group">
                     <p> Student Number</p>
-                      <input name= "studentNo" type="text" id="studentno" class="form-control" placeholder="Student number" required="required">
+                      <input name="studentNo" type="text" id="studentno" class="form-control" placeholder="Student number" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -245,7 +245,7 @@
           </form>
 
           <div class="col-md-6">
-              <form method="post" enctype="multipart/form-data" action="">
+              <form method="post" enctype="multipart/form-data" action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
               <p>Upload proof of registration</p>
               <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
                   <tr>
@@ -265,12 +265,14 @@
                     </td>
                     </tr>
                 </table>
-                <button type="Upload" name"Upload" class="btn btn-custom btn-lg">Upload files</button>
+                <button type="upload" name="upload" class="btn btn-custom btn-lg">Upload files</button>
               </form>
+
               <br>
               <div id="submit application"></div>
               <button type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
             </div>
+
         </ul>
         </div>
       </div>

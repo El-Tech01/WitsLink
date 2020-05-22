@@ -78,7 +78,7 @@ p.intro {
 
 a {
 
-	color: #1f386e;
+	color: #ffff00;
 
 	font-weight: 400;
 
@@ -923,7 +923,7 @@ header .intro-text {
 
 	padding: 100px 0 60px 0;
 
-	background: #1f386e;
+	background: #00264d;
 
 	color: rgba(255,255,255,.65);
 
@@ -1134,6 +1134,10 @@ color: #777;
 #contact .social i.fa:hover {
 
 	color: #fff;
+
+}
+#contact p {
+
 
 }
 

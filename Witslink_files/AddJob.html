@@ -46,72 +46,90 @@
 <div id="contact">
   <div class="container">
     <div class ="page-scroll"
-    <div class="col-md-8">
-      <div class="row">
-        <div class="section-title">
-          <h2>Add a Job</h2>
-          <p>Please ensure you fill all attributes of the the form below</p>
-        </div>
-
-<form  onload="val()" name="getJobDetailsForm" id="getJobDetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
-    <div class="col-md-12">
-      <div class="form-group">
-        </div>
-
-        <!-- Job Details -->
-    <div class="col-md-8" >
-      <ul>
-      <li>
-          <div class="contact-item">
-          <h4>Job Details</h4>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="section-title">
+            <h2>Add a Job</h2>
+            <p>Please ensure you fill all attributes of the the form below</p>
           </div>
-      </li>
-      <form onload="val()" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php/?" method="POST">
-        <li>
-            <p>Department ID </p>
-            <input id="DEPT_ID" name="department" value="" type="text" readonly>
-        </li>
 
-          <li>
-              <p>Job Title</p>
-              <div class="form-group"> <!--jobTitle -->
-              <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder="Job Title" required >
-              <p class="help-block text-danger"></p>
-              </div>
-          </li>
+         
+          <div class="col-md-12">
+            <div class="form-group"></div>
 
-          <li>
-              <p>Job Status</p>
-              <div class="form-group"> <!--jobStatus -->
-              <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="Job Status" required="required">
-              <p class="help-block text-danger"></p>
-              </div>
-          </li>
+            <!-- Job Details -->
+            <div class="col-md-8" >
+              <form  onclick="val()" name="getJobDetailsForm" id="getJobDetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php" method="POST">
+                <ul>
+                    <li>
+                      <div class="contact-item">
+                        <h4>Job Details</h4>
+                      </div>
+                    </li>
 
-          <li>
-                <p>Job Application Deadline</p>
-                <div class="form-group"> <!-- jobDeadline -->
-                <input type="date" id="jobDeadline" class="form-control" placeholder="Deadline Date" name="jobDeadline" required="required">
-                <p class="help-block text-danger"></p>
-                </div>
-          </li>
+                    
 
-            <div class="form-group">
-              <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
-              <p class="help-block text-danger"></p>
+                    <li>
+                      <p>Department ID </p>
+                      <div class="form-group">
+                        <input id="DEPT_ID" name="Department" value="" type="integer" readonly>
+                      </div>
+                    </li>
+
+
+                    <li>
+
+                      <p>Job Title</p>
+                      <div class="form-group"> <!-- Fname -> jobTitle -->
+                        <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder= "" required="required" >
+                        <p class="help-block text-danger"></p>
+                      </div>            </li>
+
+                    </li>
+
+                    <li>
+                      <p>Job Status</p>
+                      <div class="form-group"> <!-- Lname -> jobStatus -->
+                        <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <p>Job Application Deadline</p>
+                      <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
+                        <input type="date" id="jobDeadline" class="form-control" placeholder="" name="jobDeadline" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                      <div class="form-group">
+                        <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
+                        <p class="help-block text-danger"></p>
+                      </div>
+
+                      <div id="add job"></div>
+                      <input type="submit" id="BtnUpload" name = "BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
+                      
+                  </ul>
+                </form>
+
             </div>
 
 
+<<<<<<< HEAD
             <div id="add job"></div>
             <button onclick="val()" type="submit" id="BtnSumbit" class="btn btn-custom btn-lg" value="Submit">Add Job</button>
           </div>
           </form>
         </ul>
+=======
+>>>>>>> 01f091c6c2b69ddd661524e2e8ef139b2627bd80
         </div>
       </div>
     </form>
     </div>
-
+    
   </div>
 </div>
 

@@ -261,6 +261,22 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+a {
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
 
@@ -1176,6 +1192,16 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -2253,6 +2279,7 @@ pre code {
     margin-left: 0;
   }
 }
+/***************TABLE STUFF************************/
 table {
   background-color: transparent;
 }
@@ -2265,10 +2292,52 @@ caption {
 th {
   text-align: left;
 }
+.col1 {
+  width: 225px;
+  padding-left: 25px;
+}
+
+.col2 {
+  width: 225px;
+  padding-left: 25px;
+}
+
+.col3 {
+  width: 200px;
+}
+
+.col4 {
+  width: 160px;
+  text-align: center;
+}
+.col4-1 {
+  width: 160px;
+}
+
+.col5 {
+  width: 205px;
+  text-align: center;
+}
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
+  position: relative;
+
+}
+.thead-App{
+  font-family: sans-serif;
+  font-size: 16px;
+}
+tbody tr:hover {
+  color: #555555;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.table>.thead-App>tr>th{
+  background-color: rgba(107, 207, 238, 0.904);
+  color: #000;
+  border: 0.5px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2282,9 +2351,12 @@ th {
   border-top: 1px solid #ddd;
 }
 .table > thead > tr > th {
-  vertical-align: bottom;
+  vertical-align: middle;
   border-bottom: 2px solid #ddd;
+  background-color: rgb(65, 83, 107);
+  color: white;
 }
+
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
 .table > thead:first-child > tr:first-child > th,
@@ -2292,6 +2364,11 @@ th {
 .table > colgroup + thead > tr:first-child > td,
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
+}
+tbody tr:hover {
+  color: #555555;
+  background-color: #f5f5f5;
+  cursor: pointer;
 }
 .table > tbody + tbody {
   border-top: 2px solid #ddd;
@@ -2308,7 +2385,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #ddd;
+  border: 0.2px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2316,7 +2393,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 0.5px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {

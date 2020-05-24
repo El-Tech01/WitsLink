@@ -2,6 +2,7 @@ var BtnLogin = document.getElementById("BtnLogin");
 BtnLogin.addEventListener("click",function(){
   var urlRequest = new XMLHttpRequest();
   var user = document.getElementById("username").value;
+  localStorage.setItem("un",user);
   var password = document.getElementById("password").value;
   urlRequest.open('GET',"http://lamp.ms.wits.ac.za/~s1879990/HRLogin.php/?USERNAME="+user+"&PASSWORD="+password);
   urlRequest.onload = function(){
@@ -9,8 +10,8 @@ BtnLogin.addEventListener("click",function(){
       HtmlOutput(respond);
   };
   urlRequest.send();
-});
 
+});
 var display = document.getElementById("Test");
 function HtmlOutput(data) {
   var htmlString="",hold="";
@@ -20,7 +21,7 @@ function HtmlOutput(data) {
     //htmlString = "<p>"+"password doesnt match"+"</p>";
   }
   else{
-    htmlString= window.location.assign("AddJob.html");
+    htmlString = window.location.assign("ViewJob.html");
     display.insertAdjacentHTML('beforeend',htmlString);
     }
 }

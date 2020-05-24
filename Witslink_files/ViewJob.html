@@ -22,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+        
 
     </head>
     <body>
@@ -56,7 +57,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <form name ="viewJobForm">
+                                    <form name ="viewJobForm" id="JobTable">
                                         <div class="table-responsive">
                                             <div class="table-bordered">
                                                 <table id ="jobTable" class="table">
@@ -70,34 +71,14 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="tableBody">
-                                                        <tr data-href = "ViewApp.html"> 
-                                                            
-                                                                <td class="col1">Tutor</td>
-                                                                <td class="col2">Part-Time</td>
-                                                                <td class="col3">12/07/2020</td>
-                                                                <td class="col4">12</td>
-                                                                <td class="col5">Active</td>
                                                         
-                                                        </tr>
-                                                        <tr data-href="ViewApp.html">
-                                                                <td class="col1">Facilitator</td>
-                                                                <td class="col2">Part-Time</td>
-                                                                <td class="col3">12/05/2020</td>
-                                                                <td class="col4">12</td>
-                                                                <td class="col5">In-active</td>
-                                                        </tr>
-                                                        <tr data-href="ViewApp.html">
-                                                                <td class="col1">Discipline Enforcer</td>
-                                                                <td class="col2">Part-Time</td>
-                                                                <td class="col3">12/07/2020</td>
-                                                                <td class="col4">12</td>
-                                                                <td class="col5">Active</td>
-                                                        </tr>
                                                     </tbody>
-
+                                                    
                                                 </table>
                                             </div>
                                         </div>
+                                        <script src="js/tableRedirect.js"></script>
+                                    
                                     </form>
                                 </div>
                             </div>
@@ -106,17 +87,18 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const tRows = document.querySelectorAll("tr[data-href]");
 
-                tRows.forEach(row => {
-                    row.addEventListener("click", () => {
-                     window.location.href = row.dataset.href;
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const tRows = document.querySelectorAll("tr[data-href]");
+
+                        tRows.forEach(row => {
+                            row.addEventListener("click", () => {
+                                window.location.href = row.dataset.href;
+                            });
+                        });
+
                     });
-                });
-
-            });
-        </script>
+                </script>
     </body>
 </html>

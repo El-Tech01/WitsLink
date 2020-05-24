@@ -126,24 +126,65 @@ onceOffopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
+<<<<<<< HEAD
 var jobID;
+=======
+
+
+>>>>>>> ae4ac16dc377da58cd138d5562014a5c08802bec
 var disJobDiv = document.getElementById("jobDiv");
 // list jobs given data array
 //function to be tested
 function HtmlDisplayJob(data) {
-  var htmlString="",hold="";
+  var htmlString="",hold="", jobId;
+
   hold=data[0].JOB_TITLE;
+  
+
   if(!hold.localeCompare("false")){
     htmlString = "<h2>"+"No available jobs"+"<h2>";
   }
   else{
     var c='"';
     var a="apply"+"."+"html";
+    var b ="jclick";
     for(i = 0; i < data.length; i++){
+<<<<<<< HEAD
       htmlString += '<form><a href="apply.html"><h2 onclick="parseValue()">'+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
       +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+"</small>"+
       '<input id="JOB_ID" hidden name ="JOB_ID" value='+data[i].JOB_ID+'><form><br><br>';
+=======
+      htmlString += "<br><a href="+c+a+c+" id="+c+b+c+" ><h2>"+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
+      +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+  "</small>";
+>>>>>>> ae4ac16dc377da58cd138d5562014a5c08802bec
     }
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);
 }
+function highlight(e) {
+  if (selected[0]) selected[0].className = '';
+  e.target.parentNode.className = 'selected';
+  
+  var value = $(this).find(".selected h2:first").html();
+  var idvalue = $(this).find(".selected h3:first").html();
+  if (value == "" || idvalue=="") alert("Value not Sent");
+
+  else valueReciever(value) 
+  idvalueReciever(idvalue);
+}
+
+var jobs = document.getElementById('jobDiv'),
+  selected = jobs.getElementsByClassName('selected');
+jobs.onclick = highlight;
+
+function valueReciever(value) {
+  localStorage.setItem("jname", value);
+
+}
+
+function idvalueReciever(idvalue) {
+  localStorage.setItem("jid", idvalue);
+
+}
+
+ 

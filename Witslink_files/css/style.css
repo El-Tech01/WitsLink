@@ -120,7 +120,7 @@ hr {
 
 	background: #1E7A46;
 
-	margin-bottom: 20px;
+	mar	gin-bottom: 20px;
 
 	border: 0;
 
@@ -1139,6 +1139,273 @@ color: #777;
 #contact p {
 
 
+}
+
+/* resume Section */
+
+#resume {
+
+ padding: 100px 0 60px 0;
+
+ background: #141f1f;
+
+ color: rgba(255,255,255,.65);
+
+}
+
+#resume .section-title {
+
+ margin-bottom: 40px;
+
+}
+
+#resume .page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+	width: 21cm;
+  height: 29.7cm;
+}
+
+#resume h2 {
+
+ color: #fff;
+
+ margin-top: 10px;
+
+ margin-bottom: 15px;
+
+ padding-bottom: 15px;
+
+ border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+}
+
+#resume h4 {
+
+ color: #000000;
+
+ margin-top: 22px;
+
+margin-left: 5%;
+
+margin-right: 5%;
+
+ margin-bottom: 40px;
+
+ padding-bottom: 20px;
+
+ border-bottom: 2px solid rgb(105,105,105);
+
+ font-weight: bold;
+
+}
+
+#resume form {
+
+ padding-top: 20px;
+
+}
+
+#resume h3 {
+
+ font-size: 17px;
+
+ font-weight: 600;
+
+}
+
+#resume .text-danger {
+
+ color: #cc0033;
+
+ text-align: left;
+
+}
+
+#resume .btn-custom {
+
+ margin: 30px 0;
+
+ background: transparent;
+
+ border: 2px solid #fff;
+
+}
+
+#resume .btn-custom:hover {
+
+ color: #1f386e;
+
+ background: #fff;
+
+}
+
+label {
+
+ font-size: 12px;
+
+ font-weight: 400;
+
+ font-family: 'Open Sans', sans-serif;
+
+ float: left;
+
+}
+
+#resume .form-control {
+
+ display: block;
+
+ width: 100%;
+
+ padding: 6px 12px;
+
+ font-size: 16px;
+
+ line-height: 1.42857143;
+
+ color: #444;
+
+ background-color: #fff;
+
+ background-image: none;
+
+ border: 1px solid #ddd;
+
+ border-radius: 0;
+
+ -webkit-box-shadow: none;
+
+ box-shadow: none;
+
+ -webkit-transition: none;
+
+ -o-transition: none;
+
+ transition: none;
+
+}
+
+#resume .form-control:focus {
+
+ border-color: #999;
+
+ outline: 0;
+
+ -webkit-box-shadow: transparent;
+
+ box-shadow: transparent;
+
+}
+
+.form-control::-webkit-input-placeholder {
+
+color: #777;
+
+}
+
+.form-control:-moz-placeholder {
+
+color: #777;
+
+}
+
+.form-control::-moz-placeholder {
+
+color: #777;
+
+}
+
+.form-control:-ms-input-placeholder {
+
+color: #777;
+
+}
+
+#resume .contact-item {
+
+ margin: 20px 0;
+
+}
+
+#resume .contact-item span {
+
+ color: rgba(255,255,255,1);
+
+ display: block;
+
+}
+
+#resume .social {
+
+ border-top: 1px solid rgba(255,255,255,0.1);
+
+ padding-top: 50px;
+
+ margin-top: 50px;
+
+ text-align: center;
+
+}
+
+#resume .social ul li {
+
+ display: inline-block;
+
+ margin: 0 10px;
+
+}
+
+#resume .social i.fa {
+
+ font-size: 24px;
+
+ padding: 10px;
+
+ color: rgba(255,255,255,0.6);
+
+ transition: all 0.3s;
+
+}
+
+#resume .social i.fa:hover {
+
+ color: #fff;
+
+}
+#resume p{
+	color: #000000;
+
+}
+#resume p.leftpane{
+	color: #000000;
+	 font-weight: bold;
+	margin-left: 10%;
+}
+#resume p.paragraph{
+	margin-left: 5%;
+	margin-left: 5%;
+}
+
+#resume p.pull-right{
+
+	font-size: .9375rem
+	text-align: left;
+	color: #ffff;
+	margin-right: 16%;
+}
+#resume p.pull-left{
+
+	font-size: .9375rem
+	text-align: right;
+	color: #ffff;
+	margin-left: 16%;
+}
+#resume a{
+	color: #ffff;
 }
 
 /* Footer Section*/

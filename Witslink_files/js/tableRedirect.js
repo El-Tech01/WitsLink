@@ -5,8 +5,7 @@ window.addEventListener("load", function(){
     urltable.open('GET', "http://lamp.ms.wits.ac.za/~s1879990/jobsPosted.php/?USERNAME="+deptidInt);
     urltable.onload = function () {
         var respondData = JSON.parse(urltable.responseText);
-        loadJobTable(respondData);
-        
+        loadJobTable(respondData);   
     };
     urltable.send();
 });
@@ -16,11 +15,13 @@ var postedJobs = document.getElementById("tableBody");
 
  function loadJobTable(res) {
     var  htmlString ="", hold="";
+
      hold = res[0].JOB_TITLE;
         if (!hold.localeCompare("false")) {
               htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
               
         } else {
+
              var jobstat;
              var today = new Date();
             for (var i = 0; i < res.length; i++) {
@@ -29,11 +30,11 @@ var postedJobs = document.getElementById("tableBody");
                  } else if (new Date(res[i].JOB_DEADLINE) >= today) {
                      jobstat = 'Active';
                  }
-                 htmlString +=  '<tr><td>' + res[i].JOB_TITLE +
-                     '</td><td>' + res[i].JOB_STATUS +
-                     '</td><td>' + res[i].JOB_DEADLINE +
-                     '</td><td>' + res[i].NUM_OF_APPS +
-                     '</td><td>' + jobstat +
+                 htmlString +=  '<tr id = "dataRow"><td class="col1">' + res[i].JOB_TITLE +
+                     '</td><td class="col2">' + res[i].JOB_STATUS +
+                     '</td><td class="col3">' + res[i].JOB_DEADLINE +
+                     '</td><td class="col4">' + res[i].NUM_OF_APPS +
+                     '</td><td class="col5">' + jobstat +
                      '</td></tr>';
             }
            

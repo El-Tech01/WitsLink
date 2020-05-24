@@ -42,7 +42,7 @@ if($result =mysqli_query($link,"SELECT * FROM NEW_JOB WHERE JOB_STATUS = '$JOB_S
       $output[]=$row;
     }
   }  
-} 
+}
 mysqli_close($link);
   if(empty($output)){
   $arr = array

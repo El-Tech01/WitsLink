@@ -1388,11 +1388,25 @@ color: #777;
 #resume p.paragraph{
 	margin-left: 5%;
 	margin-left: 5%;
-	
-
 }
 
+#resume p.pull-right{
 
+	font-size: .9375rem
+	text-align: left;
+	color: #ffff;
+	margin-right: 16%;
+}
+#resume p.pull-left{
+
+	font-size: .9375rem
+	text-align: right;
+	color: #ffff;
+	margin-left: 16%;
+}
+#resume a{
+	color: #ffff;
+}
 
 /* Footer Section*/
 

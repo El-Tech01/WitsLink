@@ -1,33 +1,43 @@
- $(document).ready(function () {
-     loadJobList();
- });
+window.addEventListener("load", function(){
+    var urltable = new XMLHttpRequest();
+    var dept_id = localStorage.getItem("un");
+    var deptidInt = parseInt(dept_id);
+    urltable.open('GET', "http://lamp.ms.wits.ac.za/~s1879990/jobsPosted.php/?USERNAME="+deptidInt);
+    urltable.onload = function () {
+        var respondData = JSON.parse(urltable.responseText);
+        loadJobTable(respondData);
+        
+    };
+    urltable.send();
+});
 
- function loadJobList() {
+var postedJobs = document.getElementById("tableBody");
 
-     $.ajax({
-         type: 'POST',
-         url: 'https://lamp.ms.wits.ac.za/~1879990/',
-         dataType: 'json',
-         data: {},
-         contentType: 'application/json; charset=utf-8',
-         success: function (res) {
-             for (var i = 0; i < res.length; i++) {
 
-                 var jobstat;
-                 var today = new Date();
-
-                 if (res[i]['jobDeadline']< today ) {
-                    jobstat = '<tr><td>In-active</td></tr>';
-                 } else if (res[i]['jobDeadline']>= today) {
-                     jobstat = '<tr><td>Active</td></tr>';
+ function loadJobTable(res) {
+    var  htmlString ="", hold="";
+     hold = res[0].JOB_TITLE;
+        if (!hold.localeCompare("false")) {
+              htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
+              
+        } else {
+             var jobstat;
+             var today = new Date();
+            for (var i = 0; i < res.length; i++) {
+                 if (new Date(res[i].JOB_DEADLINE) < today ) {
+                    jobstat = 'In-Active';
+                 } else if (new Date(res[i].JOB_DEADLINE) >= today) {
+                     jobstat = 'Active';
                  }
-                 $('#tableBody').append('<tr><td hidden>' + res[i]['jobTitle'] +
-                     '</td><td>' + res[i]['jobStatus'] +
-                     '</td><td>' + res[i]['jobDeadline'] +
-                     '</td><td>' + res[i]['NUM_OF_APPS'] +
+                 htmlString +=  '<tr><td>' + res[i].JOB_TITLE +
+                     '</td><td>' + res[i].JOB_STATUS +
+                     '</td><td>' + res[i].JOB_DEADLINE +
+                     '</td><td>' + res[i].NUM_OF_APPS +
                      '</td><td>' + jobstat +
-                     '</td></tr>')
-             }
-         }
-     });
+                     '</td></tr>';
+            }
+           
+        }
+        postedJobs.insertAdjacentHTML('beforeend', htmlString);
  }
+

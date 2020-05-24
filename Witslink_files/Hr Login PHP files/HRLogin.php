@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $username = "s1879990";
 $password = "s1879990";
@@ -16,6 +17,7 @@ else{
     if($result =mysqli_query($conn,"SELECT * FROM DEPARTMENT WHERE DEPT_ID='$uname' and DEPT_PASSWORD = '$pass'")){
         while($row =$result->fetch_assoc()){
           $output[]=$row;
+          $_SESSION["USERNAME"] = $row["DEPT_ID"];
         }
     }
     else{

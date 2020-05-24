@@ -29,11 +29,11 @@ var postedJobs = document.getElementById("tableBody");
                  } else if (new Date(res[i].JOB_DEADLINE) >= today) {
                      jobstat = 'Active';
                  }
-                 htmlString +=  '<tr><td>' + res[i].JOB_TITLE +
-                     '</td><td>' + res[i].JOB_STATUS +
-                     '</td><td>' + res[i].JOB_DEADLINE +
-                     '</td><td>' + res[i].NUM_OF_APPS +
-                     '</td><td>' + jobstat +
+                 htmlString +=  '<tr><td class="col1">' + res[i].JOB_TITLE +
+                     '</td><td class="col2">' + res[i].JOB_STATUS +
+                     '</td><td class="col3">' + res[i].JOB_DEADLINE +
+                     '</td><td class="col4">' + res[i].NUM_OF_APPS +
+                     '</td><td class="col5">' + jobstat +
                      '</td></tr>';
             }
            

@@ -126,7 +126,7 @@ onceOffopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
-
+var jobID;
 var disJobDiv = document.getElementById("jobDiv");
 // list jobs given data array
 //function to be tested
@@ -140,8 +140,9 @@ function HtmlDisplayJob(data) {
     var c='"';
     var a="apply"+"."+"html";
     for(i = 0; i < data.length; i++){
-      htmlString += "<br><a href="+c+a+c+"><h2>"+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
-      +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+  "</small>";
+      htmlString += '<form><a href="apply.html"><h2 onclick="parseValue()">'+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
+      +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+"</small>"+
+      '<input id="JOB_ID" hidden name ="JOB_ID" value='+data[i].JOB_ID+'><form><br><br>';
     }
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);

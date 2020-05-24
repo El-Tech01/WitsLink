@@ -23,9 +23,13 @@
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
+<script>
+  function val(){
+    document.getElementById("JOB_ID").value=localStorage.getItem("JOB_ID");
+  }
+</script>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -62,7 +66,8 @@
             <div class="col-md-12">
               <div class="form-group">
                 <div class="contact-item">
-                  <h3>Job name</h3>
+                  <p>Job ID</p>
+                  <input id="JOB_ID" name="JOB_ID">
                 </div>
                 </div>
                 <!-- Name -->

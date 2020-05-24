@@ -12,8 +12,52 @@ function HtmlDisplayJob(data) {
       +data.jobs[i].JOB_DESC+" Deadline: "
       +data.jobs[i].JOB_DEADLINE;
     }
-    
+
   }
   return htmlString;
 }
 exports.HtmlDisplayJob = HtmlDisplayJob;
+
+
+ function loadJobTable(res) {
+    var  htmlString ="", hold="";
+     hold = res[0].JOB_TITLE;
+        if (!hold.localeCompare("false")) {
+              htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
+
+        } else {
+             var jobstat;
+             var today = new Date();
+            for (var i = 0; i < res.length; i++) {
+                 if (new Date(res[i].JOB_DEADLINE) < today ) {
+                    jobstat = 'In-Active';
+                 } else if (new Date(res[i].JOB_DEADLINE) >= today) {
+                     jobstat = 'Active';
+                 }
+                 htmlString +=  '<tr><td class="col1">' + res[i].JOB_TITLE +
+                     '</td><td class="col2">' + res[i].JOB_STATUS +
+                     '</td><td class="col3">' + res[i].JOB_DEADLINE +
+                     '</td><td class="col4">' + res[i].NUM_OF_APPS +
+                     '</td><td class="col5">' + jobstat +
+                     '</td></tr>';
+            }
+
+        }
+        postedJobs.insertAdjacentHTML('beforeend', htmlString);
+ }
+ exports.loadJobTable = loadJobTable;
+
+
+ function HtmlOutput(data) {
+   var htmlString="",hold="";
+   hold=data[0].DEPT_ID;
+   if(!hold.localeCompare("false")){
+     alert("wrong password or username");
+     //htmlString = "<p>"+"password doesnt match"+"</p>";
+   }
+   else{
+     htmlString = window.location.assign("ViewJob.html");
+     display.insertAdjacentHTML('beforeend',htmlString);
+     }
+ }
+ exports.HtmlOutput=HtmlOutput;

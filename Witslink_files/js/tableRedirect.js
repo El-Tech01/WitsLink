@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
     urltable.onload = function () {
         var respondData = JSON.parse(urltable.responseText);
         loadJobTable(respondData);
-        
+
     };
     urltable.send();
 });
@@ -19,7 +19,7 @@ var postedJobs = document.getElementById("tableBody");
      hold = res[0].JOB_TITLE;
         if (!hold.localeCompare("false")) {
               htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
-              
+
         } else {
              var jobstat;
              var today = new Date();
@@ -29,15 +29,15 @@ var postedJobs = document.getElementById("tableBody");
                  } else if (new Date(res[i].JOB_DEADLINE) >= today) {
                      jobstat = 'Active';
                  }
-                 htmlString +=  '<tr><td class="col1">' + res[i].JOB_TITLE +
-                     '</td><td class="col2">' + res[i].JOB_STATUS +
+
+                 htmlString +=  '<tr><td class="col1"><a href="ViewApp.html">' + res[i].JOB_TITLE +
+                     '</a></td><td class="col2">' + res[i].JOB_STATUS +
                      '</td><td class="col3">' + res[i].JOB_DEADLINE +
                      '</td><td class="col4">' + res[i].NUM_OF_APPS +
                      '</td><td class="col5">' + jobstat +
                      '</td></tr>';
             }
-           
+
         }
         postedJobs.insertAdjacentHTML('beforeend', htmlString);
  }
-

@@ -28,6 +28,11 @@
     document.getElementById("JOB_ID").value=localStorage.getItem("JOB_ID");
     document.getElementById("JOB_TITLE").value=localStorage.getItem("JOB_TITLE");
   }
+  function load(){
+    document.getElementById('submitApplication').onclick = function(){
+        document.getElementById('StudentNo').value = document.getElementById('studentNo').value;
+    }
+}
 </script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
@@ -62,15 +67,17 @@
           <p>Please ensure you fill all attributes of the the form below</p>
         </div>
 
-        <form id="DetailsForm"  action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
-
+        <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+          <form action="https://lamp.ms.wits.ac.za/~s1879990/Application.php" method="post">
             <div class="col-md-12">
               <div class="form-group">
                 <div class="contact-item">
-                  <p>Job ID</p>
-                  <p id="JOB_TITL"><p>
-                  <input id="JOB_ID" name="JOB_ID"><br>
-                  <input id="JOB_TITLE" name="JOB_TITLE">
+
+                  <p>Job name</p>
+                  <input id="JOB_TITLE" name="JOB_TITLE" disabled><br>
+                  <input id="JOB_ID" name="JOB_ID" hidden><br>
+                  <input id="StudentNo" name="STUDENTNO" disabled>
+
                 </div>
                 </div>
                 <!-- Name -->
@@ -215,6 +222,14 @@
                 </li>
 
                 <li>
+                    <p>Password</p>
+                    <div class="form-group">
+                      <input name="password" type="password" id="password" class="form-control" placeholder="password" required="required">
+                    <p class="help-block text-danger"></p>
+                    </div>
+                </li>
+
+                <li>
                     <div class="contact-item">
                     <h4>Education</h4>
                     </div>
@@ -278,12 +293,13 @@
 
               <br>
               <div id="submit application"></div>
-              <button type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
+              <button onclick="load()" type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
             </div>
 
         </ul>
         </div>
       </div>
+    </form>
     </div>
 </form>
     </div>

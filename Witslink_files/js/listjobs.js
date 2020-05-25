@@ -143,9 +143,10 @@ function HtmlDisplayJob(data) {
     var a="apply"+"."+"html";
     var b ="jclick";
     for(i = 0; i < data.length; i++){
-      htmlString += '<form><a href="apply.html"><h2 onclick="parseValue()">'+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
+      htmlString += '<form  onclick="parseValue()"><a href="apply.html"><h2>'+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
       +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+"</small>"+
-      '<input id="JOB_ID" hidden name ="JOB_ID" value='+data[i].JOB_ID+'><form><br><br>';
+      '<input id="JOB_ID" hidden name="JOB_ID" value='+data[i].JOB_ID+
+      '><br><input id="JOB_TITLE" hidden name="JOB_TITLE" value='+data[i].JOB_TITLE+'><form><br><br>';
     }
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);

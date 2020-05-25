@@ -126,12 +126,12 @@ onceOffopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
-var jobID;
+
 var disJobDiv = document.getElementById("jobDiv");
 // list jobs given data array
 //function to be tested
 function HtmlDisplayJob(data) {
-  var htmlString="",hold="", jobId;
+  var htmlString="",hold="";
 
   hold=data[0].JOB_TITLE;
 

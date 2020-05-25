@@ -88,16 +88,11 @@
             </div>
         </div>
                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                        const tRows = document.querySelectorAll("tr[data-href]");
-
-                        tRows.forEach(row => {
-                            row.addEventListener("click", () => {
-                                window.location.href = row.dataset.href;
-                            });
-                        });
-
-                    });
+                   $(document).ready(function(){
+                    $(document.body).on("click", "tr[data-href]", function() {
+                        window.location.href = this.dataset.href;
+                    })
+                   });
                 </script>
 
       <!-- Footer Section -->

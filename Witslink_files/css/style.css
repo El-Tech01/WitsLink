@@ -78,7 +78,7 @@ p.intro {
 
 a {
 
-	color: #ffff00;
+	color: #407b8d;
 
 	font-weight: 400;
 
@@ -120,7 +120,7 @@ hr {
 
 	background: #1E7A46;
 
-	mar	gin-bottom: 20px;
+	margin-bottom: 20px;
 
 	border: 0;
 
@@ -1392,14 +1392,14 @@ color: #777;
 
 #resume p.pull-right{
 
-	font-size: .9375rem
+	font-size: .9375rem;
 	text-align: left;
 	color: #ffff;
 	margin-right: 16%;
 }
 #resume p.pull-left{
 
-	font-size: .9375rem
+	font-size: .9375rem;
 	text-align: right;
 	color: #ffff;
 	margin-left: 16%;

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.97% </span>
+                <span class="strong">90.32% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>22/31</span>
+                <span class='fraction'>28/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/10</span>
+                <span class='fraction'>6/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.43% </span>
+                <span class="strong">89.29% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>20/28</span>
+                <span class='fraction'>25/28</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -119,7 +119,9 @@
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -169,16 +171,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//var disJobDiv = document.getElementById("jobDiv");
@@ -230,17 +234,19 @@ exports.HtmlDisplayJob = HtmlDisplayJob;
  exports.loadJobTable = loadJobTable;
 &nbsp;
 &nbsp;
- function <span class="fstat-no" title="function not covered" >HtmlOutput(</span>data) {
-   var htmlString=<span class="cstat-no" title="statement not covered" >"",</span>hold=<span class="cstat-no" title="statement not covered" >"";</span>
-<span class="cstat-no" title="statement not covered" >   hold=data[0].DEPT_ID;</span>
-<span class="cstat-no" title="statement not covered" >   if(!hold.localeCompare("false")){</span>
-<span class="cstat-no" title="statement not covered" >     alert("wrong password or username");</span>
-     //htmlString = "&lt;p&gt;"+"password doesnt match"+"&lt;/p&gt;";
+ function HtmlOutput(data) {
+   var htmlString="",hold="";
+   hold=data.jobs[0].DEPT_ID;
+   <span class="missing-if-branch" title="else path not taken" >E</span>if(!hold.localeCompare("false")){
+     //alert("wrong password or username");
+     htmlString = 'wrong password or username';
    }
    else{
-<span class="cstat-no" title="statement not covered" >     htmlString = window.location.assign("ViewJob.html");</span>
-<span class="cstat-no" title="statement not covered" >     display.insertAdjacentHTML('beforeend',htmlString);</span>
+<span class="cstat-no" title="statement not covered" >     htmlString = 'ViewJob.html';</span>
+     //htmlString = window.location.assign("ViewJob.html");
+     //display.insertAdjacentHTML('beforeend',htmlString);
      }
+     return htmlString;
  }
  exports.HtmlOutput=HtmlOutput;
 &nbsp;</pre></td></tr></table></pre>
@@ -250,7 +256,7 @@ exports.HtmlDisplayJob = HtmlDisplayJob;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu May 28 2020 23:41:19 GMT+0200 (South Africa Standard Time)
+                at Fri May 29 2020 09:05:54 GMT+0200 (South Africa Standard Time)
             </div>
         </div>
         <script src="prettify.js"></script>

@@ -37,3 +37,13 @@ test("test the json data array from the php request with jobs available and load
       '</td></tr>';
 expect(loadJobTable(obj)).toBe(htmlString);
 });
+
+//password
+const{HtmlOutput}=require("./listJobsFunction");
+test("test the json array to test password of department",()=>{
+  var hold =  '{"jobs":[' +
+  '{"DEPT_ID":"false"}]}';
+  obj = JSON.parse(hold);
+  var   htmlString = 'wrong password or username';
+  expect(HtmlOutput(obj)).toBe(htmlString);
+});

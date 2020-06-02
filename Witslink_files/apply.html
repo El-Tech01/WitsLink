@@ -27,15 +27,15 @@
 <script>
   function val(){
     document.getElementById("JOB_ID").value=localStorage.getItem("j");
-    document.getElementById("JOB_TITLE").value=localStorage.getItem("JOB_TITLE");
   }
   function load(){
     document.getElementById('submitApplication').onclick = function(){
         document.getElementById('StudentNo').value = document.getElementById('studentNo').value;
+        motivat
     }
 }
 </script>
-
+ 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
 <!-- Navigation-->
@@ -76,7 +76,7 @@
             <div class="col-md-10" >
             
               <div class="contact-item" id="jobName">
-                <input hidden id="JOB_ID" type="text">
+                <input id="JOB_ID" hidden name="JobID">
              </div>
              <script type="text/javascript" src="js/showJobTitle.js"></script>
 
@@ -137,14 +137,14 @@
                 <li>
                   <p>Race</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="Race" required="required">
+                  <select class="dropbtn" id="Race" name="race" required="required">
                   <div class="dropdown-content">
                     <option class="dropdown-content" value="null">Select option</option>
                     <option class="dropdown-content" value="Black">Black</option>
                     <option class="dropdown-content" value="White">White</option>
                     <option class="dropdown-content "value="Indian">Indian</option>
                   </div>
-                  </Select>
+                  </select>
                 </div>
                 </li>
                 <br><br>
@@ -167,7 +167,7 @@
                 <li>
                   <p>Marital Status</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="MaritalStatus" required="required"> Marital Status
+                  <select class="dropbtn" id="MaritalStatus" name= "maritalStatus" required="required"> Marital Status
                   <div class="dropdown-content">
                       <option value="" selected disabled hidden><p>Select option</p></option>
                     <option value="single"><p>Single</p></option>
@@ -182,7 +182,7 @@
                 <li>
                   <p>Home Language</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="homeLanguage" required="required">
+                  <select class="dropbtn" name="homeLanguage" required="required">
                   <div class="dropdown-content">
                     <option value="null"><p>Select option</p></option>
                   <option value="English"><p>English</p></option>
@@ -206,7 +206,7 @@
                 <li>
                   <p>Other Language</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="otherLanguage" required="required">
+                  <select class="dropbtn" name="otherLanguages" required="required">
                   <div class="dropdown-content">
                     <option value="null"><p>Select option</p></option>
                   <option value="English"><p>English</p></option>
@@ -231,7 +231,7 @@
                     <p>Any Disability</p>
                     <ul>
                     <li><input type="radio" id="yes" name="disability" value="0">
-                    <label for="yes">YES</label> </li> <br>
+                    <label for="yes">Yes</label> </li> <br>
                     <li><input type="radio" id="nodisability" name="disability" value="1">
                     <label for="no">No</label>
                     </li>
@@ -281,7 +281,7 @@
                 <li>
                     <p>Faculty enrolled in</p>
                     <div class="dropdown">
-                      <select class="dropbtn" id="faculty" required="required">
+                      <select class="dropbtn" name="faculty" required="required">
                       <div class="dropdown-content">
                         <option value="null"><p>Select option</p></option>
                         <option value="Science"><p>Science</p></option>
@@ -298,7 +298,7 @@
                 <li>
                     <p>School</p>
                     <div class="dropdown">
-                      <select class="dropbtn" id="school" required="required">
+                      <select class="dropbtn" name="school" required="required">
                       <div class="dropdown-content">
                         <option value="null"><p>Select option</p></option>
                         <option value="single"><p>CSAM</p></option>

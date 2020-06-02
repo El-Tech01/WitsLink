@@ -50,8 +50,8 @@ if ($conn){
         $phoneNumber=mysqli_real_escape_string($conn, $phoneNumber);
         $emailAddress=mysqli_real_escape_string($conn, $emailAddress);
         $faculty=mysqli_real_escape_string($conn, $faculty);
-	$faculty=mysqli_real_escape_string($conn, $faculty);
         $school=mysqli_real_escape_string($conn, $school);
+        $motivation = mysqli_real_escape_string($conn, $motivation);
         $skill=mysqli_real_escape_string($conn, $skill);
         /*$proofReg=mysqli_real_escape_string($conn, $proofReg);
         $transcript=mysqli_real_escape_string($conn, $transcript);
@@ -61,7 +61,7 @@ if ($conn){
            die(mysqli_error($conn));
         }
         else{
-            mysqli_stmt_bind_param($stmt, "isssissssssisssssss",$studentNo,$fName,$lName,$idOrPass,$yos,$dob,$gender,$maritalStatus,$race,$homeLanguage,$otherLanguages,$disability,$specifyDisability,$phoneNumber,$emailAddress,$faculty,$school,$motivation,$skill);
+            mysqli_stmt_bind_param($stmt, "isssissssssssssssss",$studentNo,$fName,$lName,$idOrPass,$yos,$dob,$gender,$maritalStatus,$race,$homeLanguage,$otherLanguages,$disability,$specifyDisability,$phoneNumber,$emailAddress,$faculty,$school,$motivation,$skill);
                 //mysqli_stmt_execute($stmt);
                     if($stmt->execute()){
                         $output=true;

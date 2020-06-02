@@ -108,7 +108,7 @@
                 <li>
                     <div class="form-group">
                     <p> ID or Passport Number</p>
-                      <input name="idOrPass" type="text" id="id_or_passport" class="form-control" placeholder="Id or passport Number" required="required">
+                      <input name="idOrPass" type="text" id="id_or_passport" class="form-control" placeholder="Id or passport Number" required="required" >
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -129,13 +129,22 @@
                     </div>
                 </li>
 
+                <br><br>
+
                 <li>
-                    <div class="form-group">
-                    <p>Race</p>
-                      <input name="race" type="text" id="Race" class="form-control" placeholder="Race" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
+                  <p>Race</p>
+                <div class="dropdown">
+                  <select class="dropbtn" id="Race" required="required">
+                  <div class="dropdown-content">
+                    <option class="dropdown-content" value="null">Select option</option>
+                    <option class="dropdown-content" value="Black">Black</option>
+                    <option class="dropdown-content" value="White">White</option>
+                    <option class="dropdown-content "value="Indian">Indian</option>
+                  </div>
+                  </Select>
+                </div>
                 </li>
+                <br><br>
 
                 <li>
                     <p>Select gender:</p>
@@ -153,27 +162,67 @@
                 </li>
 
                 <li>
-                    <div class="form-group">
-                    <p>Marital Status</p>
-                      <input name="maritalStatus" type="text" id="MaritalStatus" class="form-control" placeholder="Marital status" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
+                  <p>Marital Status</p>
+                <div class="dropdown">
+                  <select class="dropbtn" id="MaritalStatus" required="required"> Marital Status
+                  <div class="dropdown-content">
+                      <option value="" selected disabled hidden><p>Select option</p></option>
+                    <option value="single"><p>Single</p></option>
+                    <option value="married"><p>Married</p></option>
+                  </div>
+                </select>
+                </div>
                 </li>
 
+                <br><br>
+
                 <li>
-                    <div class="form-group">
-                    <p>Home Language</p>
-                      <input name="homeLanguage" type="text" id="homeLanguage" class="form-control" placeholder="home language" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
+                  <p>Home Language</p>
+                <div class="dropdown">
+                  <select class="dropbtn" id="homeLanguage" required="required">
+                  <div class="dropdown-content">
+                    <option value="null"><p>Select option</p></option>
+                  <option value="English"><p>English</p></option>
+                  <option value="IsiZulu"><p>IsiZulu</p></option>
+                  <option value="IsiXhosa"><p>IsiXhosa</p></option>
+                  <option value="Ndebele"><p>Ndebele</p></option>
+                  <option value="Sesotho"><p>Sesotho</p></option>
+                  <option value="Afrikaans"><p>Afrikaans</p></option>
+                  <option value="Siswati"><p>Siswati</p></option>
+                  <option value="SeTswana"><p>SeTswana</p></option>
+                  <option value="Xitsonga"><p>Xitsonga</p></option>
+                  <option value="Sepedi"><p>Sepedi</p></option>
+                  <option value="TshiVenda"><p>TshiVenda</p></option>
+                  </div>
+                </select>
+                </div>
                 </li>
+                <br>
+                <br>
+
                 <li>
-                    <div class="form-group">
-                    <p>Other Languages</p>
-                      <input name="otherLanguages" type="text" id="otherLanguages" class="form-control" placeholder="Other languages">
-                    <p class="help-block text-danger"></p>
-                    </div>
+                  <p>Other Language</p>
+                <div class="dropdown">
+                  <select class="dropbtn" id="otherLanguage" required="required">
+                  <div class="dropdown-content">
+                    <option value="null"><p>Select option</p></option>
+                  <option value="English"><p>English</p></option>
+                  <option value="IsiZulu"><p>IsiZulu</p></option>
+                  <option value="IsiXhosa"><p>IsiXhosa</p></option>
+                  <option value="Ndebele"><p>Ndebele</p></option>
+                  <option value="Sesotho"><p>Sesotho</p></option>
+                  <option value="Afrikaans"><p>Afrikaans</p></option>
+                  <option value="Siswati"><p>Siswati</p></option>
+                  <option value="SeTswana"><p>SeTswana</p></option>
+                  <option value="Xitsonga"><p>Xitsonga</p></option>
+                  <option value="Sepedi"><p>Sepedi</p></option>
+                  <option value="TshiVenda"><p>TshiVenda</p></option>
+                  </div>
+                </select>
+                </div>
                 </li>
+                <br>
+                <br>
 
                 <li>
                     <p>Any Disability</p>
@@ -236,15 +285,35 @@
 
                 <li>
                     <p>Faculty enrolled in</p>
-                    <div class="form-group">
-                      <input type="text" id="faculty" class="form-control" name="faculty" value="" placeholder="Faculty" required="required">
+                    <div class="dropdown">
+                      <select class="dropbtn" id="faculty" required="required">
+                      <div class="dropdown-content">
+                        <option value="null"><p>Select option</p></option>
+                        <option value="Science"><p>Science</p></option>
+                        <option value="CLM"><p>CLM</p></option>
+                        <option value="Engineering"><p>Engineering</p></option>
+                        <option value="Humanities"><p> Humanities</p></option>
+                        <option value="Medicine"><p>Medicine</p></option>
+
+                      </div>
+                    </select>
                     </div>
                 </li>
 
                 <li>
                     <p>School</p>
-                    <div class="form-group">
-                      <input type="text" id="school" class="form-control" name="school" value="" placeholder="School">
+                    <div class="dropdown">
+                      <select class="dropbtn" id="school" required="required">
+                      <div class="dropdown-content">
+                        <option value="null"><p>Select option</p></option>
+                        <option value="single"><p>CSAM</p></option>
+                        <option value="married"><p>Mathematics</p></option>
+                        <option value="married"><p>Stats and ActSci</p></option>
+                        <option value="married"><p>Economics</p></option>
+                        <option value="married"><p>Physics</p></option>
+                        <option value="married"><p>...</p></option>
+                      </div>
+                    </select>
                     </div>
                 </li>
 

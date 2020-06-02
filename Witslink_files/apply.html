@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <script>
   function val(){
-    document.getElementById("JOB_ID").value=localStorage.getItem("JOB_ID");
+    document.getElementById("JOB_ID").value=localStorage.getItem("j");
     document.getElementById("JOB_TITLE").value=localStorage.getItem("JOB_TITLE");
   }
   function load(){
@@ -35,7 +35,7 @@
 }
 </script>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -71,10 +71,11 @@
           <form action="https://lamp.ms.wits.ac.za/~s1879990/Application.php" method="post">
             <div class="col-md-12">
               <div class="form-group">
-                <!-- Name -->
+
             <div class="col-md-10" >
+            
               <div class="contact-item" id="jobName">
-              
+                <input id="JOB_ID" type="text">
              </div>
              <script type="text/javascript" src="js/showJobTitle.js"></script>
 

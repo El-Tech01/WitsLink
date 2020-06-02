@@ -126,8 +126,8 @@ onceOffopt.addEventListener("click",function(){
   };
   urlJobStatus.send();
 });
-
 var disJobDiv = document.getElementById("jobDiv");
+
 // list jobs given data array
 //function to be tested
 function HtmlDisplayJob(data) {
@@ -139,29 +139,27 @@ function HtmlDisplayJob(data) {
     htmlString = "<h2>"+"No available jobs"+"<h2>";
   }
   else{
-    var c='"';
-    var a="apply"+"."+"html";
-    var b ="jclick";
+     var strjid;
     for(i = 0; i < data.length; i++){
-      htmlString += '<form  onclick="parseValue()"><a href="apply.html"><h2>'+data[i].JOB_TITLE+"</h2></a> <h3> Duration: "+data[i].JOB_STATUS+"</h3> <p> Description: "
-      +data[i].JOB_DESC+"</p> <small> Deadline: "+data[i].JOB_DEADLINE+"</small>"+
-      '<input id="JOB_ID" hidden name="JOB_ID" value='+data[i].JOB_ID+
-      '><br><input id="JOB_TITLE" hidden name="JOB_TITLE" value='+data[i].JOB_TITLE+'><form><br><br>';
-    }
+      
+      htmlString += '<div class="jbtitle"><h2>'+ data[i].JOB_TITLE + "</h2></title> <h3> Duration: " + data[i].JOB_STATUS + "</h3> <p> Description: " +
+        data[i].JOB_DESC + "</p> <small> Deadline: " + data[i].JOB_DEADLINE + "</small>" +
+        '<input id="JOB_ID" class= "jobId" type ="hidden" value="' + data[i].JOB_ID +'">';
+  }
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);
+
 }
 
-function highlight(e) {
+        
+/*function highlight(e) {
   if (selected[0]) selected[0].className = '';
   e.target.parentNode.className = 'selected';
 
   var value = $(this).find(".selected h2:first").html();
-  var idvalue = $(this).find(".selected h3:first").html();
-  if (value == "" || idvalue=="") alert("Value not Sent");
+  if (value == "") alert("Value not Sent");
 
-  else valueReciever(value)
-  idvalueReciever(idvalue);
+  else valueReciever(value);
 }
 
 var jobs = document.getElementById('jobDiv'),
@@ -170,8 +168,5 @@ jobs.onclick = highlight;
 
 function valueReciever(value) {
   localStorage.setItem("jname", value);
-}
+}*/
 
-function idvalueReciever(idvalue) {
-  localStorage.setItem("jid", idvalue);
-}

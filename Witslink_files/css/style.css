@@ -758,7 +758,13 @@ header .intro-text {
 
 
 }
+.jbtitle{
+	text-align: left;
 
+}
+.jobId{
+	text-align: center;
+}
 
 
 

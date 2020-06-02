@@ -235,10 +235,31 @@
   <br>
   <div class="container">
       <div class="big-Pbox">
+        <a href="apply.html" >
           <div id="jobDiv" class="p-box">
           </div>
+        </a>
       </div>
         <script src="js/listjobs.js"></script>
+        <script>
+          function highlight(e) {
+          if (selected[0]) selected[0].className = '';
+          e.target.parentNode.className = 'selected';
+
+          var value = $(this).find(".selected h2:first").html();
+          if (value == null) alert("Value not Sent");
+
+          else 
+           localStorage.setItem("jtitle",value);
+            theDevil = $('.selected').find('.jobId').attr('value');
+            localStorage.setItem("j",theDevil);
+          }
+
+          var jobs = document.getElementById('jobDiv'),
+          selected = jobs.getElementsByClassName('selected');
+          jobs.onclick = highlight;
+         
+        </script>
       </div>
     <div class="row">
 
@@ -246,6 +267,8 @@
     </div>
   </div>
 </div>
+
+
  <!-- Footer Section -->
 <div id="footer">
   <div class="container text-center">
@@ -254,8 +277,6 @@
 </div>
 <script>
     function parseValue(){
-        var username = document.getElementById("JOB_ID").value;
-        localStorage.setItem("JOB_ID",username);
         var title = document.getElementById("JOB_TITLE").value;
         localStorage.setItem("JOB_TITLE",title);
         return false;

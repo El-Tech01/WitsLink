@@ -21,43 +21,44 @@ exports.HtmlDisplayJob = HtmlDisplayJob;
 
  function loadJobTable(res) {
     var  htmlString ="", hold="";
-     hold = res[0].JOB_TITLE;
+     hold = res.jobs[0].JOB_TITLE;
         if (!hold.localeCompare("false")) {
               htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
-
         } else {
              var jobstat;
              var today = new Date();
-            for (var i = 0; i < res.length; i++) {
-                 if (new Date(res[i].JOB_DEADLINE) < today ) {
+            for (var i = 0; i < 1; i++) {
+                 if (new Date(res.jobs[i].JOB_DEADLINE) < today ) {
                     jobstat = 'In-Active';
-                 } else if (new Date(res[i].JOB_DEADLINE) >= today) {
+                 } else if (new Date(res.jobs[i].JOB_DEADLINE) >= today) {
                      jobstat = 'Active';
                  }
-                 htmlString +=  '<tr><td class="col1">' + res[i].JOB_TITLE +
-                     '</td><td class="col2">' + res[i].JOB_STATUS +
-                     '</td><td class="col3">' + res[i].JOB_DEADLINE +
-                     '</td><td class="col4">' + res[i].NUM_OF_APPS +
+                 htmlString +=  '<tr><td class="col1">' + res.jobs[i].JOB_TITLE +
+                     '</td><td class="col2">' + res.jobs[i].JOB_STATUS +
+                     '</td><td class="col3">' + res.jobs[i].JOB_DEADLINE +
+                     '</td><td class="col4">' + res.jobs[i].NUM_OF_APPS +
                      '</td><td class="col5">' + jobstat +
                      '</td></tr>';
             }
-
         }
-        postedJobs.insertAdjacentHTML('beforeend', htmlString);
+        //postedJobs.insertAdjacentHTML('beforeend', htmlString);
+        return htmlString;
  }
  exports.loadJobTable = loadJobTable;
 
 
  function HtmlOutput(data) {
    var htmlString="",hold="";
-   hold=data[0].DEPT_ID;
+   hold=data.jobs[0].DEPT_ID;
    if(!hold.localeCompare("false")){
-     alert("wrong password or username");
-     //htmlString = "<p>"+"password doesnt match"+"</p>";
+     //alert("wrong password or username");
+     htmlString = 'wrong password or username';
    }
    else{
-     htmlString = window.location.assign("ViewJob.html");
-     display.insertAdjacentHTML('beforeend',htmlString);
+     htmlString = 'ViewJob.html';
+     //htmlString = window.location.assign("ViewJob.html");
+     //display.insertAdjacentHTML('beforeend',htmlString);
      }
+     return htmlString;
  }
  exports.HtmlOutput=HtmlOutput;

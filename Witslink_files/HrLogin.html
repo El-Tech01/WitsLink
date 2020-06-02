@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-signin-client_id" content="170310396358-6kcpbp4sa3lf2uim9p5clmgoe7ce9c0t.apps.googleusercontent.com">
 <title>WitsLink</title>
 <meta name="description" content="">
 <meta name="author" content="">
@@ -42,13 +43,16 @@
       <input type="text" name="USERNAME" placeholder="Username" id="username" value="" required="required">
       <input type="password" name="PASSWORD" placeholder="Password" id="password" value="" required="required">
       <input onclick="parseValue()" type="submit" name="submit" value="Login" id="BtnLogin">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </form>
+
   </div>
   </div>
         <script src="js/verifyPwd.js"></script>
   </div>
 </div>
 <script src="js/listjobs.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/SmoothScroll.js"></script>

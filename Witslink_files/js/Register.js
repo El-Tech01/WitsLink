@@ -1,10 +1,6 @@
 let btn = document.getElementById("btnregister");
 btn.addEventListener( "click", register);
 
-function clicked(){
-  alert("CLICKED!!!");
-}
-
 
 /*
 METHOD: passValidate(arg1, arg2) @params :pass, cpass

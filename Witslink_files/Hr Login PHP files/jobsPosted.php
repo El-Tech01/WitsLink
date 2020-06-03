@@ -6,16 +6,11 @@ $conn = mysqli_connect("127.0.0.1", $username, $password, $database);
 
 $dept_id = $_REQUEST["DEPT_ID"];
 $json = array();
-
+$jobID;
+$rowCnt;
 if ($conn) {
     if (isset($dept_id)) {
         $sqlQry = "SELECT JOB_ID,JOB_TITLE, JOB_STATUS, JOB_DEADLINE,NUM_OF_APPS FROM NEW_JOB WHERE DEPT_ID = '$dept_id'";
-
-        $result = mysqli_query($conn, $sqlQry);
-
-        while($row = mysqli_fetch_assoc($result)){
-            $json[] = $row;
-        }
 
     }
     mysqli_close($conn);

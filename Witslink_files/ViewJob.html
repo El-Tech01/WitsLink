@@ -63,12 +63,13 @@
                                                 <table id ="jobTable" class="table">
                                                     <thead class="table-header">
                                                         <tr >
+                                                            <th class="col6">Job Id</th>
                                                             <th class="col1">Title</th>
                                                             <th class="col2">Type</th>
                                                             <th class="col3">Deadline</th>
                                                             <th class="col4">No. of Applications</th>
                                                             <th class="col5">Status</th>
-                                                            <th class="col6">Job Id</th>
+                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody id="tableBody">
@@ -82,7 +83,7 @@
                                             for(var i=1;i<table.rows.length;++i ){
                                               table.rows[i].onclick=function(){
                                                 rIndex=this.rowIndex;
-                                                var jobId= this.cells[5].innerHTML;
+                                                var jobId= this.cells[0].innerHTML;
                                                  localStorage.setItem("Jid",jobId);
                                               }
                                             }

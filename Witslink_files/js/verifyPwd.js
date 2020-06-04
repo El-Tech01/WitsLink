@@ -1,3 +1,6 @@
+import {timeout} from "./timeout";
+import { Msg } from "./bootstrap-msg";
+
 var BtnLogin = document.getElementById("BtnLogin");
 BtnLogin.addEventListener("click",function(){
   var urlRequest = new XMLHttpRequest();
@@ -18,6 +21,7 @@ function HtmlOutput(data) {
   hold=data[0].DEPT_ID;
   if(!hold.localeCompare("false")){
     alert("wrong password or username");
+   Msg.success("hey",timeout);
     //htmlString = "<p>"+"password doesnt match"+"</p>";
   }
   else{

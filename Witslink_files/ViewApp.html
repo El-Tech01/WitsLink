@@ -59,7 +59,7 @@
                                     <form name ="viewAppForm">
                                         <div class="table-responsive">
                                             <div class="table-bordered">
-                                                <table class="table">
+                                                <table class="table" id="studentApp">
                                                     <thead class="thead-App">
                                                         <tr>
                                                             <th class="col1">Student Number</th>
@@ -69,14 +69,24 @@
                                                             <th class="col5">YOS</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-
+                                                    <tbody id="displayApps">
                                                     </tbody>
-
                                                 </table>
                                             </div>
                                         </div>
-                                        <script src="js/viewApp.js"></script>
+                                        <script>
+                                        function parseSid(){
+                                          var table = document.getElementById('studentApp'),rIndex;
+                                            for(var i=0;i<table.rows.length;++i ){
+                                              table.rows[i].onclick=function(){
+                                                rIndex=this.rowIndex;
+                                                var jobId= this.cells[0].innerHTML;
+                                                 localStorage.setItem("Sno",jobId);
+                                              }
+                                            }
+                                          }
+                                        </script>
+                                        <script src="js/showApps.js"></script>
                                     </form>
                                 </div>
                             </div>
@@ -85,5 +95,6 @@
                 </div>
             </div>
         </div>
+
     </body>
 </html>

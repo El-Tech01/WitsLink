@@ -17,6 +17,11 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
+        <link rel="stylesheet" type="text/css" href="./vendors/bootstrap-3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap-msg.css" />
+        
+
 <!-- Stylesheet-->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
@@ -110,7 +115,7 @@
                       </div>
 
                       <div id="add job"></div>
-                      <input  type="submit" id="BtnUpload" name = "BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
+                      <input onclick="Msg.success('success message', timeout);" type="submit" id="BtnUpload" name = "BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
                       
                   </ul>
                 </form>

@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
-        
+
 
     </head>
     <body>
@@ -68,16 +68,27 @@
                                                             <th class="col3">Deadline</th>
                                                             <th class="col4">No. of Applications</th>
                                                             <th class="col5">Status</th>
+                                                            <th class="col6">Job Id</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="tableBody">
                                                     </tbody>
-                                                    
                                                 </table>
                                             </div>
                                         </div>
+                                        <script>
+                                        function parseJid(){
+                                          var table = document.getElementById('jobTable'),rIndex;
+                                            for(var i=1;i<table.rows.length;++i ){
+                                              table.rows[i].onclick=function(){
+                                                rIndex=this.rowIndex;
+                                                var jobId= this.cells[5].innerHTML;
+                                                 localStorage.setItem("Jid",jobId);
+                                              }
+                                            }
+                                          }
+                                        </script>
                                         <script src="js/tableRedirect.js"></script>
-                                    
                                     </form>
                                 </div>
                             </div>
@@ -89,14 +100,14 @@
                <script>
                    document.addEventListener("DOMContentLoaded", () =>{
                        const rows = document.querySelectorAll('tr[data-href]');
-                       
+
                        rows.forEach(row => {
                            row.addEventListener("click", () => {
                                window.location.href = row.dataset.href;
                            });
                        });
                    });
-                   
+
                 </script>
 
       <!-- Footer Section -->
@@ -107,11 +118,11 @@
           </div>
       </div>
 
-      
+
       <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
       <script type="text/javascript" src="js/bootstrap.js"></script>
       <script type="text/javascript" src="js/SmoothScroll.js"></script>
       <script type="text/javascript" src="js/nivo-lightbox.js"></script>
-      
+
     </body>
 </html>

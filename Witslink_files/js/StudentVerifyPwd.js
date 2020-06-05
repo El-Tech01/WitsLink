@@ -17,8 +17,7 @@ BtnLogin.addEventListener("click",function(){
 
 var display = document.getElementById("Test");
 
-function HtmlOutput(data) {
-  var htmlString="",hold="";
+function HtmlOutput(data,stdNo){
   hold=data[0].STUDENT_NO;
   if(!hold.localeCompare("false")){
     Msg['error']("Incorrect Username or Password. Please Try Again.");

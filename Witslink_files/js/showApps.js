@@ -28,7 +28,7 @@ function HtmlOutput(data) {
   else{
     for(i = 0; i < data.length; i++){
     htmlString += '<tr><td class="col1" onclick="parseSid()"><a href="StudentCV.html">'+data[i].STUDENT_NO+
-    '<a></td><td class="col2">'+data[i].STUDENT_FNAME+
+    '</a></td><td class="col2">'+data[i].STUDENT_FNAME+
     '</td><td class="col3">'+data[i].STUDENT_LNAME+
     '</td><td class="col4-1">'+data[i].STUDENT_FACULTY+
     '</td><td class="col5">'+data[i].STUDENT_YOS+

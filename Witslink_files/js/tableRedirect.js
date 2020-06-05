@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
     var urltable = new XMLHttpRequest();
-    var dept_id = localStorage.getItem("un");
+    var dept_id = localStorage.getItem("hr");
     var deptidInt = parseInt(dept_id);
     urltable.open('GET', "http://lamp.ms.wits.ac.za/~s1879990/jobsPosted.php/?USERNAME="+deptidInt);
     urltable.onload = function () {

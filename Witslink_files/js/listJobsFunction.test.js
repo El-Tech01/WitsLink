@@ -47,3 +47,10 @@ test("test the json array to test password of department",()=>{
   var   htmlString = 'wrong password or username';
   expect(HtmlOutput(obj)).toBe(htmlString);
 });
+test("test the json array to test password of department",()=>{
+  var hold =  '{"jobs":[' +
+  '{"DEPT_ID":"10001"}]}';
+  obj = JSON.parse(hold);
+  var   htmlString = 'ViewJob.html';
+  expect(HtmlOutput(obj)).toBe(htmlString);
+});

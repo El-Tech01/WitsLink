@@ -81,7 +81,10 @@
                                               table.rows[i].onclick=function(){
                                                 rIndex=this.rowIndex;
                                                 var jobId= this.cells[0].innerHTML;
-                                                 localStorage.setItem("Sno",jobId);
+                                                var hold = jobId.split(">");
+                                                var hold2 = hold[1].split("<")
+                                                //alert(hold2[0]);
+                                                localStorage.setItem("Sno",hold2[0]);
                                               }
                                             }
                                           }

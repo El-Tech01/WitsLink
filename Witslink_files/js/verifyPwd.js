@@ -1,3 +1,5 @@
+localStorage.clear();
+
 var BtnLogin = document.getElementById("BtnLogin");
 BtnLogin.addEventListener("click",function(){
   var urlRequest = new XMLHttpRequest();

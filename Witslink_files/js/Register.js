@@ -26,6 +26,12 @@ function filled(inputs){
   return true;
 }
 
+function ValidateEmail(mail) {
+
+  const corrFormat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return corrFormat.test(String(mail).toLowerCase());
+}
+
 /*
 METHOD:Register
 --registers students to the web's database
@@ -38,6 +44,11 @@ function register(){
      let stdNo = document.getElementById('studentno').value;
       let pwd = document.getElementById('password').value;
        let cpwd = document.getElementById('confirmPassword').value;
+
+  if(!ValidateEmail(mail)){
+    Msg['error']("Please Enter Valid E-mail!");
+    return;
+  }
 
   if (!passValidate(pwd, cpwd)){
     Msg['error']("Passwords don't match!")
@@ -70,3 +81,5 @@ function register(){
   }
 
 }
+
+

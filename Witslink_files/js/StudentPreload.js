@@ -1,7 +1,7 @@
 
 window.addEventListener("load", function(){
     var urlform = new XMLHttpRequest();
-    var std_id = localStorage.getItem("std");
+    var std_id = localStorage.getItem("un");
     var stdIdInt = parseInt(std_id);
     urlform.open('GET', "http://lamp.ms.wits.ac.za/~s1879990/studentPreload.php/?STUDENT_NO="+stdIdInt);
     urlform.onload = function () {
@@ -17,7 +17,7 @@ function loadStudentData(Sdata){
 
       hold = Sdata[0].STUDENT_NO;
  
-      if (!hold.localeCompare("false")) {
+      if (!hold.localeCompare("false")) { 
         //  alert("no data");
       }else{
 

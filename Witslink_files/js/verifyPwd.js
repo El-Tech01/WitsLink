@@ -1,6 +1,3 @@
-import Msg from './bootstrap-msg';
-import {timeout} from './timeout';
-
 var BtnLogin = document.getElementById("BtnLogin");
 BtnLogin.addEventListener("click",function(){
   var urlRequest = new XMLHttpRequest();
@@ -20,9 +17,8 @@ function HtmlOutput(data) {
   var htmlString="",hold="";
   hold=data[0].DEPT_ID;
   if(!hold.localeCompare("false")){
-    alert("wrong password or username");
-    Msg.success("message",timeout); 
-    //htmlString = "<p>"+"password doesnt match"+"</p>";
+    
+    Msg['error']("Incorrect Username or Password. Please Try Again.");
   }
   else{
     htmlString = window.location.assign("ViewJob.html");

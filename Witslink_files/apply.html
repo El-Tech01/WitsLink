@@ -25,20 +25,29 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 <script>
-  function val(){
-    document.getElementById("JOB_ID").value=localStorage.getItem("j");
-  }
+
   function load(){
     document.getElementById('submitApplication').onclick = function(){
         var stdNum = document.getElementById('studentNo').value;
         localStorage.setItem('stdNo',stdNum);
-         Msg.success('success message', timeout);
     }
 }
+function preload(){
+  document.getElementById("Fname").value = localStorage.getItem("FName");
+  document.getElementById("Lname").value = localStorage.getItem("LName");
+  document.getElementById("studentno").value = localStorage.getItem("sn");
+  document.getElementById("email").value = localStorage.getItem("Email");
+}
+window.addEventListener('load',function(){
+ var time = 5;
+ setInterval(function(){preload();},time);
+ 
+});
+
 </script>
  
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()">
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -93,6 +102,7 @@
                   </div>
               </li>
               <form action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+                
                 <li>
                     <p>First Name</p>
                     <div class="form-group">
@@ -104,7 +114,7 @@
                 <li>
                     <p> Last Name</p>
                     <div class="form-group">
-                      <input name="lastName" type="text" id="Lname" class="form-control" placeholder="Last name" required="required">
+                      <input name="lastName" type="text" id="Lname" class="form-control" placeholder="Last Name" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -374,10 +384,12 @@
       </div>
     </form>
     </div>
+            <script src="js/StudentPreload.js"></script>
 </form>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap-msg.js"></script>
+
 
     </div>
   </div>

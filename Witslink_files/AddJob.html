@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WitsLink</title>
-<meta name="description" content="">
-<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WitsLink</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Favicons-->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet-->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+  <!-- Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 
 
 </head>
+
 <body onload="val()">
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
         <a class="navbar-brand page-scroll" href="index.html">WITSLINK</a>
         <div class="phone"><span>STUDENT</span>Plug</div>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="ViewJob.html" class="page-scroll">View all jobs</a></li>
-      </ul>
-    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="ViewJob.html" class="page-scroll">View all jobs</a></li>
+        </ul>
+      </div>
       <!-- /.navbar-collapse -->
     </div>
   </nav>
-<!-- Contact Section -->
-<div id="contact">
-  <div class="container">
-    <div class ="page-scroll">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="section-title">
-            <h2>Add a Job</h2>
-            <p>Please ensure you fill all attributes of the the form below</p>
-          </div>
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <div class="page-scroll">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="section-title">
+              <h2>Add a Job</h2>
+              <p>Please ensure you fill all attributes of the the form below</p>
+            </div>
 
-         
-          <div class="col-md-12">
-            <div class="form-group"></div>
 
-            <!-- Job Details -->
-            <div class="col-md-8" >
-              <form name="getJobDetailsForm" id="getJobDetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php" method="POST">
-                <ul>
+            <div class="col-md-12">
+              <div class="form-group"></div>
+
+              <!-- Job Details -->
+              <div class="col-md-8">
+                <form name="getJobDetailsForm" id="getJobDetailsForm"
+                  action="https://lamp.ms.wits.ac.za/~s1879990/AddJob.php" method="POST">
+                  <ul>
                     <li>
                       <div class="contact-item">
                         <h4>Job Details</h4>
                       </div>
                     </li>
 
-                    
+
 
                     <li>
                       <p>Department ID </p>
@@ -81,68 +86,78 @@
                     <li>
 
                       <p>Job Title</p>
-                      <div class="form-group"> <!-- Fname -> jobTitle -->
-                        <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder= "" required="required" >
+                      <div class="form-group">
+                        <!-- Fname -> jobTitle -->
+                        <input type="text" id="jobTitle" class="form-control" name="jobTitle" placeholder=""
+                          required="required">
                         <p class="help-block text-danger"></p>
-                      </div>            </li>
+                      </div>
+                    </li>
 
                     </li>
 
                     <li>
                       <p>Job Status</p>
-                      <div class="form-group"> <!-- Lname -> jobStatus -->
-                        <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder="" required="required">
+                      <div class="form-group">
+                        <!-- Lname -> jobStatus -->
+                        <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder=""
+                          required="required">
                         <p class="help-block text-danger"></p>
                       </div>
                     </li>
 
                     <li>
                       <p>Job Application Deadline</p>
-                      <div class="form-group"> <!-- "dateofbirth -> jobDeadline -->
-                        <input type="date" id="jobDeadline" class="form-control" placeholder="" name="jobDeadline" required="required">
+                      <div class="form-group">
+                        <!-- "dateofbirth -> jobDeadline -->
+                        <input type="date" id="jobDeadline" class="form-control" placeholder="" name="jobDeadline"
+                          required="required">
                         <p class="help-block text-danger"></p>
                       </div>
                     </li>
 
-                      <div class="form-group">
-                        <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description" maxlength="3000"required></textarea>
-                        <p class="help-block text-danger"></p>
-                      </div>
+                    <div class="form-group">
+                      <textarea name="jobDesc" id="jobDesc" class="form-control" rows="4" placeholder="Job Description"
+                        maxlength="3000" required></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
 
-                      <div id="add job"></div>
-                      <input  type="submit" id="BtnUpload" name = "BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
-                      
+                    <div id="add job"></div>
+                    <input type="submit" id="BtnUpload" name="BtnUpload" class="btn btn-custom btn-lg" value="Add Job">
+
                   </ul>
                 </form>
 
+              </div>
             </div>
+            </form>
+            </ul>
           </div>
-          </form>
-        </ul>
         </div>
+        </form>
       </div>
-    </form>
+
     </div>
-    
   </div>
-</div>
 
   <!-- Footer Section -->
-<div id="footer">
-  <div class="container text-center">
-    <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a></p>
+  <div id="footer">
+    <div class="container text-center">
+      <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a>
+      </p>
+    </div>
   </div>
-</div>
-<script>
-  function val(){
-    document.getElementById("DEPT_ID").value=localStorage.getItem("textvalue");
-  }
-</script>
+  <script>
+    function val() {
+      document.getElementById("DEPT_ID").value = localStorage.getItem("textvalue");
+    }
+  </script>
   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
   <script type="text/javascript" src="js/nivo-lightbox.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,3 +1,5 @@
+localStorage.clear();
+
 let btn = document.getElementById("btnregister");
 btn.addEventListener( "click", register);
 
@@ -40,13 +42,13 @@ function register(){
        let cpwd = document.getElementById('confirmPassword').value;
 
   if (!passValidate(pwd, cpwd)){
-    alert("Passwords do not match!");
+    Msg['error']("Passwords don't match!")
 
   }else{
      //check if all attributes are filled first
      let inputs = new Array(firstName, lastName, mail, stdNo, pwd);  //array of the form's inputs
      if (!filled(inputs)){
-       alert("You have not filled all of the attributes");
+       Msg['warning']("Please fill in ALL the fields.");
        return;
      }
 
@@ -57,11 +59,11 @@ function register(){
      xhr.onload = function(){
       // console.log(this.responseText);
        if (this.responseText == "true"){
-         window.location.replace('index.html');
-            alert("you are registered");
-            window.localStorage.setItem('student-no', stdNo);
+        window.location.replace('index.html');
+        alert("Registration Successful!");
+         window.localStorage.setItem('un', stdNo);
        }else{
-         alert("Something went wrong:(...Please try again!");
+         Msg['warning']("Something went wrong :(...Please try again!");
        }
      }
 

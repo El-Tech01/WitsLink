@@ -11,12 +11,6 @@ if ($conn) {
     if (isset($dept_id)) {
         $sqlQry = "SELECT JOB_ID,JOB_TITLE, JOB_STATUS, JOB_DEADLINE,NUM_OF_APPS FROM NEW_JOB WHERE DEPT_ID = '$dept_id'";
 
-        $result = mysqli_query($conn, $sqlQry);
-
-        while($row = mysqli_fetch_assoc($result)){
-            $json[] = $row;
-        }
-
     }
     mysqli_close($conn);
     if(!empty($json)){

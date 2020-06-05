@@ -29,6 +29,7 @@
                         if($stmt->execute()){
                             $output=true;
                             echo json_encode("Job post successfull!");
+                                    
                         }
                         else {
                             $output=false;

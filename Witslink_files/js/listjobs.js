@@ -139,12 +139,15 @@ function HtmlDisplayJob(data) {
     htmlString = "<h2>"+"No available jobs"+"<h2>";
   }
   else{
-     var strjid;
+    var today = new Date();
     for(i = 0; i < data.length; i++){
-      
-      htmlString += '<div class="jbtitle"><h2>'+ data[i].JOB_TITLE + "</h2></title> <h3> Duration: " + data[i].JOB_STATUS + "</h3> <p> Description: " +
+      if (new Date(data[i].JOB_DEADLINE) >= today) {
+
+        htmlString += '<div class="jbtitle"><h2>'+ data[i].JOB_TITLE + "</h2></title> <h3> Duration: " + data[i].JOB_STATUS + "</h3> <p> Description: " +
         data[i].JOB_DESC + "</p> <small> Deadline: " + data[i].JOB_DEADLINE + "</small>" +
         '<input id="JOB_ID" class= "jobId" type ="hidden" value="' + data[i].JOB_ID +'">';
+      }
+
   }
   }
   disJobDiv.insertAdjacentHTML('beforeend',htmlString);
@@ -152,21 +155,5 @@ function HtmlDisplayJob(data) {
 }
 
         
-/*function highlight(e) {
-  if (selected[0]) selected[0].className = '';
-  e.target.parentNode.className = 'selected';
 
-  var value = $(this).find(".selected h2:first").html();
-  if (value == "") alert("Value not Sent");
-
-  else valueReciever(value);
-}
-
-var jobs = document.getElementById('jobDiv'),
-  selected = jobs.getElementsByClassName('selected');
-jobs.onclick = highlight;
-
-function valueReciever(value) {
-  localStorage.setItem("jname", value);
-}*/
 

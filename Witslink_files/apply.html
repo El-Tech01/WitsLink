@@ -25,19 +25,29 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 <script>
-  function val(){
-    document.getElementById("JOB_ID").value=localStorage.getItem("j");
-  }
+
   function load(){
     document.getElementById('submitApplication').onclick = function(){
-        document.getElementById('StudentNo').value = document.getElementById('studentNo').value;
-        motivat
+        var stdNum = document.getElementById('studentNo').value;
+        localStorage.setItem('stdNo',stdNum);
     }
 }
+function preload(){
+  document.getElementById("Fname").value = localStorage.getItem("FName");
+  document.getElementById("Lname").value = localStorage.getItem("LName");
+  document.getElementById("studentno").value = localStorage.getItem("sn");
+  document.getElementById("email").value = localStorage.getItem("Email");
+}
+window.addEventListener('load',function(){
+ var time = 5;
+ setInterval(function(){preload();},time);
+ 
+});
+
 </script>
  
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="val()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()">
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -92,6 +102,7 @@
                   </div>
               </li>
               <form action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+                
                 <li>
                     <p>First Name</p>
                     <div class="form-group">
@@ -103,7 +114,7 @@
                 <li>
                     <p> Last Name</p>
                     <div class="form-group">
-                      <input name="lastName" type="text" id="Lname" class="form-control" placeholder="Last name" required="required">
+                      <input name="lastName" type="text" id="Lname" class="form-control" placeholder="Last Name" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -139,10 +150,11 @@
                 <div class="dropdown">
                   <select class="dropbtn" id="Race" name="race" required="required">
                   <div class="dropdown-content">
-                    <option class="dropdown-content" value="null">Select option</option>
+                    <option value="" selected disabled>Select option</option>
                     <option class="dropdown-content" value="Black">Black</option>
                     <option class="dropdown-content" value="White">White</option>
                     <option class="dropdown-content "value="Indian">Indian</option>
+                    <option class="dropdown-content " value="Indian">Other</option>
                   </div>
                   </select>
                 </div>
@@ -167,9 +179,9 @@
                 <li>
                   <p>Marital Status</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="MaritalStatus" name= "maritalStatus" required="required"> Marital Status
+                  <select class="dropbtn" id="MaritalStatus" name= "maritalStatus" required="required">
                   <div class="dropdown-content">
-                      <option value="" selected disabled hidden><p>Select option</p></option>
+                    <option value="" selected disabled hidden><p>Select option</p></option>
                     <option value="single"><p>Single</p></option>
                     <option value="married"><p>Married</p></option>
                   </div>
@@ -182,20 +194,20 @@
                 <li>
                   <p>Home Language</p>
                 <div class="dropdown">
-                  <select class="dropbtn" name="homeLanguage" required="required">
+                  <select class="dropbtn" id="HL" name="homeLanguage" required="required">
                   <div class="dropdown-content">
-                    <option value="null"><p>Select option</p></option>
-                  <option value="English"><p>English</p></option>
-                  <option value="IsiZulu"><p>IsiZulu</p></option>
-                  <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                  <option value="Ndebele"><p>Ndebele</p></option>
-                  <option value="Sesotho"><p>Sesotho</p></option>
-                  <option value="Afrikaans"><p>Afrikaans</p></option>
-                  <option value="Siswati"><p>Siswati</p></option>
-                  <option value="SeTswana"><p>SeTswana</p></option>
-                  <option value="Xitsonga"><p>Xitsonga</p></option>
-                  <option value="Sepedi"><p>Sepedi</p></option>
-                  <option value="TshiVenda"><p>TshiVenda</p></option>
+                    <option value="" selected disabled hidden><p>Select option</p></option>
+                    <option value="English"><p>English</p></option>
+                    <option value="IsiZulu"><p>IsiZulu</p></option>
+                    <option value="IsiXhosa"><p>IsiXhosa</p></option>
+                    <option value="Ndebele"><p>Ndebele</p></option>
+                    <option value="Sesotho"><p>Sesotho</p></option>
+                    <option value="Afrikaans"><p>Afrikaans</p></option>
+                    <option value="Siswati"><p>Siswati</p></option>
+                    <option value="SeTswana"><p>SeTswana</p></option>
+                    <option value="Xitsonga"><p>Xitsonga</p></option>
+                    <option value="Sepedi"><p>Sepedi</p></option>
+                    <option value="TshiVenda"><p>TshiVenda</p></option>
                   </div>
                 </select>
                 </div>
@@ -208,7 +220,7 @@
                 <div class="dropdown">
                   <select class="dropbtn" name="otherLanguages" required="required">
                   <div class="dropdown-content">
-                    <option value="null"><p>Select option</p></option>
+                    <option selected="selected" disabled><p>Select option</p></option>
                   <option value="English"><p>English</p></option>
                   <option value="IsiZulu"><p>IsiZulu</p></option>
                   <option value="IsiXhosa"><p>IsiXhosa</p></option>
@@ -263,7 +275,7 @@
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
-
+                <br>
                 <li>
                     <p>Phone number</p>
                     <div class="form-group">
@@ -271,7 +283,7 @@
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
-
+                <br>
                 <li>
                     <div class="contact-item">
                     <h4>Education</h4>
@@ -283,42 +295,50 @@
                     <div class="dropdown">
                       <select class="dropbtn" name="faculty" required="required">
                       <div class="dropdown-content">
-                        <option value="null"><p>Select option</p></option>
+                        <option selected="selected" disabled><p>Select option</p></option>
                         <option value="Science"><p>Science</p></option>
-                        <option value="CLM"><p>CLM</p></option>
+                        <option value="CLM"><p>Commerce, Law & Management</p></option>
                         <option value="Engineering"><p>Engineering</p></option>
                         <option value="Humanities"><p> Humanities</p></option>
-                        <option value="Medicine"><p>Medicine</p></option>
+                        <option value="Medicine"><p>Health Sciences</p></option>
 
                       </div>
                     </select>
                     </div>
                 </li>
-
+                <br>
                 <li>
                     <p>School</p>
                     <div class="dropdown">
                       <select class="dropbtn" name="school" required="required">
                       <div class="dropdown-content">
-                        <option value="null"><p>Select option</p></option>
-                        <option value="single"><p>CSAM</p></option>
+                        <option selected="selected" disabled><p>Select option</p></option>
+                        <option value="single"><p>Computer Science & Applied Mathematics</p></option>
                         <option value="married"><p>Mathematics</p></option>
-                        <option value="married"><p>Stats and ActSci</p></option>
-                        <option value="married"><p>Economics</p></option>
-                        <option value="married"><p>Physics</p></option>
-                        <option value="married"><p>...</p></option>
+                        <option value="married"><p>Statistics & Actuarial Science</p></option>
+                        <option value="married"><p>Biological Sciences</p></option>
+                        <option value="married"><p>Physical Science</p></option>
+                        <option value="married"><p>Business Sciences</p></option>
+                        <option value="married"><p>Accountancy</p></option>
+                        <option value="married"><p>Economics and Finance</p></option>
+                        <option value="married"><p>Law</p></option>
+                        <option value="married"><p>Earth Sciences</p></option>
+                        <option value="married"><p>Wits School of Arts</p></option>
+                        <option value="married"><p>Education</p></option>
+                        <option value="married"><p>Human and Community Development</p></option>
+                        <option value="married"><p>Social Sciences</p></option>                  
                       </div>
                     </select>
                     </div>
                 </li>
-
+                <br>
                 <li>
                     <p>Year of study</p>
                     <div class=" form-group">
                       <input type="number" name="YOS" value="yos" id="yos" required="required">
                     </div>
                 </li>
-
+                <br>
                 <div class="form-group">
                     <textarea name="motivation" id="motivation" class="form-control" rows="4" placeholder="Short Motivation" maxlength="1000"required></textarea>
                     <p class="help-block text-danger"></p>
@@ -364,7 +384,13 @@
       </div>
     </form>
     </div>
+            <script src="js/StudentPreload.js"></script>
 </form>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="js/bootstrap-msg.js"></script>
+
+
     </div>
   </div>
 </div>

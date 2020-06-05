@@ -30,8 +30,13 @@ $transcript=$_POST["transcript"];
 */
 
 if ($conn){
-        if(isset($firstName,$lastName,$idOrPass,$studentNo,$dateOfBirth,$race,$gender,$maritalStatus,$homeLanguage,
-        $disability,$emailAddress,$phoneNumber,$faculty,$YOS,$motivation)){
+    if (isset($firstName, $lastName, $idOrPass, $studentNo, $dateOfBirth, $race, $gender, $maritalStatus, $homeLanguage,
+    $disability, $emailAddress, $phoneNumber, $faculty, $YOS, $motivation)) {
+        $res = $conn->query("SELECT * FROM STUDENT WHERE STUDENT_NO = $studentNo");
+        if($res->num_rows > 0){
+            $Qry = "INSERT INTO APPPLICATION VALUES ('$job_id','$studentNo','$motivation')";
+        }else{
+
         $query ="INSERT INTO STUDENT VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         $studentNo=mysqli_real_escape_string($conn, $studentNo);
@@ -65,7 +70,14 @@ if ($conn){
                 //mysqli_stmt_execute($stmt);
                     if($stmt->execute()){
                         $output=true;
-                        echo json_encode($output);
+                        $qry = "UPDATE NEW_JOB SET NUM_OF_APPS = NUM_OF_APPS + 1 WHERE JOB_ID = '$job_id'";
+                        $qryResult = mysqli_query($conn,$qry);
+                        if($qryResult){
+                            echo json_encode($output);
+                        }else{
+                            echo json_encode("Unsuccessful Attempt.");
+                        }
+                       
                     }
                     else {
                         $output=false;
@@ -78,6 +90,8 @@ if ($conn){
 else {
     die("Connection was not established");
 }
+}
 mysqli_close($conn);
 die();
+
 ?>

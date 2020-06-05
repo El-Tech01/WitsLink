@@ -55,9 +55,9 @@ h4 {
 h5 {
 
 
-	font-weight: 400;
-	font-size: 25;
-
+	font-weight: 600;
+	font-size: 28px;
+	color: rgb(163, 163, 163);
 	line-height: 20px;
 
 }
@@ -1466,17 +1466,17 @@ color: #777;
 
 #resume p.pull-right{
 
-	font-size: .9375rem;
+	font-size: 15px;
 	text-align: left;
 	color: #ffff;
-	margin-right: 16%;
+	margin-right: 0%;
 }
 #resume p.pull-left{
 
-	font-size: .9375rem;
+	font-size: 15px;
 	text-align: right;
 	color: #ffff;
-	margin-left: 16%;
+	margin-left: 0%;
 }
 #resume a{
 	color: #ffff;

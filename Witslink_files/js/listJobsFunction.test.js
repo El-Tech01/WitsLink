@@ -47,7 +47,7 @@ test("test the json array to test password of department",()=>{
   var   htmlString = 'wrong password or username';
   expect(HtmlOutput(obj)).toBe(htmlString);
 });
-test("test the json array to test password of department",()=>{
+test("test the json array to test password of department if department exist",()=>{
   var hold =  '{"jobs":[' +
   '{"DEPT_ID":"10001"}]}';
   obj = JSON.parse(hold);

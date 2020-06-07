@@ -1,4 +1,4 @@
-localStorage.clear();
+sessionStorage.clear();
 
 var BtnLogin = document.getElementById("sBtnLogin");
 
@@ -24,7 +24,7 @@ function HtmlOutput(data,stdNo){
     //htmlString = "<p>"+"password doesnt match"+"</p>";
   }
   else{
-    localStorage.setItem('un',stdNo);
+    sessionStorage.setItem('un',stdNo);
     htmlString = window.location.assign("index.html");
     display.insertAdjacentHTML('beforeend',htmlString);
     }

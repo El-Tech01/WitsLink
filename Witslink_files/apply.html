@@ -29,14 +29,14 @@
   function load(){
     document.getElementById('submitApplication').onclick = function(){
         var stdNum = document.getElementById('studentNo').value;
-        localStorage.setItem('stdNo',stdNum);
+        sessionStorage.setItem('stdNo',stdNum);
     }
 }
 function preload(){
-  document.getElementById("Fname").value = localStorage.getItem("FName");
-  document.getElementById("Lname").value = localStorage.getItem("LName");
-  document.getElementById("studentno").value = localStorage.getItem("sn");
-  document.getElementById("email").value = localStorage.getItem("Email");
+  document.getElementById("Fname").value = sessionStorage.getItem("FName");
+  document.getElementById("Lname").value = sessionStorage.getItem("LName");
+  document.getElementById("studentno").value = sessionStorage.getItem("sn");
+  document.getElementById("email").value = sessionStorage.getItem("Email");
 }
 window.addEventListener('load',function(){
  var time = 5;

@@ -24,14 +24,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-<script>
-
-  function load(){
-    document.getElementById('submitApplication').onclick = function(){
-        var stdNum = document.getElementById('studentNo').value;
-        sessionStorage.setItem('stdNo',stdNum);
-    }
-}
+<script> 
 function preload(){
   var somevar = sessionStorage.getItem("un");
   var somevar1 = sessionStorage.getItem("sId");
@@ -418,7 +411,7 @@ window.addEventListener('load',function(){
 
               <br>
               <div id="submit application"></div>
-              <button onclick="load()" type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
+              <button type="submit" id="updateData" class="btn btn-custom btn-lg" value="Submit">Save</button>
             </div>
 
         </ul>

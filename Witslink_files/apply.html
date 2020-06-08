@@ -33,27 +33,26 @@
     }
 }
 function preload(){
-  var somevar = localStorage.getItem("un");
-  var somevar1 = localStorage.getItem("sId");
+  var somevar = sessionStorage.getItem("un");
+  var somevar1 = sessionStorage.getItem("sId");
   
   if(somevar){
-    document.getElementById("JOB_ID").value = localStorage.getItem("j");
-    document.getElementById("Fname").value = localStorage.getItem("FName");
-    document.getElementById("Lname").value = localStorage.getItem("LName");
-    document.getElementById("studentno").value = localStorage.getItem("sn");
-    document.getElementById("email").value = localStorage.getItem("Email");
-
+    document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
+    document.getElementById("Fname").value = sessionStorage.getItem("FName");
+    document.getElementById("Lname").value = sessionStorage.getItem("LName");
+    document.getElementById("studentno").value = sessionStorage.getItem("sn");
+    document.getElementById("email").value = sessionStorage.getItem("Email");
       if(somevar1){
-        document.getElementById("id_or_passport").value = localStorage.getItem("sId");
-        document.getElementById("MaritalStatus").value = localStorage.getItem("mStat");
-        document.getElementById("dateofbirth").value = localStorage.getItem("sDob");
-        document.getElementById("Race").value = localStorage.getItem("sRace");
-        document.getElementById("Contactnumber").value = localStorage.getItem("sPhone");
-        document.getElementById("faculty").value = localStorage.getItem("sFac");
-        document.getElementById("school").value = localStorage.getItem("sSchool");
-        document.getElementById("yos").value = localStorage.getItem("sYos");
-        document.getElementById("HL").value = localStorage.getItem("HL");
-        document.getElementById("FAL").value = localStorage.getItem("FAL");
+        document.getElementById("id_or_passport").value = sessionStorage.getItem("sId");
+        document.getElementById("MaritalStatus").value = sessionStorage.getItem("mStat");
+        document.getElementById("dateofbirth").value = sessionStorage.getItem("sDob");
+        document.getElementById("Race").value = sessionStorage.getItem("sRace");
+        document.getElementById("Contactnumber").value = sessionStorage.getItem("sPhone");
+        document.getElementById("faculty").value = sessionStorage.getItem("sFac");
+        document.getElementById("school").value = sessionStorage.getItem("sSchool");
+        document.getElementById("yos").value = sessionStorage.getItem("sYos");
+        document.getElementById("HL").value = sessionStorage.getItem("HL");
+        document.getElementById("FAL").value = sessionStorage.getItem("FAL");
       }else{
         return;
       }

@@ -1,4 +1,4 @@
-localStorage.clear();
+sessionStorage.clear();
 
 let btn = document.getElementById("btnregister");
 btn.addEventListener( "click", register);
@@ -72,7 +72,7 @@ function register(){
        if (this.responseText == "true"){
         window.location.replace('index.html');
         alert("Registration Successful!");
-         window.localStorage.setItem('un', stdNo);
+         window.sessionStorage.setItem('un', stdNo);
        }else{
          Msg['warning']("Something went wrong :(...Please try again!");
        }

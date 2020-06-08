@@ -1,7 +1,7 @@
 let stdnt = document.getElementById("studentlgn");
  let hr = document.getElementById("hrlgn");
 
- if ("un" in localStorage){
+ if ("un" in sessionStorage){
    while (stdnt.firstChild && hr.firstChild){
      stdnt.removeChild(stdnt.firstChild);
       hr.removeChild(hr.firstChild);

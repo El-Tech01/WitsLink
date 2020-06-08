@@ -1,7 +1,7 @@
 
 window.addEventListener("load", function(){
     var urlform = new XMLHttpRequest();
-    var std_id = localStorage.getItem("un");
+    var std_id = sessionStorage.getItem("un");
     var stdIdInt = parseInt(std_id);
     urlform.open('GET', "http://lamp.ms.wits.ac.za/~s1879990/studentPreload.php/?STUDENT_NO="+stdIdInt);
     urlform.onload = function () {
@@ -32,10 +32,10 @@ function loadStudentData(Sdata){
                   var email = Sdata[i].REGISTER_EMAIL;
                   
 
-                  localStorage.setItem("sn", stdNo);
-                  localStorage.setItem("FName", fname);
-                  localStorage.setItem("LName", lname);
-                  localStorage.setItem("Email", email);
+                  sessionStorage.setItem("sn", stdNo);
+                  sessionStorage.setItem("FName", fname);
+                  sessionStorage.setItem("LName", lname);
+                  sessionStorage.setItem("Email", email);
               }
         }else{
             

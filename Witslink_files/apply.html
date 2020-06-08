@@ -29,7 +29,7 @@
   function load(){
     document.getElementById('submitApplication').onclick = function(){
         var stdNum = document.getElementById('studentNo').value;
-        localStorage.setItem('stdNo',stdNum);
+        sessionStorage.setItem('stdNo',stdNum);
     }
 }
 function preload(){
@@ -227,7 +227,7 @@ window.addEventListener('load',function(){
                     <option value="English"><p>English</p></option>
                     <option value="IsiZulu"><p>IsiZulu</p></option>
                     <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                    <option value="Ndebele"><p>Ndebele</p></option>
+                    <option value="IsiNdebele"><p>Ndebele</p></option>
                     <option value="Sesotho"><p>Sesotho</p></option>
                     <option value="Afrikaans"><p>Afrikaans</p></option>
                     <option value="Siswati"><p>Siswati</p></option>
@@ -251,7 +251,7 @@ window.addEventListener('load',function(){
                   <option value="English"><p>English</p></option>
                   <option value="IsiZulu"><p>IsiZulu</p></option>
                   <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                  <option value="Ndebele"><p>Ndebele</p></option>
+                  <option value="IsiNdebele"><p>Ndebele</p></option>
                   <option value="Sesotho"><p>Sesotho</p></option>
                   <option value="Afrikaans"><p>Afrikaans</p></option>
                   <option value="Siswati"><p>Siswati</p></option>

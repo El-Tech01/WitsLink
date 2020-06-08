@@ -33,11 +33,37 @@
     }
 }
 function preload(){
-  document.getElementById("Fname").value = localStorage.getItem("FName");
-  document.getElementById("Lname").value = localStorage.getItem("LName");
-  document.getElementById("studentno").value = localStorage.getItem("sn");
-  document.getElementById("email").value = localStorage.getItem("Email");
+  var somevar = localStorage.getItem("un");
+  var somevar1 = localStorage.getItem("sId");
+  
+  if(somevar){
+    document.getElementById("JOB_ID").value = localStorage.getItem("j");
+    document.getElementById("Fname").value = localStorage.getItem("FName");
+    document.getElementById("Lname").value = localStorage.getItem("LName");
+    document.getElementById("studentno").value = localStorage.getItem("sn");
+    document.getElementById("email").value = localStorage.getItem("Email");
+
+      if(somevar1){
+        document.getElementById("id_or_passport").value = localStorage.getItem("sId");
+        document.getElementById("MaritalStatus").value = localStorage.getItem("mStat");
+        document.getElementById("dateofbirth").value = localStorage.getItem("sDob");
+        document.getElementById("Race").value = localStorage.getItem("sRace");
+        document.getElementById("Contactnumber").value = localStorage.getItem("sPhone");
+        document.getElementById("faculty").value = localStorage.getItem("sFac");
+        document.getElementById("school").value = localStorage.getItem("sSchool");
+        document.getElementById("yos").value = localStorage.getItem("sYos");
+        document.getElementById("HL").value = localStorage.getItem("HL");
+        document.getElementById("FAL").value = localStorage.getItem("FAL");
+      }else{
+        return;
+      }
+      
+
+  }
+   document.getElementById("JOB_ID").value = localStorage.getItem("j");
+  return;
 }
+ 
 window.addEventListener('load',function(){
  var time = 5;
  setInterval(function(){preload();},time);
@@ -95,7 +121,8 @@ window.addEventListener('load',function(){
                 <!-- Name -->
             <div class="col-md-8" >
               <ul>
-
+                
+          
               <li>
                   <div class="contact-item">
                     <h4>Biographical info</h4>
@@ -154,7 +181,7 @@ window.addEventListener('load',function(){
                     <option class="dropdown-content" value="Black">Black</option>
                     <option class="dropdown-content" value="White">White</option>
                     <option class="dropdown-content "value="Indian">Indian</option>
-                    <option class="dropdown-content " value="Indian">Other</option>
+                    <option class="dropdown-content " value="Other">Other</option>
                   </div>
                   </select>
                 </div>
@@ -164,10 +191,10 @@ window.addEventListener('load',function(){
                 <li>
                     <p>Select gender:</p>
                     <ul>
-                    <li><input  type="radio" id="male" name="gender" value="male">
+                    <li><input  type="radio" id="male" name="gender" value="Male">
                     <label for="male">Male</label> </li>
                     <br>
-                    <li><input type="radio" id="female" name="gender" value="female">
+                    <li><input type="radio" id="female" name="gender" value="Female">
                     <label for="female">Female</label> </li>
                     <br>
                     <li><input type="radio" id="other" name="gender" value="other">
@@ -179,7 +206,7 @@ window.addEventListener('load',function(){
                 <li>
                   <p>Marital Status</p>
                 <div class="dropdown">
-                  <select class="dropbtn" id="MaritalStatus" name= "maritalStatus" required="required">
+                  <select class="dropbtn"  id="MaritalStatus" name= "maritalStatus" required="required">
                   <div class="dropdown-content">
                     <option value="" selected disabled hidden><p>Select option</p></option>
                     <option value="single"><p>Single</p></option>
@@ -218,7 +245,7 @@ window.addEventListener('load',function(){
                 <li>
                   <p>Other Language</p>
                 <div class="dropdown">
-                  <select class="dropbtn" name="otherLanguages" required="required">
+                  <select class="dropbtn" id ="FAL" name="otherLanguages" required="required">
                   <div class="dropdown-content">
                     <option selected="selected" disabled><p>Select option</p></option>
                   <option value="English"><p>English</p></option>
@@ -293,15 +320,14 @@ window.addEventListener('load',function(){
                 <li>
                     <p>Faculty enrolled in</p>
                     <div class="dropdown">
-                      <select class="dropbtn" name="faculty" required="required">
+                      <select class="dropbtn" id="faculty" name="faculty" required="required">
                       <div class="dropdown-content">
                         <option selected="selected" disabled><p>Select option</p></option>
                         <option value="Science"><p>Science</p></option>
-                        <option value="CLM"><p>Commerce, Law & Management</p></option>
+                        <option value="Commerce, Law & Management"><p>Commerce, Law & Management</p></option>
                         <option value="Engineering"><p>Engineering</p></option>
                         <option value="Humanities"><p> Humanities</p></option>
-                        <option value="Medicine"><p>Health Sciences</p></option>
-
+                        <option value="Health Sciences"><p>Health Sciences</p></option>
                       </div>
                     </select>
                     </div>
@@ -310,23 +336,23 @@ window.addEventListener('load',function(){
                 <li>
                     <p>School</p>
                     <div class="dropdown">
-                      <select class="dropbtn" name="school" required="required">
+                      <select class="dropbtn" id="school" name="school" required="required">
                       <div class="dropdown-content">
                         <option selected="selected" disabled><p>Select option</p></option>
-                        <option value="single"><p>Computer Science & Applied Mathematics</p></option>
-                        <option value="married"><p>Mathematics</p></option>
-                        <option value="married"><p>Statistics & Actuarial Science</p></option>
-                        <option value="married"><p>Biological Sciences</p></option>
-                        <option value="married"><p>Physical Science</p></option>
-                        <option value="married"><p>Business Sciences</p></option>
-                        <option value="married"><p>Accountancy</p></option>
-                        <option value="married"><p>Economics and Finance</p></option>
-                        <option value="married"><p>Law</p></option>
-                        <option value="married"><p>Earth Sciences</p></option>
-                        <option value="married"><p>Wits School of Arts</p></option>
-                        <option value="married"><p>Education</p></option>
-                        <option value="married"><p>Human and Community Development</p></option>
-                        <option value="married"><p>Social Sciences</p></option>                  
+                        <option value="Computer Science & Applied Mathematics"><p>Computer Science & Applied Mathematics</p></option>
+                        <option value="Mathematics"><p>Mathematics</p></option>
+                        <option value="Statistics & Actuarial Science"><p>Statistics & Actuarial Science</p></option>
+                        <option value="Biological Sciences"><p>Biological Sciences</p></option>
+                        <option value="Physical Science"><p>Physical Science</p></option>
+                        <option value="Business Sciences"><p>Business Sciences</p></option>
+                        <option value="Accountancy"><p>Accountancy</p></option>
+                        <option value="Economics and Finance"><p>Economics and Finance</p></option>
+                        <option value="Law"><p>Law</p></option>
+                        <option value="Earth Sciences"><p>Earth Sciences</p></option>
+                        <option value="Wits School of Arts"><p>Wits School of Arts</p></option>
+                        <option value="Education"><p>Education</p></option>
+                        <option value="Human and Community Development"><p>Human and Community Development</p></option>
+                        <option value="Social Sciences"><p>Social Sciences</p></option>                 
                       </div>
                     </select>
                     </div>

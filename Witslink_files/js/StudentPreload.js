@@ -59,24 +59,26 @@ function loadStudentData(Sdata){
                 var fac = Sdata[i].STUDENT_FACULTY;
                 var school = Sdata[i].STUDENT_SCHOOL;
                 var yos = Sdata[i].STUDENT_YOS;
+                var skill = Sdata[i].STUDENT_SKILLS;
 
-                  localStorage.setItem("sn", stdNo);
-                  localStorage.setItem("FName", fname);
-                  localStorage.setItem("LName", lname);
-                  localStorage.setItem("sId",id);
-                  localStorage.setItem("sDob",dob);
-                  localStorage.setItem("sGen",gen);
-                  localStorage.setItem("sRace",race);
-                  localStorage.setItem("mStat",mStatus);
-                  localStorage.setItem("HL",hLang);
-                  localStorage.setItem("FAL",oLang);
-                  localStorage.setItem("disa",dis);
-                  localStorage.setItem("disD",disDesc);
-                  localStorage.setItem("sPhone",phone);
-                  localStorage.setItem("sFac",fac);
-                  localStorage.setItem("Email", email);
-                  localStorage.setItem("sSchool",school);
-                  localStorage.setItem("sYos", yos);
+                  sessionStorage.setItem("sn", stdNo);
+                  sessionStorage.setItem("FName", fname);
+                  sessionStorage.setItem("LName", lname);
+                  sessionStorage.setItem("sId",id);
+                  sessionStorage.setItem("sDob",dob);
+                  sessionStorage.setItem("sGen",gen);
+                  sessionStorage.setItem("sRace",race);
+                  sessionStorage.setItem("mStat",mStatus);
+                  sessionStorage.setItem("HL",hLang);
+                  sessionStorage.setItem("FAL",oLang);
+                  sessionStorage.setItem("disa",dis);
+                  sessionStorage.setItem("disD",disDesc);
+                  sessionStorage.setItem("sPhone",phone);
+                  sessionStorage.setItem("sFac",fac);
+                  sessionStorage.setItem("Email", email);
+                  sessionStorage.setItem("sSchool",school);
+                  sessionStorage.setItem("sYos", yos);
+                  sessionStorage.setItem("sSkill", skill);
             
             }
         }

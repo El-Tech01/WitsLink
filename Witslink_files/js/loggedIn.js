@@ -6,7 +6,7 @@ let stdnt = document.getElementById("studentlgn");
      stdnt.removeChild(stdnt.firstChild);
       hr.removeChild(hr.firstChild);
    }
-   let appView = "<a href="+"viewAppStatus.html"+" class="+"page-scroll>view my applications</a>";
+   let appView = "<a href="+"studentProfile.html"+" class="+"page-scroll>My Profile</a>";
     let logout = "<a href="+"StudentLogin.html"+" class="+"page-scroll>Log out</a>";
      stdnt.insertAdjacentHTML('beforeend',appView);
       hr.insertAdjacentHTML('beforeend',logout);

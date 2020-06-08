@@ -55,26 +55,25 @@ function preload(){
         document.getElementById("HL").value = sessionStorage.getItem("HL");
         document.getElementById("FAL").value = sessionStorage.getItem("FAL");
         document.getElementById("skill").value = sessionStorage.getItem("sSkill");
-                var genders = sessionStorage.getItem('sGen');
-                var disable = sessionStorage.getItem('sGen');
-                if(genders == 'Male'){
-                  document.getElementById('male').checked = true;
-                }else if(genders == 'Female'){
-                  document.getElementById('female').checked = true;
-                }else{
-                  document.getElementById('other').checked = true;
-                }
-
-                if(disable == '1'){
-                  document.getElementById('yes').checked = true;
-                }else{
-                  document.getElementById('nodisability').checked = true;
-                }
-
+        var genders = sessionStorage.getItem('sGen');
+        var disable = sessionStorage.getItem('sGen');
+        if(genders == 'Male'){
+            document.getElementById('male').checked = true;
+        }else if(genders == 'Female'){
+            document.getElementById('female').checked = true;
+        }else{
+            document.getElementById('other').checked = true;
+        }
+        if(disable == '1'){
+            document.getElementById('yes').checked = true;
+        }else{
+            document.getElementById('nodisability').checked = true;
+        }
+        
       }else{
         return;
       }
-   /// alert(sessionStorage.getItem("sId"));
+   
 
   }
    document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
@@ -106,6 +105,7 @@ window.addEventListener('load',function(){
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html#InfoHub" class="page-scroll">Info Hub</a></li>
         <li><a href="index.html#services" class="page-scroll">Job Vacancies</a></li>
+        <li><a href="viewAppStatus.html" class="page-scroll">My Applications</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -118,8 +118,8 @@ window.addEventListener('load',function(){
     <div class="col-md-8">
       <div class="row">
         <div class="section-title">
-          <h2>Apply</h2>
-          <p>Please ensure you fill all attributes of the the form below</p>
+          <h2>My Profile</h2>
+          <p>Please ensure to save all changes.</p>
         </div>
 
         <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
@@ -131,7 +131,6 @@ window.addEventListener('load',function(){
               <div class="contact-item" id="jobName">
                 <input id="JOB_ID" hidden name="JobID">
              </div>
-             <script type="text/javascript" src="js/showJobTitle.js"></script>
 
                 </div>
                 </div>
@@ -142,7 +141,7 @@ window.addEventListener('load',function(){
           
               <li>
                   <div class="contact-item">
-                    <h4>Biographical info</h4>
+                    <h4>Biographical Information</h4>
                   </div>
               </li>
               <form action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
@@ -214,7 +213,7 @@ window.addEventListener('load',function(){
                     <li><input type="radio" id="female" name="gender" value="Female">
                     <label for="female">Female</label> </li>
                     <br>
-                    <li><input type="radio" id="other" name="gender" value="other">
+                    <li><input type="radio" id="other" name="gender" value="Other">
                       <label for="other">Other</label></li>
                     </ul>
                     <br>
@@ -394,6 +393,28 @@ window.addEventListener('load',function(){
           </form>
 
           <div class="col-md-6">
+              <form method="post" enctype="multipart/form-data" action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
+              <p>Upload proof of registration</p>
+              <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
+                  <tr>
+                  <td width="246">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                  <input name="proofReg" type="file" id="userproofreg">
+                  </td>
+
+                  </tr>
+                </table>
+                  <p>Upload your transcript</p>
+                <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+                    <tr>
+                    <td width="246">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                    <input name="transcript" type="file" id="userfile">
+                    </td>
+                    </tr>
+                </table>
+                <button type="upload" name="upload" class="btn btn-custom btn-lg">Upload files</button>
+              </form>
 
               <br>
               <div id="submit application"></div>

@@ -134,17 +134,17 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Medium;
+  font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #595959;
+  color: #ffff;
 }
 
 .txt2 {
-  font-family: Poppins-Medium;
+  font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #595959;
+  color: #ffff;
 }
 
 
@@ -170,7 +170,7 @@ iframe {
   padding: 15px;
   background: #183269;
 
-  background: linear-gradient(to bottom, #ffff 2%, #b3b3b3 100%);
+  background: linear-gradient(to right,#ffff, #00264d);
 }
 
 .wrap-login100 {

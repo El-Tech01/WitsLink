@@ -24,14 +24,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-<script>
-
-  function load(){
-    document.getElementById('submitApplication').onclick = function(){
-        var stdNum = document.getElementById('studentNo').value;
-        sessionStorage.setItem('stdNo',stdNum);
-    }
-}
+<script> 
 function preload(){
   var somevar = sessionStorage.getItem("un");
   var somevar1 = sessionStorage.getItem("sId");
@@ -381,7 +374,6 @@ window.addEventListener('load',function(){
                     </div>
                 </li>
                 <br>
-
                 <div class="form-group">
                     <textarea name="skill" id="skill" class="form-control" rows="4" placeholder="Your Skills"d></textarea>
                     <p class="help-block text-danger"></p>

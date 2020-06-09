@@ -98,12 +98,20 @@
 
                     <li>
                       <p>Job Status</p>
-                      <div class="form-group">
-                        <!-- Lname -> jobStatus -->
-                        <input type="text" id="jobStatus" class="form-control" name="jobStatus" placeholder=""
-                          required="required">
-                        <p class="help-block text-danger"></p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="jobStatus" name="jobStatus" required="required">
+                        <div class="dropdown-content">
+                          <option value="" selected disabled>Select option</option>
+                          <option class="dropdown-content" value="Full-Time">Full-Time</option>
+                          <option class="dropdown-content" value="Part-Time">Part-Time</option>
+                          <option class="dropdown-content "value="Vacational">Vacational</option>
+                          <option class="dropdown-content " value="Once-Off">Once-Off</option>
+                        </div>
+                        </select>
+                          <p class="help-block text-danger"></p>
                       </div>
+                  
+
                     </li>
 
                     <li>

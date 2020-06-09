@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>WitsLink-Application-Status</title>
+        <title>WitsLink</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -23,6 +23,7 @@
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 
+
     </head>
     <body>
         <nav id="menu" class="navbar navbar-default navbar-fixed-top">
@@ -39,7 +40,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html#services" class="page-scroll">View Jobs</a></li>
+                        <li><a href="AddJob.html" class="page-scroll">Add a Job</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -52,35 +53,33 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="section-title">
-                                <h2>View Applications</h2>
+                                <h2>Posted Jobs</h2>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                  <h3 id="stdno"></h3>
-                                    <form name ="viewStatusForm">
+                                    <form name ="viewJobForm" id="JobTable">
                                         <div class="table-responsive">
                                             <div class="table-bordered">
-                                                <table class="table">
-                                                    <thead class="thead-App">
-                                                        <tr>
-                                                            <th class="col1">Department</th>
-                                                            <th class="col2">Job Title</th>
-                                                            <th class="col3">Job Term</th>
-                                                            <th class="col4-1">Application Deadline</th>
+                                                <table id ="jobTable" class="table">
+                                                    <thead class="table-header">
+                                                        <tr >
+                                                            <th class="col1">Title</th>
+                                                            <th class="col2">Type</th>
+                                                            <th class="col3">Deadline</th>
+                                                            <th class="col4">No. of Applications</th>
                                                             <th class="col5">Status</th>
-
                                                         </tr>
                                                     </thead>
-                                                    <tbody id="data">
+                                                    <tbody id="tableBody">
 
                                                     </tbody>
 
                                                 </table>
-
                                             </div>
                                         </div>
+                                        <script src="js/tableRedirect.js"></script>
+
                                     </form>
-                                    <p id="parag"></p>
                                 </div>
                             </div>
                         </div>
@@ -88,8 +87,27 @@
                 </div>
             </div>
         </div>
+               <script>
+                   $(document).ready(function(){
+                    $(document.body).on("click", "tr[data-href]", function() {
+                        window.location.href = this.dataset.href;
+                    })
+                   });
+                </script>
+
+      <!-- Footer Section -->
+      <div id="footer">
+          <div class="container text-center">
+              <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School
+                      Project</a></p>
+          </div>
+      </div>
+
+
+      <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/SmoothScroll.js"></script>
+      <script type="text/javascript" src="js/nivo-lightbox.js"></script>
 
     </body>
-<script type="text/javascript" src="js/status.js"></script>
-
 </html>

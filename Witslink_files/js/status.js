@@ -2,7 +2,7 @@ let tag = document.getElementById('data');
  let stdn = document.getElementById('stdno');
 
 
-let std = parseInt(localStorage.getItem('un'));
+let std = parseInt(sessionStorage.getItem('un'));
 fetchData(std);
 
 function fetchData(studentNo){
@@ -44,76 +44,3 @@ function displayStatus(arr) {
             tag.insertAdjacentHTML('beforeend', htmlString);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //displayStatus(arr);
-
-
-/*
-function StatusTable(res) {
-   var  htmlString ="", hold="";
-
-    hold = res[0].JOB_TITLE;
-       if (!hold.localeCompare("false")) {
-             htmlString = "<tr><td>" + "No jobs available" + "</td></tr>";
-
-       } else {
-
-            var jobstat;
-            var today = new Date();
-           for (var i = 0; i < res.length; i++) {
-                if (new Date(res[i].JOB_DEADLINE) < today ) {
-                   jobstat = 'In-Active';
-                } else if (new Date(res[i].JOB_DEADLINE) >= today) {
-                    jobstat = 'Active';
-                }
-                htmlString +=  '<tr><td class="col1">' + res[i].JOB_TITLE +
-                    '</td><td class="col2">' + res[i].JOB_STATUS +
-                    '</td><td class="col3">' + res[i].JOB_DEADLINE +
-                    '</td><td class="col4">' + res[i].NUM_OF_APPS +
-                    '</td><td class="col5">' + jobstat +
-                    '</td></tr>';
-           }
-
-       }
-       postedJobs.insertAdjacentHTML('beforeend', htmlString);
-}
-*/

@@ -58,6 +58,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <form name ="viewJobForm" id="JobTable">
+                                        <div class="table-responsive">
                                            <div class="table-bordered">
                                                 <table id ="jobTable" class="table">
                                                     <thead class="table-header">
@@ -69,11 +70,11 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="tableBody">
-                                                      <tbody class="row"> </tbody>
-                                                      <tbody class="row"> </tbody>
-                                                    </tbody>
+                                                     </tbody>
                                                 </table>
                                             </div>
+                                              </div>
+                                            <script src="js/listdocuments.js"></script>
                                      </form>
                                 </div>
                             </div>
@@ -82,6 +83,19 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () =>{
+                const rows = document.querySelectorAll('tr[data-href]');
+
+                rows.forEach(row => {
+                    row.addEventListener("click", () => {
+                        window.location.href = row.dataset.href;
+                    });
+                });
+            });
+
+         </script>
 
 
 

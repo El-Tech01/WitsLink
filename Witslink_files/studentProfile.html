@@ -27,26 +27,17 @@
 </head>
 
 <script>
-
-
+//Refreshing the page
 let loaded = sessionStorage.getItem("loaded");
 if (loaded == "false"){
     setInterval(function(){location.reload();},500);
   sessionStorage.setItem("loaded", 'true');
 }
-//setInterval(function(){location.reload();},1000);
-//clearInterval(setInterval(function(){location.reload();},1000));
 
-//window.addEventListener('load',preload);
-
-function preload(){
-  document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
-
-}
 </script>
 
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()" onshow="preload()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">

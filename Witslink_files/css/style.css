@@ -185,6 +185,7 @@ hr {
 #menu.navbar-default .navbar-nav > li > a:hover {
 
 	color: #ce2a36;
+	cursor: pointer;
 
 }
 
@@ -531,6 +532,8 @@ header .intro-text {
 	font-weight: 300;
 
 	padding-right: 8px;
+
+	cursor: pointer;
 
 }
 

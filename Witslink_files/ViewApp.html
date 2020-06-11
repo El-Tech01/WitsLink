@@ -55,6 +55,9 @@
                                 <h2>Applicants</h2>
                             </div>
                             <div class="col-md-12">
+                                <div class="form-group" id="job_title">
+
+                                </div>
                                 <div class="form-group">
                                     <form name ="viewAppForm">
                                         <div class="table-responsive">
@@ -82,8 +85,7 @@
                                                 rIndex=this.rowIndex;
                                                 var jobId= this.cells[0].innerHTML;
                                                 var hold = jobId.split(">");
-                                                var hold2 = hold[1].split("<")
-                                              //  alert(jobId);
+                                                var hold2 = hold[1].split("<");
                                                 localStorage.setItem("Sno",hold2[0]);
                                               
                                               }

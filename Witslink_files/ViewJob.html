@@ -84,7 +84,13 @@
                                               table.rows[i].onclick=function(){
                                                 rIndex=this.rowIndex;
                                                 var jobId= this.cells[0].innerHTML;
-                                                 localStorage.setItem("Jid",jobId);
+                                                var jobTit= this.cells[1].innerHTML;
+                                                localStorage.setItem("Jid",jobId);
+
+                                                //This is to show the job title on this page
+                                                var hold = jobTit.split(">");
+                                                var hold2 = hold[1].split("<");
+                                                localStorage.setItem("jTitle",hold2[0]);
                                                  
                                               }
                                             }
@@ -99,18 +105,6 @@
                 </div>
             </div>
         </div>
-               <script>
-                   document.addEventListener("DOMContentLoaded", () =>{
-                       const rows = document.querySelectorAll('tr[data-href]');
-
-                       rows.forEach(row => {
-                           row.addEventListener("click", () => {
-                               window.location.href = row.dataset.href;
-                           });
-                       });
-                   });
-                   
-                </script>
 
         
       <!-- Footer Section -->

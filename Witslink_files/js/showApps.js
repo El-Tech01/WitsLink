@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     var urlRequest = new XMLHttpRequest();
     // find a way of getting the job id
     //var user = document.getElementById("JOB_ID").value;
-    var user=11200001;
+    
     var job_id = localStorage.getItem("Jid");
     //alert(job_id);
     var jobidInt = parseInt(job_id);
@@ -16,9 +16,15 @@ window.addEventListener("load", function(){
     urlRequest.send();
 });
 
-
 var display = document.getElementById("displayApps");
+var jtitle = document.getElementById("job_title");
+
 function HtmlOutput(data) {
+
+  var jbname = localStorage.getItem("jTitle");
+  var htmlstr = "<h5>" + jbname + "</h5>"
+  jtitle.insertAdjacentHTML('beforeend', htmlstr);
+
   var htmlString="";
   var hold="a";
   hold=data[0].STUDENT_NO;

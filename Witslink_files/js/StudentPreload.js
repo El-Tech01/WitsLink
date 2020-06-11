@@ -53,7 +53,7 @@ function loadStudentData(Sdata){
                 var  hLang = Sdata[i].STUDENT_HOME_LANG;
                 var  oLang = Sdata[i].STUDENT_OTHER_LANG;
                 var  dis = Sdata[i].STUDENT_DISABILITY;
-                var disDesc = Sdata[i].STUDENT_DISABILITY_DESC;
+                var disDesc = Sdata[i].STUDENT_DISABLILITY_DESC;
                 var phone = Sdata[i].STUDENT_PHONE_NO;
                 var email = Sdata[i].STUDENT_EMAIL;
                 var fac = Sdata[i].STUDENT_FACULTY;

@@ -35,7 +35,7 @@
 function preload(){
   var somevar = sessionStorage.getItem("un");
   var somevar1 = sessionStorage.getItem("sId");
-  
+
   if(somevar){
     document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
     document.getElementById("Fname").value = sessionStorage.getItem("FName");
@@ -55,7 +55,7 @@ function preload(){
         document.getElementById("FAL").value = sessionStorage.getItem("FAL");
         document.getElementById("skill").value = sessionStorage.getItem("sSkill");
                 var genders = sessionStorage.getItem('sGen');
-                var disable = sessionStorage.getItem('sGen');
+                var disable = sessionStorage.getItem('disa');
                 if(genders == 'Male'){
                   document.getElementById('male').checked = true;
                 }else if(genders == 'Female'){
@@ -64,8 +64,9 @@ function preload(){
                   document.getElementById('other').checked = true;
                 }
 
-                if(disable == '1'){
+                if(disable == 0){
                   document.getElementById('yes').checked = true;
+                  document.getElementById('disabilityspec').value = sessionStorage.getItem('disD');
                 }else{
                   document.getElementById('nodisability').checked = true;
                 }
@@ -79,15 +80,15 @@ function preload(){
    document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
   return;
 }
- 
+
 window.addEventListener('load',function(){
  var time = 5;
  setInterval(function(){preload();},time);
- 
+
 });
 
 </script>
- 
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()">
 <!-- Navigation-->
@@ -121,12 +122,12 @@ window.addEventListener('load',function(){
           <p>Please ensure you fill all attributes of the the form below</p>
         </div>
 
-        <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+        <form id="DetailsForm" >
             <div class="col-md-12">
               <div class="form-group">
 
             <div class="col-md-10" >
-            
+
               <div class="contact-item" id="jobName">
                 <input id="JOB_ID" hidden name="JobID">
              </div>
@@ -137,15 +138,15 @@ window.addEventListener('load',function(){
                 <!-- Name -->
             <div class="col-md-8" >
               <ul>
-                
-          
+
+
               <li>
                   <div class="contact-item">
                     <h4>Biographical info</h4>
                   </div>
               </li>
-              <form action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
-                
+              <form >
+
                 <li>
                     <p>First Name</p>
                     <div class="form-group">
@@ -368,7 +369,7 @@ window.addEventListener('load',function(){
                         <option value="Wits School of Arts"><p>Wits School of Arts</p></option>
                         <option value="Education"><p>Education</p></option>
                         <option value="Human and Community Development"><p>Human and Community Development</p></option>
-                        <option value="Social Sciences"><p>Social Sciences</p></option>                 
+                        <option value="Social Sciences"><p>Social Sciences</p></option>
                       </div>
                     </select>
                     </div>
@@ -393,6 +394,29 @@ window.addEventListener('load',function(){
           </form>
 
           <div class="col-md-6">
+                        <form method="post" enctype="multipart/form-data"
+                          action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
+                          <p>Upload proof of registration</p>
+                          <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
+                            <tr>
+                              <td width="246">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                <input name="proofReg" type="file" id="userproofreg">
+                              </td>
+
+                            </tr>
+                          </table>
+                          <p>Upload your transcript</p>
+                          <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+                            <tr>
+                              <td width="246">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                <input name="transcript" type="file" id="userfile">
+                              </td>
+                            </tr>
+                          </table>
+                          <button type="upload" name="upload" class="btn btn-custom btn-lg">Upload files</button>
+                        </form>
 
               <br>
               <div id="submit application"></div>
@@ -406,6 +430,27 @@ window.addEventListener('load',function(){
     </div>
             <script src="js/StudentPreload.js"></script>
 </form>
+
+        <script type="text/javascript">
+          let myform = document.getElementById('DetailsForm');
+            myform.addEventListener('submit', (e)=>{
+              e.preventDefault();
+
+              let xhr = new XMLHttpRequest();
+                 xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php");
+
+                 xhr.onload = function (){
+                   if (this.responseText){
+                     alert("Application successful");
+                     window.location.assign("viewAppStatus.html");
+                   }else{
+                     window.location.assign("apply.html");
+                   }
+                 };
+                  xhr.send(new FormData(myform));
+
+            });
+        </script>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap-msg.js"></script>

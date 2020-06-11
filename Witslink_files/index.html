@@ -47,7 +47,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul id="Nav" class="nav navbar-nav navbar-right">
         <li><a href="#InfoHub" class="page-scroll">Info Hub</a></li>
         <li><a href="#services" class="page-scroll">Job Vacancies</a></li>
         <li id="studentlgn"><a href="StudentLogin.html" class="page-scroll">Student Login</a></li>
@@ -252,10 +252,10 @@
           var value = $(this).find(".selected h2:first").html();
           if (value == null) alert("Value not Sent");
 
-          else
-           localStorage.setItem("jtitle",value);
-           theDevil = $('.selected').find('.jobId').attr('value');
-           sessionStorage.setItem("j",theDevil);
+          else 
+            localStorage.setItem("jtitle",value);
+            theDevil = $('.selected').find('.jobId').attr('value');
+            sessionStorage.setItem("j",theDevil);
           }
 
           var jobs = document.getElementById('jobDiv'),

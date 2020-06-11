@@ -5,7 +5,7 @@ document.getElementById('appStatus').addEventListener('click', function(){
   if ('un' in sessionStorage){
     window.location.replace("viewAppStatus.html");
   }else{
-    Msg['warning']("You have to be logged in first to see your applications");
+    alert("You have to be logged in first to see your applications");
     window.location.replace("studentLogin.html");
   }
 
@@ -20,10 +20,10 @@ let myform = document.getElementById('DetailsForm');
 
       xhr.onload = function (){
         if(this.responseText){
-          Msg['success']("Details successfully updated!");
+          alert("Details successfully updated!");
           window.location.replace("viewAppStatus.html");
         }else{
-          Msg['error']("An error was encountered, please try again");
+          alert("An error was encountered, please try again");
         }
       };
 

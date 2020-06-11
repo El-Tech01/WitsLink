@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WitsLink</title>
+<title>WitsLink-Student details</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -24,15 +24,29 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-<script> 
+</head>
+
+<script>
+
+
+let loaded = sessionStorage.getItem("loaded");
+if (loaded == "false"){
+    setInterval(function(){location.reload();},500);
+  sessionStorage.setItem("loaded", 'true');
+}
+//setInterval(function(){location.reload();},1000);
+//clearInterval(setInterval(function(){location.reload();},1000));
+
+//window.addEventListener('load',preload);
+
 function preload(){
   document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
 
 }
 </script>
- 
-</head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()">
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="preload()" onshow="preload()">
 <!-- Navigation-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -48,7 +62,7 @@ function preload(){
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html#InfoHub" class="page-scroll">Info Hub</a></li>
         <li><a href="index.html#services" class="page-scroll">Job Vacancies</a></li>
-        <li><a href="viewAppStatus.html" class="page-scroll">My Applications</a></li>
+        <li id="appStatus"><a  class="page-scroll">My Applications</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -65,23 +79,12 @@ function preload(){
           <p>Please ensure to save all changes.</p>
         </div>
 
-        <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php" method="POST">
-            <div class="col-md-12">
-              <div class="form-group">
+        <form id="DetailsForm" >
 
-            <div class="col-md-10" >
-            
-              <div class="contact-item" id="jobName">
-                <input id="JOB_ID" hidden name="JobID">
-             </div>
-
-                </div>
-                </div>
-                <!-- Name -->
             <div class="col-md-8" >
               <ul>
-                
-          
+
+
               <li>
                   <div class="contact-item">
                     <h4>Biographical Information</h4>
@@ -92,7 +95,7 @@ function preload(){
                 <li>
                     <p>First Name</p>
                     <div class="form-group">
-                      <input name="firstName" type="text" id="Fname" class="form-control" placeholder="First Name" required>
+                      <input name="firstName" type="text" id="Fname" class="form-control" placeholder="First Name"  required>
 
                     </div>
                 </li>
@@ -149,7 +152,7 @@ function preload(){
 
                 <li>
                     <p>Select gender:</p>
-                    <ul>
+                    <ul id="gender">
                     <li><input  type="radio" id="male" name="gender" value="Male">
                     <label for="male">Male</label> </li>
                     <br>
@@ -186,7 +189,7 @@ function preload(){
                     <option value="English"><p>English</p></option>
                     <option value="IsiZulu"><p>IsiZulu</p></option>
                     <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                    <option value="IsiNdebele"><p>Ndebele</p></option>
+                    <option value="IsiNdebele"><p>IsiNdebele</p></option>
                     <option value="Sesotho"><p>Sesotho</p></option>
                     <option value="Afrikaans"><p>Afrikaans</p></option>
                     <option value="Siswati"><p>Siswati</p></option>
@@ -210,7 +213,7 @@ function preload(){
                   <option value="English"><p>English</p></option>
                   <option value="IsiZulu"><p>IsiZulu</p></option>
                   <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                  <option value="IsiNdebele"><p>Ndebele</p></option>
+                  <option value="IsiNdebele"><p>IsiNdebele</p></option>
                   <option value="Sesotho"><p>Sesotho</p></option>
                   <option value="Afrikaans"><p>Afrikaans</p></option>
                   <option value="Siswati"><p>Siswati</p></option>
@@ -311,7 +314,7 @@ function preload(){
                         <option value="Wits School of Arts"><p>Wits School of Arts</p></option>
                         <option value="Education"><p>Education</p></option>
                         <option value="Human and Community Development"><p>Human and Community Development</p></option>
-                        <option value="Social Sciences"><p>Social Sciences</p></option>                 
+                        <option value="Social Sciences"><p>Social Sciences</p></option>
                       </div>
                     </select>
                     </div>
@@ -366,7 +369,6 @@ function preload(){
     </div>
             <script src="js/trial.js"></script>
             
-</form>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap-msg.js"></script>
@@ -386,8 +388,10 @@ function preload(){
 
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/bootstrap-msg.js"></script>
 <script type="text/javascript" src="js/SmoothScroll.js"></script>
 <script type="text/javascript" src="js/nivo-lightbox.js"></script>
+<script type="text/javascript" src="js/studentProfile.js"></script>
 <!--<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/main.js"></script>-->

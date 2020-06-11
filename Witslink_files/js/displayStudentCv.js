@@ -27,11 +27,11 @@ function HtmlOutput(data) {
   else{
     for(i = 0; i < data.length; i++){
       var dis;
-      if(parseInt(data[i].STUDENT_DISABILTY)==1){
-        dis ="none";
+      if(data[i].STUDENT_DISABILITY == 0){
+        dis = data[i].STUDENT_DISABLILITY_DESC;
       }
       else{
-        dis="Yes";
+        dis="None";
       }
     htmlString += '<ul><li><p>'+data[i].STUDENT_FNAME+
     '</p></li><li><p>'+ data[i].STUDENT_LNAME+
@@ -55,7 +55,7 @@ function HtmlOutput(data) {
     '</p></li></ul>';
 
     skill+= '<p class="paragraph">'+data[i].STUDENT_SKILLS+'</p>';
-    localStorage.setItem("Motivation",data[i].STUDENT_MOTIVATION);
+    //localStorage.setItem("Motivation",data[i].STUDENT_MOTIVATION);
     }
 
       //htmlString1 = window.location.assign("index.html");

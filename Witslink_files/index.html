@@ -83,7 +83,7 @@
         <p>Tap into the world of opportunities Wits has to offer.</p>
       </div>
       <div class="col-xs-12 col-md-4 text-center">
-        <a href="apply.html" class="btn btn-custom btn-lg page-scroll" id="BtnApply">APPLY</a>
+        <a href="index.html#services" class="btn btn-custom btn-lg page-scroll" id="BtnApply">APPLY</a>
       </div>
     </div>
   </div>
@@ -253,7 +253,7 @@
           if (value == null) alert("Value not Sent");
 
           else 
-            sessionStorage.setItem("jtitle",value);
+            localStorage.setItem("jtitle",value);
             theDevil = $('.selected').find('.jobId').attr('value');
             sessionStorage.setItem("j",theDevil);
           }

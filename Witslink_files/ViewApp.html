@@ -65,7 +65,7 @@
                                                             <th class="col1">Student Number</th>
                                                             <th class="col2">First Name</th>
                                                             <th class="col3">Last Name</th>
-                                                            <th class="col4-1" colspan="25">Faculty</th>
+                                                            <th class="col4-1">Faculty</th>
                                                             <th class="col5">YOS</th>
                                                         </tr>
                                                     </thead>
@@ -83,8 +83,9 @@
                                                 var jobId= this.cells[0].innerHTML;
                                                 var hold = jobId.split(">");
                                                 var hold2 = hold[1].split("<")
-                                                //alert(hold2[0]);
+                                              //  alert(jobId);
                                                 localStorage.setItem("Sno",hold2[0]);
+                                              
                                               }
                                             }
                                           }

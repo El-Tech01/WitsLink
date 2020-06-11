@@ -26,59 +26,9 @@
 
 <script> 
 function preload(){
-  var somevar = sessionStorage.getItem("un");
-  var somevar1 = sessionStorage.getItem("sId");
-  
-  if(somevar){
-    document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
-    document.getElementById("Fname").value = sessionStorage.getItem("FName");
-    document.getElementById("Lname").value = sessionStorage.getItem("LName");
-    document.getElementById("studentno").value = sessionStorage.getItem("sn");
-    document.getElementById("email").value = sessionStorage.getItem("Email");
+  document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
 
-      if(somevar1){
-        document.getElementById("id_or_passport").value = sessionStorage.getItem("sId");
-        document.getElementById("MaritalStatus").value = sessionStorage.getItem("mStat");
-        document.getElementById("dateofbirth").value = sessionStorage.getItem("sDob");
-        document.getElementById("Race").value = sessionStorage.getItem("sRace");
-        document.getElementById("Contactnumber").value = sessionStorage.getItem("sPhone");
-        document.getElementById("faculty").value = sessionStorage.getItem("sFac");
-        document.getElementById("school").value = sessionStorage.getItem("sSchool");
-        document.getElementById("yos").value = sessionStorage.getItem("sYos");
-        document.getElementById("HL").value = sessionStorage.getItem("HL");
-        document.getElementById("FAL").value = sessionStorage.getItem("FAL");
-        document.getElementById("skill").value = sessionStorage.getItem("sSkill");
-        var genders = sessionStorage.getItem('sGen');
-        var disable = sessionStorage.getItem('sGen');
-        if(genders == 'Male'){
-            document.getElementById('male').checked = true;
-        }else if(genders == 'Female'){
-            document.getElementById('female').checked = true;
-        }else{
-            document.getElementById('other').checked = true;
-        }
-        if(disable == '1'){
-            document.getElementById('yes').checked = true;
-        }else{
-            document.getElementById('nodisability').checked = true;
-        }
-        
-      }else{
-        return;
-      }
-   
-
-  }
-   document.getElementById("JOB_ID").value = sessionStorage.getItem("j");
-  return;
 }
- 
-window.addEventListener('load',function(){
- var time = 5;
- setInterval(function(){preload();},time);
- 
-});
-
 </script>
  
 </head>
@@ -115,7 +65,7 @@ window.addEventListener('load',function(){
           <p>Please ensure to save all changes.</p>
         </div>
 
-        <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+        <form id="DetailsForm" action="https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php" method="POST">
             <div class="col-md-12">
               <div class="form-group">
 
@@ -137,7 +87,7 @@ window.addEventListener('load',function(){
                     <h4>Biographical Information</h4>
                   </div>
               </li>
-              <form action="https://lamp.ms.wits.ac.za/~s1879990/studentInfo.php" method="POST">
+              <form action="https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php" method="POST">
                 
                 <li>
                     <p>First Name</p>
@@ -414,7 +364,8 @@ window.addEventListener('load',function(){
       </div>
     </form>
     </div>
-            <script src="js/StudentPreload.js"></script>
+            <script src="js/trial.js"></script>
+            
 </form>
 
         <script src="//code.jquery.com/jquery.min.js"></script>

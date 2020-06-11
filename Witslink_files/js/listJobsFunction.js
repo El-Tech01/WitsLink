@@ -45,20 +45,3 @@ exports.HtmlDisplayJob = HtmlDisplayJob;
         return htmlString;
  }
  exports.loadJobTable = loadJobTable;
-
-
- function HtmlOutput(data) {
-   var htmlString="",hold="";
-   hold=data.jobs[0].DEPT_ID;
-   if(!hold.localeCompare("false")){
-     //alert("wrong password or username");
-     htmlString = 'wrong password or username';
-   }
-   else{
-     htmlString = 'ViewJob.html';
-     //htmlString = window.location.assign("ViewJob.html");
-     //display.insertAdjacentHTML('beforeend',htmlString);
-     }
-     return htmlString;
- }
- exports.HtmlOutput=HtmlOutput;

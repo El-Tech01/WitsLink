@@ -417,7 +417,8 @@ window.addEventListener('load',function(){
 
                  xhr.onload = function (){
                    if (this.responseText){
-                     alert("Application successful");
+                    var respondData = JSON.parse(this.responseText);
+                    alert(respondData);
                      window.location.assign("upload.html");
                    }else{
                      window.location.assign("apply.html");

@@ -25,7 +25,7 @@ test("test the json array to load jobs if no job available in the table",()=>{
   expect(loadJobTable(obj)).toBe(htmlString);
 });
 
-test("test the json data array from the php request with jobs available and load them to a table",()=>{
+test("test the json data array from the php request with jobs available and load them to a table... In-Active job",()=>{
   var text = '{"jobs":[' +
   '{"JOB_TITLE":"Facilitator","JOB_STATUS":"Part-Time","JOB_DEADLINE":"02-04-2020","NUM_OF_APPS":"72"}]}';
   obj = JSON.parse(text);
@@ -37,20 +37,15 @@ test("test the json data array from the php request with jobs available and load
       '</td></tr>';
 expect(loadJobTable(obj)).toBe(htmlString);
 });
-
-//password
-const{HtmlOutput}=require("./listJobsFunction");
-test("test the json array to test password of department",()=>{
-  var hold =  '{"jobs":[' +
-  '{"DEPT_ID":"false"}]}';
-  obj = JSON.parse(hold);
-  var   htmlString = 'wrong password or username';
-  expect(HtmlOutput(obj)).toBe(htmlString);
-});
-test("test the json array to test password of department if department exist",()=>{
-  var hold =  '{"jobs":[' +
-  '{"DEPT_ID":"10001"}]}';
-  obj = JSON.parse(hold);
-  var   htmlString = 'ViewJob.html';
-  expect(HtmlOutput(obj)).toBe(htmlString);
+test("test the json data array from the php request with jobs available and load them to a table...Active job",()=>{
+  var text = '{"jobs":[' +
+  '{"JOB_TITLE":"Facilitator","JOB_STATUS":"Once-Off","JOB_DEADLINE":"02-04-2021","NUM_OF_APPS":"2"}]}';
+  obj = JSON.parse(text);
+  var htmlString =  '<tr><td class="col1">' + "Facilitator" +
+      '</td><td class="col2">' + "Once-Off" +
+      '</td><td class="col3">' + "02-04-2021" +
+      '</td><td class="col4">' + "2"+
+      '</td><td class="col5">' + "Active" +
+      '</td></tr>';
+expect(loadJobTable(obj)).toBe(htmlString);
 });

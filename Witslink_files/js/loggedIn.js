@@ -9,7 +9,7 @@ let stdnt = document.getElementById("studentlgn");
      stdnt.removeChild(stdnt.firstChild);
       hr.removeChild(hr.firstChild);
    }
-   let profile = "<li><a id="+"Profile"+" class="+"page-scroll"+">My Profile</a></li>";
+   let profile = "<li><a :hover id="+"Profile"+" class="+"page-scroll"+">My Profile</a></li>";
     let appView = "<a href="+"viewAppStatus.html"+" class="+"page-scroll>My applications</a>";
      let logout = "<a href="+"StudentLogin.html"+" class="+"page-scroll>Log out</a>";
       stdnt.insertAdjacentHTML('beforeend',appView);

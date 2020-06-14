@@ -1,22 +1,3 @@
-
-window.addEventListener("load", function(){
-    var urlRequest = new XMLHttpRequest();
-    var studentNo = localStorage.getItem("Sno");
-    var studentNoInt = parseInt(studentNo);
-
-    urlRequest.open('GET',"http://lamp.ms.wits.ac.za/~s1879990/studentCVData.php/?STUDENT_NO="+studentNoInt);
-    urlRequest.onload = function(){
-        var respond = JSON.parse(urlRequest.responseText);
-        DisplayStudentCV(respond);
-    };
-    urlRequest.send();
-});
-
-
-var display = document.getElementById("studentDetails");
-var displayContacts = document.getElementById("contactDetails");
-var displayEducation = document.getElementById("educationDetails");
-var displaySkill = document.getElementById("skillDetails");
 function DisplayStudentCV(data) {
   var htmlString="",contacts="",education="",skill;
   var hold="a";

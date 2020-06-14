@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WitsLink</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+  <!-- Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <script>
+    function loadSno(){
+      var k =sessionStorage.getItem("un");
+      document.getElementById('studentNo').value=sessionStorage.getItem("un");
+    }
+</script>
+</head>
+<body onload="loadSno()">
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand page-scroll" href="index.html">WITSLINK</a>
+        <div class="phone"><span>STUDENT</span>Plug</div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html#InfoHub" class="page-scroll">Info Hub</a></li>
+          <li><a href="index.html#services" class="page-scroll">Job Vacancies</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <div id="contact">
+    <div class="container">
+      <div class ="page-scroll">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="section-title">
+            <h2>Apply</h2>
+            <p>Please ensure you upload all documents required below</p>
+          </div>
+              <div class="col-md-12">
+        <div class="form-group">
+
+          <div class="col-md-10" >
+          <div class="contact-item" id="jobName">
+          <input id="JOB_ID" hidden name="JobID">
+          </div>
+          <script type="text/javascript" src="js/showJobTitle.js"></script>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form id="uploadDocs" method="post" enctype="multipart/form-data" action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
+            <p>Upload proof of registration</p>
+            <div class="contact-item" id="jobName">
+              <p>Student number:<p>
+              <input id="studentNo" name="studentNo" value="" readonly>
+           </div>
+            <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
+              <tr>
+                <td width="246">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" required>
+                  <input name="proofReg" type="file" id="userproofreg" required>
+                </td>
+
+              </tr>
+            </table>
+            <br>
+            <p>Upload your transcript</p>
+            <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+              <tr>
+                <td width="246">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" required>
+                  <input name="transcript" type="file" id="userfile" required>
+                </td>
+              </tr>
+            </table>
+            <button type="submit" id="submit" name="upload" class="btn btn-custom btn-lg">Upload files</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!--
+<script type="text/javascript">
+  let myform = document.getElementById('uploadDocs');
+    myform.addEventListener('submit', (e)=>{
+      e.preventDefault();
+
+      let xhr = new XMLHttpRequest();
+         xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php");
+
+         xhr.onload = function (){
+           if (this.responseText){
+             alert("Upload successful");
+             window.location.assign("viewAppStatus.html");
+           }else{
+             window.location.assign("upload.html");
+           }
+         };
+          xhr.send(new FormData(myform));
+
+    });
+</script>-->
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="js/bootstrap-msg.js"></script>
+<!-- Footer Section -->
+<div id="footer">
+  <div class="container text-center">
+    <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a></p>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/nivo-lightbox.js"></script>
+</body>
+</html>

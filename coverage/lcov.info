@@ -1,5 +1,5 @@
 TN:
-SF:Witslink_files/js/PasswordFunctions.js
+SF:Witslink_files/js/testing/PasswordFunctions.js
 FN:1,HtmlOutput
 FN:17,sHtmlOutput
 FNF:2
@@ -20,7 +20,7 @@ DA:21,1
 DA:25,1
 DA:26,1
 DA:29,2
-DA:32,1
+DA:31,1
 LF:15
 LH:15
 BRDA:4,0,0,1
@@ -31,7 +31,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:Witslink_files/js/jobsum.js
+SF:Witslink_files/js/testing/jobsum.js
 FN:1,jobsum
 FNF:1
 FNH:1
@@ -44,7 +44,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:Witslink_files/js/listJobsFunction.js
+SF:Witslink_files/js/testing/listJobsFunction.js
 FN:2,HtmlDisplayJob
 FN:22,loadJobTable
 FNF:2

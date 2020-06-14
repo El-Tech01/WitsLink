@@ -28,5 +28,4 @@ function sHtmlOutput(data,stdNo){
     }
     return htmlString;
 }
-
 exports.sHtmlOutput=sHtmlOutput;

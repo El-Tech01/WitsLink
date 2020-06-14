@@ -1218,6 +1218,402 @@ color: #777;
 
 }
 
+/* Profile Section */
+#profilemenu {
+
+	padding: 20px;
+
+	transition: all 0.8s;
+
+}
+
+#profilemenu.navbar-default {
+
+	background-color: #b30000;
+
+	border-color: rgba(231, 231, 231, 0);
+
+	box-shadow: 0 0 30px rgba(0,0,0,0.2);
+
+}
+
+#profilemenu a.navbar-brand {
+
+	font-family: 'Montserrat', sans-serif;
+
+	font-size: 32px;
+
+	font-weight: 700;
+
+
+	color: #fff;
+
+	text-transform: uppercase;
+
+	letter-spacing: -1px;
+
+}
+
+#profilemenu.navbar-default .navbar-nav > li > a {
+
+	font-family: 'Montserrat', sans-serif;
+
+	text-transform: uppercase;
+
+	color: #fff;
+
+	font-size: 14px;
+
+	font-weight: 700;
+
+	padding: 8px 2px;
+
+	border-radius: 0;
+
+	margin: 9px 20px 0 20px;
+
+}
+
+#profilemenu.navbar-default .navbar-nav > li > a:hover {
+
+	color: #8c8c8c;
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+
+	color: #fff !important;
+
+	background-color: transparent;
+
+}
+
+#profilemenu .phone {
+
+	font-family: 'Montserrat', sans-serif;
+
+	margin: 4px 0 0 120px;
+
+	float: left;
+
+	font-size: 16px;
+
+	font-weight: 400;
+
+	color: #999;
+
+}
+
+
+
+
+#profile {
+
+	padding: 100px 0 60px 0;
+
+	background: #f2f2f2;
+
+	color: 666666;
+
+}
+
+#profile .section-title {
+
+	margin-bottom: 40px;
+
+
+}
+
+#profile h2 {
+
+	color: #666666;
+
+	margin-top: 10px;
+
+	margin-bottom: 15px;
+
+	padding-bottom: 15px;
+
+	border-bottom: 2px solid rgba(89, 89, 89 0.09);
+
+}
+
+#profile h4 {
+
+	color: #b30000;
+
+	margin-top: 22px;
+
+	margin-bottom: 60px;
+
+	padding-bottom: 20px;
+
+	font-weight: bolder;
+
+	border-bottom: 1px solid rgba(89, 89, 89 0.09);
+
+}
+
+#profile form {
+
+	padding-top: 20px;
+
+}
+
+#profile h3 {
+
+	font-size: 17px;
+
+	font-weight: 600;
+
+}
+
+#profile .text-danger {
+
+	color: #cc0033;
+
+	text-align: left;
+
+}
+
+#profile .btn-custom {
+
+	margin: 30px 0;
+
+	background: transparent;
+
+	color: #666666;
+
+	border: 2px solid #666666;
+
+}
+
+#profile .btn-custom:hover {
+
+	color: #b30000;
+
+	background: #fff;
+
+	border: 2px solid #d9d9d9;
+
+}
+
+label {
+
+	font-size: 12px;
+
+	font-weight: 400;
+
+	font-family: 'Open Sans', sans-serif;
+
+	float: left;
+
+}
+
+#profile .form-control {
+
+	display: block;
+
+	width: 40%;
+
+	padding: 6px 12px;
+
+	font-size: 16px;
+
+	line-height: 1.42857143;
+
+	color: #444;
+
+	background-color: #f2f2f2;
+
+	background-image: none;
+
+	border: 1px solid #ddd;
+
+	border-radius: 0;
+
+	-webkit-box-shadow: none;
+
+	box-shadow: none;
+
+	-webkit-transition: none;
+
+	-o-transition: none;
+
+	transition: none;
+
+}
+#profile .dropbtn {
+background-color: #f2f2f2;
+
+  cursor: pointer;
+
+	display: block;
+
+	width: 40%;
+
+	padding: 6px 12px;
+
+	font-size: 16px;
+
+	text-align: left;
+
+	line-height: 1.42857143;
+
+	color: #444;
+
+	background-image: none;
+
+	border: 1px solid #ddd;
+
+	border-radius: 0;
+
+	-webkit-box-shadow: none;
+
+	box-shadow: none;
+
+	-webkit-transition: none;
+
+	-o-transition: none;
+
+	transition: none;
+
+}
+
+#profile .dropdown {
+  position: relative;
+
+}
+
+#profile .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#profile .dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#profile .dropdown-content p:hover {background-color: #fff}
+
+#profile .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#profile .dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+
+
+#profile .form-control:focus {
+
+	border-color: #999;
+
+	outline: 0;
+
+	-webkit-box-shadow: transparent;
+
+	box-shadow: transparent;
+
+}
+
+.form-control::-webkit-input-placeholder {
+
+color: #777;
+
+}
+
+.form-control:-moz-placeholder {
+
+color: #777;
+
+}
+
+.form-control::-moz-placeholder {
+
+color: #777;
+
+}
+
+.form-control:-ms-input-placeholder {
+
+color: #777;
+
+}
+
+#profile .contact-item {
+
+	margin: 20px 0;
+
+}
+
+#profile .contact-item span {
+
+	color: rgba(255,255,255,1);
+
+	display: block;
+
+}
+
+#profile .social {
+
+	border-top: 1px solid rgba(255,255,255,0.1);
+
+	padding-top: 50px;
+
+	margin-top: 50px;
+
+	text-align: center;
+
+}
+
+#profile .social ul li {
+
+	display: block;
+
+	margin: 0 20px;
+
+}
+
+
+#profile .social i.fa {
+	font-size: 24px;
+
+	padding: 10px;
+
+	color: rgba(255,255,255,0.6);
+
+	transition: all 0.3s;
+
+}
+
+#profile .social i.fa:hover {
+
+	color: #fff;
+
+}
+#profile img {
+	border-radius: 50%;
+	width: 12%;
+
+}
+
+#profile p.form{
+	font-weight: 900px;
+}
+
+#profile p.save{
+	font-weight: 500px;
+}
+
+
 /* resume Section */
 
 #resume {

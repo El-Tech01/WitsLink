@@ -394,30 +394,6 @@ window.addEventListener('load',function(){
           </form>
 
           <div class="col-md-6">
-                        <form method="post" enctype="multipart/form-data"
-                          action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
-                          <p>Upload proof of registration</p>
-                          <table width="350" border="0" cellpadding="0" cellspacing="1" class="box">
-                            <tr>
-                              <td width="246">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-                                <input name="proofReg" type="file" id="userproofreg">
-                              </td>
-
-                            </tr>
-                          </table>
-                          <p>Upload your transcript</p>
-                          <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
-                            <tr>
-                              <td width="246">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-                                <input name="transcript" type="file" id="userfile">
-                              </td>
-                            </tr>
-                          </table>
-                          <button type="upload" name="upload" class="btn btn-custom btn-lg">Upload files</button>
-                        </form>
-
               <br>
               <div id="submit application"></div>
               <button onclick="load()" type="submit" id="submitApplication" class="btn btn-custom btn-lg" value="Submit">Submit Application</button>
@@ -442,7 +418,7 @@ window.addEventListener('load',function(){
                  xhr.onload = function (){
                    if (this.responseText){
                      alert("Application successful");
-                     window.location.assign("viewAppStatus.html");
+                     window.location.assign("upload.html");
                    }else{
                      window.location.assign("apply.html");
                    }

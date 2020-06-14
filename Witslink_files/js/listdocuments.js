@@ -21,13 +21,23 @@ var postedDocs = document.getElementById("tableBody");
               htmlString = "<tr><td>" + "No Additional documents submitted" + "</td></tr>";
 
         } else {
+
             for (var i = 0; i < res.length; i++) {
-                 htmlString += '<tr class="col1" ><td class="col1">' + i +
+              var num=i+1;
+            if (i==0){
+                 htmlString += '<tr class="col1" ><td class="col1">' + num +
+                      '</a></td><td class="col1">' + res[i].FILE_ID +
                      '</td><td class="col2">' + res[i].FILE_NAME +
-                     '</a></td><td class="col3">' + res[i].FILE_TYPE +
                      '</td><td class="col4" onclick=" "><a href="AdditionalDocList.html">' +  "Open"+
                       '</td></tr>';
+                    }else if(i==1){
 
+                      htmlString += '<tr class="col1" ><td class="col1">' + num +
+                            '</a></td><td class="col2">' + res[i].REG_ID +
+                          '</td><td class="col2">' + res[i].REG_NAME +
+                           '</td><td class="col4" onclick=" "><a href="AdditionalDocList.html">' +  "Open"+
+                           '</td></tr>';
+                    }
                 }
             postedDocs.insertAdjacentHTML('beforeend', htmlString);
 

@@ -39,7 +39,7 @@ if (loaded == "false"){
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
 <!-- Navigation-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+<nav id="profilemenu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -59,19 +59,23 @@ if (loaded == "false"){
   </div>
 </nav>
   <!-- Contact Section -->
-<div id="contact">
+<div id="profile">
   <div class="container">
     <div class ="page-scroll">
-    <div class="col-md-8">
+    <div class="col-md-16">
       <div class="row">
         <div class="section-title">
-          <h2>My Profile</h2>
-          <p>Please ensure to save all changes.</p>
+          <div class="img">
+             <img src="img/defaultpicture2.png" alt="Avatar">
         </div>
+          <h2>My Profile</h2>
+
+        </div>
+
 
         <form id="DetailsForm" >
 
-            <div class="col-md-8" >
+            <div class="col-md-16" >
               <ul>
 
 
@@ -81,11 +85,11 @@ if (loaded == "false"){
                   </div>
               </li>
               <form action="https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php" method="POST">
-                
+
                 <li>
-                    <p>First Name</p>
+                    <p class="form">First Name</p>
                     <div class="form-group">
-                      <input name="firstName" type="text" id="Fname" class="form-control" placeholder="First Name"  required>
+                      <input name="firstName" type="text" id="Fname" class="form-control"  required>
 
                     </div>
                 </li>
@@ -93,7 +97,7 @@ if (loaded == "false"){
                 <li>
                     <p> Last Name</p>
                     <div class="form-group">
-                      <input name="lastName" type="text" id="Lname" class="form-control" placeholder="Last Name" required="required">
+                      <input name="lastName" type="text" id="Lname" class="form-control"  required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -101,7 +105,7 @@ if (loaded == "false"){
                 <li>
                     <div class="form-group">
                     <p> ID or Passport Number</p>
-                      <input name="idOrPass" type="text" id="id_or_passport" class="form-control" placeholder="Id or passport Number" required="required" >
+                      <input name="idOrPass" type="text" id="id_or_passport" class="form-control"  required="required" >
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -109,7 +113,7 @@ if (loaded == "false"){
                 <li>
                     <div class="form-group">
                     <p> Student Number</p>
-                      <input name="studentNo" type="text" id="studentno" class="form-control" placeholder="Student number" required="required">
+                      <input name="studentNo" type="text" id="studentno" class="form-control" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -250,7 +254,7 @@ if (loaded == "false"){
                 <li>
                     <p>Email address</p>
                     <div class="form-group">
-                      <input name="emailAddress" type="email" id="email" class="form-control" placeholder="Email address" required="required">
+                      <input name="emailAddress" type="email" id="email" class="form-control" placeholder="1234567@students.wits.ac.za" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -258,7 +262,7 @@ if (loaded == "false"){
                 <li>
                     <p>Phone number</p>
                     <div class="form-group">
-                      <input name="phoneNumber"type="text" id="Contactnumber" class="form-control" placeholder="Phone number" required="required">
+                      <input name="phoneNumber"type="text" id="Contactnumber" class="form-control" required="required">
                     <p class="help-block text-danger"></p>
                     </div>
                 </li>
@@ -348,6 +352,7 @@ if (loaded == "false"){
               </form>
 
               <br>
+                      <p class="save"> Please ensure to save to update all changes.</p>
               <div id="submit application"></div>
               <button type="submit" id="updateData" class="btn btn-custom btn-lg" value="Submit">Save</button>
             </div>
@@ -358,7 +363,7 @@ if (loaded == "false"){
     </form>
     </div>
             <script src="js/UpdateData.js"></script>
-            
+
 
         <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap-msg.js"></script>

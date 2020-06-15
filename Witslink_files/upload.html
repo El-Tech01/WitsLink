@@ -66,9 +66,9 @@
           </div>
         </div>
         <div class="col-md-6">
-          <form id="uploadDocs" method="post" enctype="multipart/form-data" action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php">
-            
-            <div class="contact-item">
+          <form id="uploadDocs" action="https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php" method="post" enctype="multipart/form-data">
+            <p>Upload proof of registration</p>
+            <div class="contact-item" id="jobName">
               <p>Student number:<p>
               <input id="studentNo" name="studentNo" value="" readonly>
            </div>
@@ -94,6 +94,28 @@
             </table>
             <button type="submit" id="submit" name="upload" class="btn btn-custom btn-lg">Upload files</button>
           </form>
+          <!--
+          <script type="text/javascript">
+            let myform = document.getElementById('uploadDocs');
+              myform.addEventListener('submit', (e)=>{
+                e.preventDefault();
+
+                let xhr = new XMLHttpRequest();
+                   xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php");
+
+                   xhr.onload = function (){
+                     alert(this.responseText);
+                     if (this.responseText.includes("successful")){
+                       alert("Application successful");
+                       window.location.assign("viewAppStatus.html");
+                     }else{
+                       alert("uploading failed!");
+                       window.location.assign("upload.html");
+                     }
+                   };
+                    xhr.send(new FormData(myform));
+              });
+          </script>-->
       </div>
     </div>
   </div>
@@ -101,28 +123,6 @@
 </div>
 </div>
 </div>
-<!--
-<script type="text/javascript">
-  let myform = document.getElementById('uploadDocs');
-    myform.addEventListener('submit', (e)=>{
-      e.preventDefault();
-
-      let xhr = new XMLHttpRequest();
-         xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/uploadTranscript.php");
-
-         xhr.onload = function (){
-           if (this.responseText){
-             alert("Upload successful");
-             window.location.assign("viewAppStatus.html");
-           }else{
-             alert("uploading failed!")
-             window.location.assign("upload.html");
-           }
-         };
-          xhr.send(new FormData(myform));
-
-    });
-</script>-->
 <script src="//code.jquery.com/jquery.min.js"></script>
 <!-- Footer Section -->
 <div id="footer">

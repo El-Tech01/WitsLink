@@ -58,7 +58,7 @@
 
         </div>
 
-          <div class="page">
+          <div class="page" id="page">
             <div class="row">
               <div class="col-md-12">
 
@@ -161,14 +161,16 @@
 
 
 
-
+              <div id="editor"></div>
             <div class="row">
            <div class="col-md-6">
                <br>
-               <div id="Download CV"></div>
-               <button type="submit" id="downloadCV" class="btn btn-custom btn-lg" value="Submit">Download CV</button>
+                 <a class="btn btn-custom btn-lg" href="javascript:generatePDF()">Dowload PDF</a>
              </div>
+
+
              </div>
+
          </div>
 
      </div>
@@ -179,6 +181,11 @@
   </div>
 <script src="js/displayStudentCv.js"></script>
 <script src="js/getMotivation.js"></script>
+<script src="js/downloadCV.js"></script>
+
+
+<!-- jsPDF library -->
+<script type="text/javascript" src="js/jspdf.min.js"></script>
 
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>

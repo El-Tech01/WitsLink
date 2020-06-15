@@ -1880,6 +1880,9 @@ color: #777;
 #resume a{
 	color: #ffff;
 }
+#resume a.download{
+	padding-left: 0;
+}
 
 /* Footer Section*/
 

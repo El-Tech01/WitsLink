@@ -12,6 +12,7 @@ window.addEventListener("load", function(){
 });
 var postedDocs = document.getElementById("tableBody");
 
+  
 
  function loadTable(res) {
     var  htmlString ="", hold="";

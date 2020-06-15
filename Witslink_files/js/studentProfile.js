@@ -14,12 +14,13 @@ document.getElementById('appStatus').addEventListener('click', function(){
 let myform = document.getElementById('DetailsForm');
    myform.addEventListener('submit', (e)=>{
      e.preventDefault();
-
+    
      let xhr = new XMLHttpRequest();
-      xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php");
+      xhr.open("POST","https://lamp.ms.wits.ac.za/~s1879990/studentTrial.php");
 
       xhr.onload = function (){
         if(this.responseText){
+          //alert(xhr.responseText);
           alert("Details successfully updated!");
           window.location.replace("viewAppStatus.html");
         }else{

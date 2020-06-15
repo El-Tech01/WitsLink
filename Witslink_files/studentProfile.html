@@ -1,370 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WitsLink-Student details</title>
-<meta name="description" content="">
-<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WitsLink-Student details</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Favicons-->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet-->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <!-- Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 </head>
 
-<script>
-//Refreshing the page
-let loaded = sessionStorage.getItem("loaded");
-if (loaded == "false"){
-    setInterval(function(){location.reload();},500);
-  sessionStorage.setItem("loaded", 'true');
-}
-
-</script>
 
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
-<!-- Navigation-->
-<nav id="profilemenu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="index.html">WITSLINK</a>
-      <div class="phone"><span>STUDENT</span>Plug</div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation-->
+  <nav id="profilemenu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand page-scroll" href="index.html">WITSLINK</a>
+        <div class="phone"><span>STUDENT</span>Plug</div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="upload.html" class="page-scroll">Upload Documents</a></li>
+          <li><a href="index.html#services" class="page-scroll">Job Vacancies</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="upload.html" class="page-scroll">Upload Documents</a></li>
-        <li><a href="index.html#services" class="page-scroll">Job Vacancies</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-</nav>
+  </nav>
   <!-- Contact Section -->
-<div id="profile">
-  <div class="container">
-    <div class ="page-scroll">
-    <div class="col-md-16">
-      <div class="row">
-        <div class="section-title">
-          <div class="img">
-             <img src="img/defaultpicture2.png" alt="Avatar">
-        </div>
-          <h2>My Profile</h2>
+  <div id="profile">
+    <div class="container">
+      <div class="page-scroll">
+        <div class="col-md-16">
+          <div class="row">
+            <div class="section-title">
+              <div class="img">
+                <img src="img/defaultpicture2.png" alt="Avatar">
+              </div>
+              <h2>My Profile</h2>
 
-        </div>
-
-
-        <form id="DetailsForm" >
-
-            <div class="col-md-16" >
-              <ul>
-
-
-              <li>
-                  <div class="contact-item">
-                    <h4>Biographical Information</h4>
-                  </div>
-              </li>
-              <form action="https://lamp.ms.wits.ac.za/~s1879990/studentUpdate.php" method="POST">
-
-                <li>
-                    <p class="form">First Name</p>
-                    <div class="form-group">
-                      <input name="firstName" type="text" id="Fname" class="form-control"  required>
-
-                    </div>
-                </li>
-
-                <li>
-                    <p> Last Name</p>
-                    <div class="form-group">
-                      <input name="lastName" type="text" id="Lname" class="form-control"  required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="form-group">
-                    <p> ID or Passport Number</p>
-                      <input name="idOrPass" type="text" id="id_or_passport" class="form-control"  required="required" >
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="form-group">
-                    <p> Student Number</p>
-                      <input name="studentNo" type="text" id="studentno" class="form-control" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-
-                <li>
-                    <p> Date of birth</p>
-                    <div class="form-group">
-                      <input name= "dateOfBirth" type="date" id="dateofbirth" class="form-control" placeholder="Date-of-birth" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-
-                <br><br>
-
-                <li>
-                  <p>Race</p>
-                <div class="dropdown">
-                  <select class="dropbtn" id="Race" name="race" required="required">
-                  <div class="dropdown-content">
-                    <option value="" selected disabled>Select option</option>
-                    <option class="dropdown-content" value="Black">Black</option>
-                    <option class="dropdown-content" value="White">White</option>
-                    <option class="dropdown-content "value="Indian">Indian</option>
-                    <option class="dropdown-content " value="Other">Other</option>
-                  </div>
-                  </select>
-                </div>
-                </li>
-                <br><br>
-
-                <li>
-                    <p>Select gender:</p>
-                    <ul id="gender">
-                    <li><input  type="radio" id="male" name="gender" value="Male">
-                    <label for="male">Male</label> </li>
-                    <br>
-                    <li><input type="radio" id="female" name="gender" value="Female">
-                    <label for="female">Female</label> </li>
-                    <br>
-                    <li><input type="radio" id="other" name="gender" value="Other">
-                      <label for="other">Other</label></li>
-                    </ul>
-                    <br>
-                </li>
-
-                <li>
-                  <p>Marital Status</p>
-                <div class="dropdown">
-                  <select class="dropbtn"  id="MaritalStatus" name= "maritalStatus" required="required">
-                  <div class="dropdown-content">
-                    <option value="" selected disabled hidden><p>Select option</p></option>
-                    <option value="single"><p>Single</p></option>
-                    <option value="married"><p>Married</p></option>
-                  </div>
-                </select>
-                </div>
-                </li>
-
-                <br><br>
-
-                <li>
-                  <p>Home Language</p>
-                <div class="dropdown">
-                  <select class="dropbtn" id="HL" name="homeLanguage" required="required">
-                  <div class="dropdown-content">
-                    <option value="" selected disabled hidden><p>Select option</p></option>
-                    <option value="English"><p>English</p></option>
-                    <option value="IsiZulu"><p>IsiZulu</p></option>
-                    <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                    <option value="IsiNdebele"><p>IsiNdebele</p></option>
-                    <option value="Sesotho"><p>Sesotho</p></option>
-                    <option value="Afrikaans"><p>Afrikaans</p></option>
-                    <option value="Siswati"><p>Siswati</p></option>
-                    <option value="SeTswana"><p>SeTswana</p></option>
-                    <option value="Xitsonga"><p>Xitsonga</p></option>
-                    <option value="Sepedi"><p>Sepedi</p></option>
-                    <option value="TshiVenda"><p>TshiVenda</p></option>
-                  </div>
-                </select>
-                </div>
-                </li>
-                <br>
-                <br>
-
-                <li>
-                  <p>Other Language</p>
-                <div class="dropdown">
-                  <select class="dropbtn" id ="FAL" name="otherLanguages" required="required">
-                  <div class="dropdown-content">
-                    <option selected="selected" disabled><p>Select option</p></option>
-                  <option value="English"><p>English</p></option>
-                  <option value="IsiZulu"><p>IsiZulu</p></option>
-                  <option value="IsiXhosa"><p>IsiXhosa</p></option>
-                  <option value="IsiNdebele"><p>IsiNdebele</p></option>
-                  <option value="Sesotho"><p>Sesotho</p></option>
-                  <option value="Afrikaans"><p>Afrikaans</p></option>
-                  <option value="Siswati"><p>Siswati</p></option>
-                  <option value="SeTswana"><p>SeTswana</p></option>
-                  <option value="Xitsonga"><p>Xitsonga</p></option>
-                  <option value="Sepedi"><p>Sepedi</p></option>
-                  <option value="TshiVenda"><p>TshiVenda</p></option>
-                  </div>
-                </select>
-                </div>
-                </li>
-                <br>
-                <br>
-
-                <li>
-                    <p>Any Disability</p>
-                    <ul>
-                    <li><input type="radio" id="yes" name="disability" value="0">
-                    <label for="yes">Yes</label> </li> <br>
-                    <li><input type="radio" id="nodisability" name="disability" value="1">
-                    <label for="no">No</label>
-                    </li>
-                    <br>
-                    </ul>
-                </li>
-
-                <li>
-                    <div class="form-group">
-                    <p>If clicked yes, specify</p>
-                      <input name="specifyDisability" type="text" id="disabilityspec" class="form-control" placeholder="" >
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-
-                <br>
-                <br>
-
-                <li>
-                  <div class="contact-item">
-                  <h4>Contact details</h4>
-                  </div>
-                </li>
-
-                <li>
-                    <p>Email address</p>
-                    <div class="form-group">
-                      <input name="emailAddress" type="email" id="email" class="form-control" placeholder="1234567@students.wits.ac.za" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-                <br>
-                <li>
-                    <p>Phone number</p>
-                    <div class="form-group">
-                      <input name="phoneNumber"type="text" id="Contactnumber" class="form-control" required="required">
-                    <p class="help-block text-danger"></p>
-                    </div>
-                </li>
-                <br>
-                <li>
-                    <div class="contact-item">
-                    <h4>Education</h4>
-                    </div>
-                </li>
-
-                <li>
-                    <p>Faculty enrolled in</p>
-                    <div class="dropdown">
-                      <select class="dropbtn" id="faculty" name="faculty" required="required">
-                      <div class="dropdown-content">
-                        <option selected="selected" disabled><p>Select option</p></option>
-                        <option value="Science"><p>Science</p></option>
-                        <option value="Commerce, Law & Management"><p>Commerce, Law & Management</p></option>
-                        <option value="Engineering"><p>Engineering</p></option>
-                        <option value="Humanities"><p> Humanities</p></option>
-                        <option value="Health Sciences"><p>Health Sciences</p></option>
-                      </div>
-                    </select>
-                    </div>
-                </li>
-                <br>
-                <li>
-                    <p>School</p>
-                    <div class="dropdown">
-                      <select class="dropbtn" id="school" name="school" required="required">
-                      <div class="dropdown-content">
-                        <option selected="selected" disabled><p>Select option</p></option>
-                        <option value="Computer Science & Applied Mathematics"><p>Computer Science & Applied Mathematics</p></option>
-                        <option value="Mathematics"><p>Mathematics</p></option>
-                        <option value="Statistics & Actuarial Science"><p>Statistics & Actuarial Science</p></option>
-                        <option value="Biological Sciences"><p>Biological Sciences</p></option>
-                        <option value="Physical Science"><p>Physical Science</p></option>
-                        <option value="Business Sciences"><p>Business Sciences</p></option>
-                        <option value="Accountancy"><p>Accountancy</p></option>
-                        <option value="Economics and Finance"><p>Economics and Finance</p></option>
-                        <option value="Law"><p>Law</p></option>
-                        <option value="Earth Sciences"><p>Earth Sciences</p></option>
-                        <option value="Wits School of Arts"><p>Wits School of Arts</p></option>
-                        <option value="Education"><p>Education</p></option>
-                        <option value="Human and Community Development"><p>Human and Community Development</p></option>
-                        <option value="Social Sciences"><p>Social Sciences</p></option>
-                      </div>
-                    </select>
-                    </div>
-                </li>
-                <br>
-                <li>
-                    <p>Year of study</p>
-                    <div class=" form-group">
-                      <input type="number" name="YOS" value="yos" id="yos" required="required">
-                    </div>
-                </li>
-                <br>
-                <div class="form-group">
-                    <textarea name="skill" id="skill" class="form-control" rows="4" placeholder="Your Skills"></textarea>
-                    <p class="help-block text-danger"></p>
-                </div>
-          </form>
-
-          <div class="col-md-6">
-              <p class="save"> Please ensure to save.</p>
-              <div id="submit application"></div>
-              <button type="submit" id="updateData" class="btn btn-custom btn-lg" value="Submit">Save</button>
             </div>
 
-        </ul>
+
+            <form id="DetailsForm">
+
+              <div class="col-md-16">
+                <ul>
+
+
+                  <li>
+                    <div class="contact-item">
+                      <h4>Biographical Information</h4>
+                    </div>
+                  </li>
+                  <form action="https://lamp.ms.wits.ac.za/~s1879990/studentTrial.php" method="POST">
+
+                    <li>
+                      <p class="form">First Name</p>
+                      <div class="form-group">
+                        <input name="firstName" type="text" id="Fname" class="form-control" required>
+
+                      </div>
+                    </li>
+
+                    <li>
+                      <p> Last Name</p>
+                      <div class="form-group">
+                        <input name="lastName" type="text" id="Lname" class="form-control" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="form-group">
+                        <p> ID or Passport Number</p>
+                        <input name="idOrPass" type="text" id="id_or_passport" class="form-control" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="form-group">
+                        <p> Student Number</p>
+                        <input name="studentNo" type="text" id="studentno" class="form-control" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <p> Date of birth</p>
+                      <div class="form-group">
+                        <input name="dateOfBirth" type="date" id="dateofbirth" class="form-control"
+                          placeholder="Date-of-birth" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <br><br>
+
+                    <li>
+                      <p>Race</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="Race" name="race" required="required">
+                          <div class="dropdown-content">
+                            <option value="" selected disabled>Select option</option>
+                            <option class="dropdown-content" value="Black">Black</option>
+                            <option class="dropdown-content" value="White">White</option>
+                            <option class="dropdown-content " value="Indian">Indian</option>
+                            <option class="dropdown-content " value="Other">Other</option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+                    <br><br>
+
+                    <li>
+                      <p>Select gender:</p>
+                      <ul id="gender">
+                        <li><input type="radio" id="male" name="gender" value="Male">
+                          <label for="male">Male</label> </li>
+                        <br>
+                        <li><input type="radio" id="female" name="gender" value="Female">
+                          <label for="female">Female</label> </li>
+                        <br>
+                        <li><input type="radio" id="other" name="gender" value="Other">
+                          <label for="other">Other</label></li>
+                      </ul>
+                      <br>
+                    </li>
+
+                    <li>
+                      <p>Marital Status</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="MaritalStatus" name="maritalStatus" required="required">
+                          <div class="dropdown-content">
+                            <option value="" selected disabled hidden>
+                              <p>Select option</p>
+                            </option>
+                            <option value="single">
+                              <p>Single</p>
+                            </option>
+                            <option value="married">
+                              <p>Married</p>
+                            </option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+
+                    <br><br>
+
+                    <li>
+                      <p>Home Language</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="HL" name="homeLanguage" required="required">
+                          <div class="dropdown-content">
+                            <option value="" selected disabled hidden>
+                              <p>Select option</p>
+                            </option>
+                            <option value="English">
+                              <p>English</p>
+                            </option>
+                            <option value="IsiZulu">
+                              <p>IsiZulu</p>
+                            </option>
+                            <option value="IsiXhosa">
+                              <p>IsiXhosa</p>
+                            </option>
+                            <option value="IsiNdebele">
+                              <p>IsiNdebele</p>
+                            </option>
+                            <option value="Sesotho">
+                              <p>Sesotho</p>
+                            </option>
+                            <option value="Afrikaans">
+                              <p>Afrikaans</p>
+                            </option>
+                            <option value="Siswati">
+                              <p>Siswati</p>
+                            </option>
+                            <option value="SeTswana">
+                              <p>SeTswana</p>
+                            </option>
+                            <option value="Xitsonga">
+                              <p>Xitsonga</p>
+                            </option>
+                            <option value="Sepedi">
+                              <p>Sepedi</p>
+                            </option>
+                            <option value="TshiVenda">
+                              <p>TshiVenda</p>
+                            </option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+                    <br>
+                    <br>
+
+                    <li>
+                      <p>Other Language</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="FAL" name="otherLanguages" required="required">
+                          <div class="dropdown-content">
+                            <option selected="selected" disabled>
+                              <p>Select option</p>
+                            </option>
+                            <option value="English">
+                              <p>English</p>
+                            </option>
+                            <option value="IsiZulu">
+                              <p>IsiZulu</p>
+                            </option>
+                            <option value="IsiXhosa">
+                              <p>IsiXhosa</p>
+                            </option>
+                            <option value="IsiNdebele">
+                              <p>IsiNdebele</p>
+                            </option>
+                            <option value="Sesotho">
+                              <p>Sesotho</p>
+                            </option>
+                            <option value="Afrikaans">
+                              <p>Afrikaans</p>
+                            </option>
+                            <option value="Siswati">
+                              <p>Siswati</p>
+                            </option>
+                            <option value="SeTswana">
+                              <p>SeTswana</p>
+                            </option>
+                            <option value="Xitsonga">
+                              <p>Xitsonga</p>
+                            </option>
+                            <option value="Sepedi">
+                              <p>Sepedi</p>
+                            </option>
+                            <option value="TshiVenda">
+                              <p>TshiVenda</p>
+                            </option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+                    <br>
+                    <br>
+
+                    <li>
+                      <p>Any Disability</p>
+                      <ul>
+                        <li><input type="radio" id="yes" name="disability" value="0">
+                          <label for="yes">Yes</label> </li> <br>
+                        <li><input type="radio" id="nodisability" name="disability" value="1">
+                          <label for="no">No</label>
+                        </li>
+                        <br>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <div class="form-group">
+                        <p>If clicked yes, specify</p>
+                        <input name="specifyDisability" type="text" id="disabilityspec" class="form-control"
+                          placeholder="">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+
+                    <br>
+                    <br>
+
+                    <li>
+                      <div class="contact-item">
+                        <h4>Contact details</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <p>Email address</p>
+                      <div class="form-group">
+                        <input name="emailAddress" type="email" id="email" class="form-control"
+                          placeholder="1234567@students.wits.ac.za" required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+                    <br>
+                    <li>
+                      <p>Phone number</p>
+                      <div class="form-group">
+                        <input name="phoneNumber" type="text" id="Contactnumber" class="form-control"
+                          required="required">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </li>
+                    <br>
+                    <li>
+                      <div class="contact-item">
+                        <h4>Education</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <p>Faculty enrolled in</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="faculty" name="faculty" required="required">
+                          <div class="dropdown-content">
+                            <option selected="selected" disabled>
+                              <p>Select option</p>
+                            </option>
+                            <option value="Science">
+                              <p>Science</p>
+                            </option>
+                            <option value="Commerce, Law & Management">
+                              <p>Commerce, Law & Management</p>
+                            </option>
+                            <option value="Engineering">
+                              <p>Engineering</p>
+                            </option>
+                            <option value="Humanities">
+                              <p> Humanities</p>
+                            </option>
+                            <option value="Health Sciences">
+                              <p>Health Sciences</p>
+                            </option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+                    <br>
+                    <li>
+                      <p>School</p>
+                      <div class="dropdown">
+                        <select class="dropbtn" id="school" name="school" required="required">
+                          <div class="dropdown-content">
+                            <option selected="selected" disabled>
+                              <p>Select option</p>
+                            </option>
+                            <option value="Computer Science & Applied Mathematics">
+                              <p>Computer Science & Applied Mathematics</p>
+                            </option>
+                            <option value="Mathematics">
+                              <p>Mathematics</p>
+                            </option>
+                            <option value="Statistics & Actuarial Science">
+                              <p>Statistics & Actuarial Science</p>
+                            </option>
+                            <option value="Biological Sciences">
+                              <p>Biological Sciences</p>
+                            </option>
+                            <option value="Physical Science">
+                              <p>Physical Science</p>
+                            </option>
+                            <option value="Business Sciences">
+                              <p>Business Sciences</p>
+                            </option>
+                            <option value="Accountancy">
+                              <p>Accountancy</p>
+                            </option>
+                            <option value="Economics and Finance">
+                              <p>Economics and Finance</p>
+                            </option>
+                            <option value="Law">
+                              <p>Law</p>
+                            </option>
+                            <option value="Earth Sciences">
+                              <p>Earth Sciences</p>
+                            </option>
+                            <option value="Wits School of Arts">
+                              <p>Wits School of Arts</p>
+                            </option>
+                            <option value="Education">
+                              <p>Education</p>
+                            </option>
+                            <option value="Human and Community Development">
+                              <p>Human and Community Development</p>
+                            </option>
+                            <option value="Social Sciences">
+                              <p>Social Sciences</p>
+                            </option>
+                          </div>
+                        </select>
+                      </div>
+                    </li>
+                    <br>
+                    <li>
+                      <p>Year of study</p>
+                      <div class=" form-group">
+                        <input type="number" name="YOS" value="yos" id="yos" required="required">
+                      </div>
+                    </li>
+                    <br>
+                    <div class="form-group">
+                      <textarea name="skill" id="skill" class="form-control" rows="4" placeholder="Your Skills"
+                        d></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </form>
+
+                  <div class="col-md-6">
+
+                    <br>
+                    <p class="save"> Please ensure to save to update all changes.</p>
+                    <div id="submit application"></div>
+                    <button type="submit" id="updateData" class="btn btn-custom btn-lg" value="Submit">Save</button>
+                  </div>
+
+                </ul>
+              </div>
+          </div>
+          </form>
         </div>
-      </div>
-    </form>
-    </div>
-            <script src="js/UpdateData.js"></script>
+        <script src="js/UpdateData.js"></script>
 
 
         <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap-msg.js"></script>
 
 
+      </div>
     </div>
   </div>
-</div>
-</div>
-
-<!-- Footer Section -->
-<div id="footer">
-  <div class="container text-center">
-    <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a></p>
   </div>
-</div>
 
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="./js/bootstrap-msg.js"></script>
-<script type="text/javascript" src="js/SmoothScroll.js"></script>
-<script type="text/javascript" src="js/nivo-lightbox.js"></script>
-<script type="text/javascript" src="js/studentProfile.js"></script>
-<!--<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+  <!-- Footer Section -->
+  <div id="footer">
+    <div class="container text-center">
+      <p>&copy; 2020 WITSLINK. Design by ELtech <a href="http://www.templatewire.com" rel="nofollow">School Project</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="./js/bootstrap-msg.js"></script>
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="js/nivo-lightbox.js"></script>
+  <script type="text/javascript" src="js/studentProfile.js"></script>
+  <!--<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
 <script type="text/javascript" src="js/main.js"></script>-->
 </body>
+
 </html>

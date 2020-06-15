@@ -34,7 +34,7 @@ var postedDocs = document.getElementById("tableBody");
                     }else if(i==1){
 
                       htmlString += '<tr class="col1" ><td class="col1">' + num +
-                            '</a></td><td class="col2">' + res[i].REG_ID +
+                            '</a></td><td class="col1">' + res[i].REG_ID +
                           '</td><td class="col2">' + res[i].REG_NAME +
                            '</td><td class="col4" onclick=" "><a href="AdditionalDocList.html">' +  "Open"+
                            '</td></tr>';
